@@ -707,3 +707,48 @@ Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
   [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
   ↳ db/seeds.rb:24
   [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started POST "/session?user[email]=EnviroNerd&user[password]=[FILTERED]" for ::1 at 2019-06-29 16:14:56 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"EnviroNerd", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "EnviroNerd"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:44
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "EnviroNerd"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "5JkkgkAkYk1qPfZdHvg_2Q"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44
+  [1m[36mUser Update (0.9ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "5JkkgkAkYk1qPfZdHvg_2Q"], ["updated_at", "2019-06-29 23:14:57.190357"], ["id", 5]]
+  ↳ app/models/user.rb:44
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:44
+Redirected to http://localhost:3000/users/5
+Completed 302 Found in 428ms (ActiveRecord: 8.8ms)
+
+
+Started GET "/users/5" for ::1 at 2019-06-29 16:14:57 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"5"}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session?user[email]=asDAADA&user[password]=[FILTERED]" for ::1 at 2019-06-29 16:15:01 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"asDAADA", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "asDAADA"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 268ms (Views: 261.8ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/session?user[email]=asDAADA&user[password]=[FILTERED]" for ::1 at 2019-06-29 16:16:20 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"asDAADA", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "asDAADA"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 316ms (Views: 280.2ms | ActiveRecord: 3.0ms)
+
+

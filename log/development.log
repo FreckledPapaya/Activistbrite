@@ -752,3 +752,78 @@ Processing by SessionsController#create as */*
 Completed 200 OK in 316ms (Views: 280.2ms | ActiveRecord: 3.0ms)
 
 
+Started POST "/session?user[email]=VigilAuntie&user[password]=[FILTERED]" for ::1 at 2019-06-29 16:16:46 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"VigilAuntie", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "VigilAuntie"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:44
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "VigilAuntie"], ["id", 10], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "RHz37IfVsEDebakiy4Q_Jw"], ["id", 10], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44
+  [1m[36mUser Update (0.9ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "RHz37IfVsEDebakiy4Q_Jw"], ["updated_at", "2019-06-29 23:16:47.100617"], ["id", 10]]
+  ↳ app/models/user.rb:44
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:44
+Redirected to http://localhost:3000/users/10
+Completed 302 Found in 379ms (ActiveRecord: 6.3ms)
+
+
+Started GET "/users/10" for ::1 at 2019-06-29 16:16:47 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"10"}
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2313144873462487680)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateEvents (20190629231709)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (66.9ms)[0m  [1m[35mCREATE TABLE "events" ("id" bigserial primary key, "title" character varying NOT NULL, "body" character varying NOT NULL, "location" character varying NOT NULL, "datetime" timestamp NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190629231709_create_events.rb:3
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE  INDEX  "index_events_on_title" ON "events"  ("title")[0m
+  ↳ db/migrate/20190629231709_create_events.rb:12
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE  INDEX  "index_events_on_location" ON "events"  ("location")[0m
+  ↳ db/migrate/20190629231709_create_events.rb:13
+  [1m[35m (15.2ms)[0m  [1m[35mCREATE  INDEX  "index_events_on_date_time" ON "events"  ("date_time")[0m
+  ↳ db/migrate/20190629231709_create_events.rb:14
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2313144873462487680)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2313144873462487680)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateEvents (20190629231709)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (10.2ms)[0m  [1m[35mCREATE TABLE "events" ("id" bigserial primary key, "title" character varying NOT NULL, "body" character varying NOT NULL, "location" character varying NOT NULL, "datetime" timestamp NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190629231709_create_events.rb:3
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE  INDEX  "index_events_on_title" ON "events"  ("title")[0m
+  ↳ db/migrate/20190629231709_create_events.rb:12
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE  INDEX  "index_events_on_location" ON "events"  ("location")[0m
+  ↳ db/migrate/20190629231709_create_events.rb:13
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE  INDEX  "index_events_on_datetime" ON "events"  ("datetime")[0m
+  ↳ db/migrate/20190629231709_create_events.rb:14
+  [1m[36mActiveRecord::SchemaMigration Create (1.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190629231709"]]
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (2.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(2313144873462487680)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/freckledpapaya/.rbenv/versions/2.5.1/bin/annotate:23

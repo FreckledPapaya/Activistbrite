@@ -6,12 +6,12 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(
-      username: user_params[:username],
+      email: user_params[:email],
       password: user_params[:password]
     )
 
     if @user.save
-      login!(user)
+      login!(@user)
       redirect_to user_url(@user)
       # change to events index
     else  
@@ -27,6 +27,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:username, :password)
+    params.require(:user).permit(:email, :password)
   end
 end

@@ -6,16 +6,16 @@ class SessionsController < ApplicationController
 
   def create
      @user = User.find_by_credentials(
-      username: user_params[:username],
-      password: user_params[:password]
+      params[:user][:email],
+      params[:user][:password]
     )
 
     if @user
-      login!(user)
+      login!(@user)
       redirect_to user_url(@user)
       # change to events index
     else  
-      flash.now[:errors] = ["Invalid username/password"]
+      flash.now[:errors] = ["Invalid email/password"]
       render :new
     end 
   end
@@ -24,10 +24,5 @@ class SessionsController < ApplicationController
     logout!
     redirect_to new_session_url
     # change to event index
-  end
-
-  private
-  def user_params
-    params.require(:user).permit(:username, :password)
-  end
+  end 
 end

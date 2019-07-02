@@ -1,4 +1,6 @@
 class API::UsersController < ApplicationController
+  before action :show, :require_logged_in
+
   def new
     @user = User.new
     render :new
@@ -21,7 +23,8 @@ class API::UsersController < ApplicationController
   end
 
   def show
-    render json: "show page"
+    @user = User.find_by(id: params[:id])
+    render :show
   end
 
   private

@@ -4,7 +4,7 @@ import Signup from './signup';
 
 
 const mapStateToProps = () => dispatch => {
-  const defaultUser = {email: '', fname: '', lname: ''};
+  const defaultUser = {email: '', fname: '', lname: '', password: ''};
 
   return {user: defaultUser};
 };

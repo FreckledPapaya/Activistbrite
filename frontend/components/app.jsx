@@ -1,5 +1,6 @@
 import React from 'react';
 import SignupContainer from './session/signup_container';
+import LoginContainer from './session/login_container';
 // import components here
 
 import { Route } from 'react-router-dom';
@@ -7,7 +8,9 @@ import { Route } from 'react-router-dom';
 
 export default () => (
   <div>
-    <Route path="/signup" component={SignupContainer} />
+    <Route exact path="/signin" component={SigninContainer} />
+    <Route exact path="/signin/signup" component={SignupContainer} />
+    <Route exact path="/signin/login" component={LoginContainer} />
   </div>
 );
 

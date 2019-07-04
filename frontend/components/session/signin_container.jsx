@@ -1,10 +1,12 @@
 import { connect } from 'react-redux';
 import { createUser, loginUser, logoutUser } from '../../actions/session';
-import Login from './login';
+import Signin from './signin';
 
 const mapStateToProps = (state, ownProps) => {
-  const defaultUser = { email: ownProps.email, password: '' };
-  return { user: defaultUser };
+  const defaultUser = { email: '', fname: '', lname: '', password: '' };
+  const user = this.state.props.users[ownProps.match.params.userId] || defaultUser;
+  // how does ownProps receive userId?
+  return { user };
 };
 
 const mapDispatchToProps = () => dispatch => ({
@@ -13,4 +15,4 @@ const mapDispatchToProps = () => dispatch => ({
   logoutUser: () => dispatch(logoutUser())
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Login);
+export default connect(mapStateToProps, mapDispatchToProps)(Signin);

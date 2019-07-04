@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Login extends React.Component {
+class Signin extends React.Component {
   constructor(props) {
     super(props);
     this.state = this.props.user;
@@ -15,7 +15,7 @@ class Login extends React.Component {
 
   handleSumbit(e) {
     e.preventDefault();
-    // pass to signin container
+    this.props.loginUser(this.state).then(() => this.props.history.push('/'));
   }
 
 
@@ -40,6 +40,4 @@ class Login extends React.Component {
       </div>)
   }
 }
-export default Login;
-
-// add link "Log In Instead" at bottom
+export default Signin;

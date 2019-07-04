@@ -27,6 +27,11 @@ class API::UsersController < ApplicationController
     render :show
   end
 
+  def index
+    @users = User.all
+    render :index
+  end
+
   private
 
   def user_params

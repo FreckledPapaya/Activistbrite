@@ -42,8 +42,6 @@ class Signup extends React.Component {
             <input type="password" value={this.state.password} onChange={this.update('password')}/>
             <p>Your password must be at least 8 characters</p>
           </label>
-          <br />
-          <input type="submit" value="Sign Up"/>
         
         </form>
       </div>)

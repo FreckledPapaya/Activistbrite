@@ -13,9 +13,9 @@ class Signin extends React.Component {
     };
   }
 
-  handleClick(e) {
+  handleClick (e) {
     e.preventDefault();
-    // redirect to login
+    this.props.receiveSigninProps(this.state);
   }
 
 
@@ -23,13 +23,12 @@ class Signin extends React.Component {
     return (
       <div>
         <h3>Let's get started</h3>
-        <p>Create an account.</p>
+        <p>Use email to get started.</p>
 
         <form >
           <label id='email'>
             <input type="text" name="Email address" value={this.state.email} onChange={this.update('email')} />
           </label>
-
           <button onClick={this.handleClick}>Get Started</button>
 
         </form>

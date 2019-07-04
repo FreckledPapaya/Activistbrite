@@ -1,4 +1,4 @@
-import {RECEIVE_CURRENT_USER, LOGOUT_CURRENT_USER, RECEIVE_USERS } from '../actions/session_actions';
+import {RECEIVE_CURRENT_USER, LOGOUT_CURRENT_USER } from '../actions/session_actions';
 
 const _nullSession = {
   currentUser: null
@@ -9,8 +9,6 @@ export default (state = _nullSession, action) => {
   switch(action.type) {
     case RECEIVE_CURRENT_USER:
       return merge ({}, { [currentUser]: action.user });
-    case RECEIVE_USERS:
-      return merge({}, action.users);
     case LOGOUT_CURRENT_USER:
       return _nullSession;
     default:

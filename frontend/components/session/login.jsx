@@ -22,7 +22,6 @@ class Login extends React.Component {
 
 
   render() {
-    console.log(this.state);
     return (
       <div>
         <h3>Welcome back</h3>

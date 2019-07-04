@@ -1,12 +1,29 @@
 class API::UsersController < ApplicationController
   before action :show, :require_logged_in
 
+  def verify
+    @user = User.find_by(email: params[:email])
+
+    if @user
+      render json: @user
+    else
+      render json: ['Require Signup']
+    end
+      
+  end
+  # use to determine which component to render from session (redux)
+
   def new
     @user = User.new
     render :new
   end
 
   def create
+    # @user = User.find_by(email: params[:user][:email])
+    # if @user
+    #   return render json: @user
+    # end
+
     @user = User.new(
       email: user_params[:email],
       password: user_params[:password]

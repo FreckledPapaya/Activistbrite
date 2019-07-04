@@ -2396,3 +2396,223 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 1270ms (Views: 1263.8ms | ActiveRecord: 0.0ms)
 
 
+Started GET "//" for ::1 at 2019-07-04 16:12:37 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 1330ms (Views: 1327.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "//" for ::1 at 2019-07-04 16:13:46 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 1352ms (Views: 1350.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "//" for ::1 at 2019-07-04 16:14:39 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 1602ms (Views: 1601.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "//" for ::1 at 2019-07-04 16:16:20 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 1247ms (Views: 1242.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "//" for ::1 at 2019-07-04 16:17:01 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 1435ms (Views: 1432.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/asdasdsa" for ::1 at 2019-07-04 16:17:05 -0700
+
+ArgumentError - wrong number of arguments (given 2, expected 1):
+  app/controllers/api/users_controller.rb:2:in `<class:UsersController>'
+  app/controllers/api/users_controller.rb:1:in `<top (required)>'
+
+Started GET "/?Email+address=" for ::1 at 2019-07-04 16:20:22 -0700
+Processing by StaticPagesController#root as HTML
+  Parameters: {"Email address"=>""}
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 204ms (Views: 202.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/EnviroNerd" for ::1 at 2019-07-04 16:20:28 -0700
+
+ArgumentError - wrong number of arguments (given 2, expected 1):
+  app/controllers/api/users_controller.rb:2:in `<class:UsersController>'
+  app/controllers/api/users_controller.rb:1:in `<top (required)>'
+
+Started GET "/" for ::1 at 2019-07-04 16:20:32 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 124ms (Views: 123.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/maya" for ::1 at 2019-07-04 16:20:37 -0700
+
+ArgumentError - wrong number of arguments (given 2, expected 1):
+  app/controllers/api/users_controller.rb:2:in `<class:UsersController>'
+  app/controllers/api/users_controller.rb:1:in `<top (required)>'
+
+Started GET "/" for ::1 at 2019-07-04 16:20:56 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 311ms (Views: 307.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/EnviroNerd" for ::1 at 2019-07-04 16:21:02 -0700
+
+ArgumentError - wrong number of arguments (given 2, expected 1):
+  app/controllers/api/users_controller.rb:2:in `<class:UsersController>'
+  app/controllers/api/users_controller.rb:1:in `<top (required)>'
+
+Started GET "/" for ::1 at 2019-07-04 16:21:21 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 1117ms (Views: 1116.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/EnviroNerd" for ::1 at 2019-07-04 16:21:28 -0700
+
+ArgumentError - wrong number of arguments (given 2, expected 1):
+  app/controllers/api/users_controller.rb:2:in `<class:UsersController>'
+  app/controllers/api/users_controller.rb:1:in `<top (required)>'
+
+Started GET "/" for ::1 at 2019-07-04 16:22:39 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 708ms (Views: 701.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-04 16:22:42 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 71ms (Views: 70.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-04 16:22:47 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 45ms (Views: 43.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-04 16:22:49 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 56ms (Views: 54.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-04 16:22:50 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 65ms (Views: 63.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/JanetSnakehole" for ::1 at 2019-07-04 16:22:58 -0700
+
+ArgumentError - wrong number of arguments (given 2, expected 1):
+  app/controllers/api/users_controller.rb:2:in `<class:UsersController>'
+  app/controllers/api/users_controller.rb:1:in `<top (required)>'
+
+Started GET "/" for ::1 at 2019-07-04 16:27:41 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 372ms (Views: 371.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/JanetSnakehole" for ::1 at 2019-07-04 16:27:47 -0700
+
+ArgumentError - wrong number of arguments (given 2, expected 1):
+  app/controllers/api/users_controller.rb:2:in `<class:UsersController>'
+  app/controllers/api/users_controller.rb:1:in `<top (required)>'
+
+Started GET "/" for ::1 at 2019-07-04 16:27:53 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 134ms (Views: 133.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/JanetSnakehole" for ::1 at 2019-07-04 16:28:10 -0700
+
+ArgumentError - wrong number of arguments (given 2, expected 1):
+  app/controllers/api/users_controller.rb:2:in `<class:UsersController>'
+  app/controllers/api/users_controller.rb:1:in `<top (required)>'
+
+Started GET "/" for ::1 at 2019-07-04 16:29:27 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 1269ms (Views: 1262.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-04 16:30:25 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 1202ms (Views: 1195.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/JanetSnakehole" for ::1 at 2019-07-04 16:30:29 -0700
+
+ArgumentError - wrong number of arguments (given 2, expected 1):
+  app/controllers/api/users_controller.rb:2:in `<class:UsersController>'
+  app/controllers/api/users_controller.rb:1:in `<top (required)>'
+
+Started GET "/" for ::1 at 2019-07-04 16:32:18 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 155ms (Views: 154.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/JanetSnakehole" for ::1 at 2019-07-04 16:32:22 -0700
+
+ArgumentError - wrong number of arguments (given 2, expected 1):
+  app/controllers/api/users_controller.rb:2:in `<class:UsersController>'
+  app/controllers/api/users_controller.rb:1:in `<top (required)>'
+
+Started GET "/" for ::1 at 2019-07-04 16:35:02 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 1258ms (Views: 1256.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/users" for ::1 at 2019-07-04 16:35:14 -0700
+
+ArgumentError - wrong number of arguments (given 2, expected 1):
+  app/controllers/api/users_controller.rb:2:in `<class:UsersController>'
+  app/controllers/api/users_controller.rb:1:in `<top (required)>'
+
+Started GET "/" for ::1 at 2019-07-04 16:36:18 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 1170ms (Views: 1169.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/users" for ::1 at 2019-07-04 16:36:21 -0700
+
+ArgumentError - wrong number of arguments (given 2, expected 1):
+  app/controllers/api/users_controller.rb:2:in `<class:UsersController>'
+  app/controllers/api/users_controller.rb:1:in `<top (required)>'
+

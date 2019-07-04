@@ -8,10 +8,10 @@ export const createUser = (user) => {
   });
 };
 
-export const fetchUsers = () => {
+export const fetchUser = (email) => {
   return $.ajax({
     method: 'GET',
-    url: `/api/users/`
+    url: `/api/users/${email}`
   });
 };
 

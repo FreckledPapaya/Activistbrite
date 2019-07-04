@@ -3,7 +3,7 @@ import { createUser, loginUser, logoutUser } from '../../actions/session';
 import Signup from './signup';
 
 
-const mapStateToProps = () => dispatch => {
+const mapStateToProps = (ownProps) => dispatch => {
   const defaultUser = {email: '', fname: '', lname: '', password: ''};
 
   return {user: defaultUser};

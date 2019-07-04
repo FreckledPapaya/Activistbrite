@@ -1,6 +1,5 @@
 import React from 'react';
-import SignupContainer from './session/signup_container';
-import LoginContainer from './session/login_container';
+import SessionContainer from './session/session_container';
 // import components here
 
 import { Route } from 'react-router-dom';
@@ -8,13 +7,10 @@ import { Route } from 'react-router-dom';
 
 export default () => (
   <div>
-    <Route exact path="/signin" component={SigninContainer} />
-    <Route exact path="/signin/signup" component={SignupContainer} />
-    <Route exact path="/signin/login" component={LoginContainer} />
+    <Route path="/signin" component={SessionContainer} />
+
   </div>
 );
 
-// <Route path="/" component={NavBarContainer} />
-// <Route path="/login" component={LoginContainer} />
-// change to authroutes
-// <Route path="/events" component={EventIndexContainer} />
+// <Route exact path="/signin/signup" component={SignupContainer} />
+//   <Route exact path="/signin/login" component={LoginContainer} />

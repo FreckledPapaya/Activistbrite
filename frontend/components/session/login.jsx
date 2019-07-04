@@ -15,7 +15,7 @@ class Login extends React.Component {
 
   handleSumbit(e) {
     e.preventDefault();
-    // pass to signin container
+    this.props.loginUser(this.state).then(() => this.props.history.push('/'));
   }
 
 

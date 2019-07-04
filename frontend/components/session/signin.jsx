@@ -4,7 +4,7 @@ class Signin extends React.Component {
   constructor(props) {
     super(props);
     this.state = this.props.user;
-    this.handleSumbit = this.handleSumbit.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   update(field) {
@@ -13,9 +13,9 @@ class Signin extends React.Component {
     };
   }
 
-  handleSumbit(e) {
+  handleClick(e) {
     e.preventDefault();
-    this.props.loginUser(this.state).then(() => this.props.history.push('/'));
+    // redirect to login
   }
 
 
@@ -25,19 +25,17 @@ class Signin extends React.Component {
         <h3>Let's get started</h3>
         <p>Create an account.</p>
 
-        <form onSumbit={this.handleSumbit}>
+        <form >
           <label id='email'>
             <input type="text" name="Email address" value={this.state.email} onChange={this.update('email')} />
           </label>
-          <br />
-          <label id='password'>
-            <input type="password" name="Password" value={this.state.password} onChange={this.update('password')} />
-          </label>
 
-          <input type="submit" value="Log In" />
+          <button onClick={this.handleClick}>Get Started</button>
 
         </form>
-      </div>)
+      </div>
+    )
   }
 }
+
 export default Signin;

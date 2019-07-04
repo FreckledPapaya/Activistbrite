@@ -3,10 +3,8 @@ import { createUser, loginUser, logoutUser } from '../../actions/session';
 import Signin from './signin';
 
 const mapStateToProps = (state, ownProps) => {
-  const defaultUser = { email: '', fname: '', lname: '', password: '' };
-  const user = this.state.props.users[ownProps.match.params.userId] || defaultUser;
-  // how does ownProps receive userId?
-  return { user };
+  const defaultUser = { email: '' };
+  return { user: defaultUser };
 };
 
 const mapDispatchToProps = () => dispatch => ({

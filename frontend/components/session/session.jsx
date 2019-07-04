@@ -42,7 +42,7 @@ class Session extends React.Component {
     const mappedUsers = Object.keys(users).map(id => users[id]);
     let thisUser = null;
     mappedUsers.forEach(user => {
-      if (user.email === email) {
+      if (user[email] === email) {
         thisUser = user;
       }
     });
@@ -51,9 +51,9 @@ class Session extends React.Component {
 
   receiveSigninProps (user) {
     this.setState({user: user});
-    if (this.findUser(user.email)) {
+    // if (this.findUser(user.email)) {
       this.form = <Login user={user} receiveLoginProps={this.receiveLoginProps} />;
-    }
+    // }
   }
 
   receiveLoginProps (props) {

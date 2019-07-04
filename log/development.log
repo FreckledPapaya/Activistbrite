@@ -2389,3 +2389,10 @@ ArgumentError - wrong number of arguments (given 2, expected 1):
   app/controllers/api/users_controller.rb:2:in `<class:UsersController>'
   app/controllers/api/users_controller.rb:1:in `<top (required)>'
 
+Started GET "//" for ::1 at 2019-07-04 15:31:25 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 1270ms (Views: 1263.8ms | ActiveRecord: 0.0ms)
+
+

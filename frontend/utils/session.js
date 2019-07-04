@@ -1,4 +1,4 @@
-// postUser, postSession, deleteSession
+
 
 export const createUser = (user) => {
   return $.ajax({

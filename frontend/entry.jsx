@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import createStore from './store/store';
+import Root from './components/root';
 
 
 
 document.addEventListener("DOMContentLoaded", () => {
     const root = document.getElementById("root");
-    const preloadedState = {};
-    const store = createStore(preloadedState);
+    const store = createStore();
     window.store = store;
-    ReactDOM.render(<h2>React is running</h2>, root)
+    ReactDOM.render(<Root store={store} />, root);
 });

@@ -8,6 +8,10 @@ class Signup extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
+  componentDidMount() {
+    this.state.email = this.props.email;
+  }
+
   update(field) {
     return (e) => {
       this.setState({[field]: e.target.value});
@@ -22,13 +26,16 @@ class Signup extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="signup_container">
+
+        <div className="signup_header">
         <h3>Welcome</h3>
         <p>Create an account.</p>
+        </div>
 
-        <form  >
+        <form className="signup_form">
           <label id='email'>
-            <input type="text" name="Email address" value={this.email} onChange={this.update('email')}/>
+            <input type="text" name="Email address" value={this.email} disabled />
             
           </label>
           <br />
@@ -44,7 +51,7 @@ class Signup extends React.Component {
             <input type="password" value={this.state.password} onChange={this.update('password')}/>
             <p>Your password must be at least 8 characters</p>
           </label>
-
+          <br />
           <button onClick={this.handleClick}>Sign Up</button>
         
         </form>

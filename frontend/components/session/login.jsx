@@ -1,18 +1,17 @@
 import React from 'react';
+import { merge } from 'lodash';
 
 class Login extends React.Component {
   constructor(props) {
     super(props);
     this.state = this.props.user;
     this.email = this.props.email;
-    // this.handleSumbit = this.handleSumbit.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
-
-  // handleSumbit(e) {
-  //   e.preventDefault();
-  //   this.props.loginUser(this.state).then(() => this.props.history.push('/'));
-  // }
+  componentDidMount() {
+    this.state.email = this.props.email;
+  }
 
   update(field) {
     return (e) => {
@@ -20,22 +19,33 @@ class Login extends React.Component {
     };
   }
 
+  handleClick(e) {
+    e.preventDefault();
+    this.props.receiveLoginProps(this.state);
+  }
 
 
   render() {
     return (
-      <div>
+      <div className="login_container">
+
+        <div className="login_header">
         <h3>Welcome back</h3>
         <p>Please enter your password to log in.</p>
+        </div>
 
-        <form>
+        <form className="login_form">
           <label id='email'>
-            <input type="text" name="Email address" value={this.email} onChange={this.update('email')} />
+            <input type="text" name="Email address" value={this.email} disabled />
           </label>
           <br />
           <label id='password'>
             <input type="password" name="Password" value={this.state.password} onChange={this.update('password')} />
           </label>
+          <br />
+
+          <button onClick={this.handleClick}>Log In</button>
+
 
         </form>
       </div>)

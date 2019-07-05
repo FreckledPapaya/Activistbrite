@@ -4195,3 +4195,357 @@ Processing by Api::UsersController#verify as JSON
 Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.6ms)
 
 
+  [1m[35m (1972.6ms)[0m  [1m[35mCREATE DATABASE "Activistbrite_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (437.1ms)[0m  [1m[35mCREATE DATABASE "Activistbrite_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (99.0ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (30.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "events" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (558.2ms)[0m  [1m[35mCREATE TABLE "events" ("id" bigserial primary key, "title" character varying NOT NULL, "body" character varying NOT NULL, "location" character varying NOT NULL, "datetime" timestamp NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "creator_id" integer)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (86.8ms)[0m  [1m[35mCREATE  INDEX  "index_events_on_datetime" ON "events"  ("datetime")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (27.7ms)[0m  [1m[35mCREATE  INDEX  "index_events_on_location" ON "events"  ("location")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (45.2ms)[0m  [1m[35mCREATE  INDEX  "index_events_on_title" ON "events"  ("title")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:31
+  [1m[35m (50.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "fname" character varying, "lname" character varying, "organizer_title" character varying)[0m
+  ↳ db/schema.rb:31
+  [1m[35m (23.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:31
+  [1m[35m (14.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  ↳ db/schema.rb:31
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (296.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190702232648)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190629220142),
+(20190629231709),
+(20190629232721);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (27.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (28.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (15.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-07-05 18:49:20.845581"], ["updated_at", "2019-07-05 18:49:20.845581"]]
+  ↳ db/schema.rb:13
+  [1m[35m (19.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "events" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (71.6ms)[0m  [1m[35mCREATE TABLE "events" ("id" bigserial primary key, "title" character varying NOT NULL, "body" character varying NOT NULL, "location" character varying NOT NULL, "datetime" timestamp NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "creator_id" integer)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (9.4ms)[0m  [1m[35mCREATE  INDEX  "index_events_on_datetime" ON "events"  ("datetime")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (27.3ms)[0m  [1m[35mCREATE  INDEX  "index_events_on_location" ON "events"  ("location")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (28.4ms)[0m  [1m[35mCREATE  INDEX  "index_events_on_title" ON "events"  ("title")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:31
+  [1m[35m (18.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "fname" character varying, "lname" character varying, "organizer_title" character varying)[0m
+  ↳ db/schema.rb:31
+  [1m[35m (54.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:31
+  [1m[35m (22.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  ↳ db/schema.rb:31
+  [1m[35m (10.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (4.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190702232648)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (9.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190629220142),
+(20190629231709),
+(20190629232721);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (52.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-07-05 18:49:21.339667"], ["updated_at", "2019-07-05 18:49:21.339667"]]
+  ↳ db/schema.rb:13
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (50.0ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-07-05 18:49:21.350385"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (21.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "EnviroNerd"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "gs9ocFwiGmLyvyiOGnSBxg"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "EnviroNerd"], ["password_digest", "$2a$12$IGiYKgsZmHt79yBKRrPLY.FTlfgpjxIdgpu94xwYVe556dWq.Ls/a"], ["session_token", "gs9ocFwiGmLyvyiOGnSBxg"], ["created_at", "2019-07-05 18:49:22.068209"], ["updated_at", "2019-07-05 18:49:22.068209"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (12.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "RightsForAll"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "398QKaseLsGgJKdrAJvDqg"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "RightsForAll"], ["password_digest", "$2a$12$Bhngm5H8qw50akRG4UL0juXKF8KVbfRT5c76fPnc6KC0DpowBeweK"], ["session_token", "398QKaseLsGgJKdrAJvDqg"], ["created_at", "2019-07-05 18:49:22.382904"], ["updated_at", "2019-07-05 18:49:22.382904"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (16.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "JanetSnakehole"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "24UBm39xTo-BuWNev2r2qw"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "JanetSnakehole"], ["password_digest", "$2a$12$tcuJje1o.5KXaXXUfBMTrucx2FLaO91BJcdiKKd5c71HqJJJJv.fO"], ["session_token", "24UBm39xTo-BuWNev2r2qw"], ["created_at", "2019-07-05 18:49:22.702506"], ["updated_at", "2019-07-05 18:49:22.702506"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "LightOneCandle"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZOM8KAHBj-v09fT8po0mPw"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "LightOneCandle"], ["password_digest", "$2a$12$mymv8gUiUKuHPX5lL3hTAuBULxmUWMlU4HaDL/QuMpArHq5z1BQSO"], ["session_token", "ZOM8KAHBj-v09fT8po0mPw"], ["created_at", "2019-07-05 18:49:23.012168"], ["updated_at", "2019-07-05 18:49:23.012168"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (21.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ExpectoPatronum"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "xPNcnmUQp_ZGmo694JkWiQ"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "ExpectoPatronum"], ["password_digest", "$2a$12$S9rzCkjKMNM3GFFnZlrBAes/Mqu4G06jL.s6Wdk6lwcv3RLkJDkoK"], ["session_token", "xPNcnmUQp_ZGmo694JkWiQ"], ["created_at", "2019-07-05 18:49:23.345958"], ["updated_at", "2019-07-05 18:49:23.345958"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "VigilAuntie"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "BdT-vQXlg2YujBHT9p0xww"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "VigilAuntie"], ["password_digest", "$2a$12$OVwOX7IUfLANUDBCeq2Yp..BkujcPJNN/V/oKLIeq6PStdnUaNGEC"], ["session_token", "BdT-vQXlg2YujBHT9p0xww"], ["created_at", "2019-07-05 18:49:23.649396"], ["updated_at", "2019-07-05 18:49:23.649396"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "FreeHugs"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "yLHaMIoE1Ua-AW1IpwmaeA"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "FreeHugs"], ["password_digest", "$2a$12$MqovW7wVd5zLoOX6xAyk5.SMXrLQ51OD.ku0vv6ZuHnd7Rf8j3neO"], ["session_token", "yLHaMIoE1Ua-AW1IpwmaeA"], ["created_at", "2019-07-05 18:49:23.962282"], ["updated_at", "2019-07-05 18:49:23.962282"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "Education101"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lPf769rzPlVkc56qK0B0kg"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "Education101"], ["password_digest", "$2a$12$BChvKporDwLxqrBFScEP5.wiFRSPMcPsRzthc9eypJtvlglu/wpO6"], ["session_token", "lPf769rzPlVkc56qK0B0kg"], ["created_at", "2019-07-05 18:49:24.269199"], ["updated_at", "2019-07-05 18:49:24.269199"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (18.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "FeministGamer"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "CmdWY3Vquzn6URDJQhVEnw"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "FeministGamer"], ["password_digest", "$2a$12$r5xuo8vt/2Qmp0l7qDsxLek4on7a7PFIH7LWFElhvETJcxSxICeRm"], ["session_token", "CmdWY3Vquzn6URDJQhVEnw"], ["created_at", "2019-07-05 18:49:24.594499"], ["updated_at", "2019-07-05 18:49:24.594499"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (15.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "RootDownRiseUp"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "UUCK_iEdpNoEcod-TjFqoA"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "RootDownRiseUp"], ["password_digest", "$2a$12$W8frrs7fXeqcwfRHDdwYQOaHL5edH5icsTuCBnuns/g9PikAT8MD."], ["session_token", "UUCK_iEdpNoEcod-TjFqoA"], ["created_at", "2019-07-05 18:49:24.911095"], ["updated_at", "2019-07-05 18:49:24.911095"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "NoJusticeNoPeace"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "HkttjRLlzHDEWK022rnWsQ"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "NoJusticeNoPeace"], ["password_digest", "$2a$12$glB6EI1rVfRPEhfrlfCGjem6RprXrIam3hLdLGQuNhvJ9lcf6i0uS"], ["session_token", "HkttjRLlzHDEWK022rnWsQ"], ["created_at", "2019-07-05 18:49:25.225028"], ["updated_at", "2019-07-05 18:49:25.225028"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (18.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "WaterIsLife"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "zVR0yxU8u3gisI2epYjz_Q"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "WaterIsLife"], ["password_digest", "$2a$12$ZskzeJYPbRQhbM3CgHG7rOb6ZVAVIutXFKm.hzv45SYTit8TRCsQK"], ["session_token", "zVR0yxU8u3gisI2epYjz_Q"], ["created_at", "2019-07-05 18:49:25.550146"], ["updated_at", "2019-07-05 18:49:25.550146"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "WeAreTheLand"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "s2TrkVFcNYm33p49_WwsEg"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "WeAreTheLand"], ["password_digest", "$2a$12$lggepSD5Y6sj2Uq.63ihce7obWWS7kyH7EbpDAMEDONxEQAXQcFkK"], ["session_token", "s2TrkVFcNYm33p49_WwsEg"], ["created_at", "2019-07-05 18:49:25.857977"], ["updated_at", "2019-07-05 18:49:25.857977"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (15.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+Started GET "/" for ::1 at 2019-07-05 11:49:55 -0700
+Started GET "/" for ::1 at 2019-07-05 11:49:55 -0700
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/appacademy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/appacademy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 5783ms (Views: 5782.9ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 5910ms (Views: 5901.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/sdagfh/verify" for ::1 at 2019-07-05 11:50:49 -0700
+Processing by Api::UsersController#verify as JSON
+  Parameters: {"email"=>"sdagfh"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sdagfh"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+Completed 200 OK in 86ms (Views: 0.3ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/api/users/sdagfh/verify" for ::1 at 2019-07-05 11:50:50 -0700
+Processing by Api::UsersController#verify as JSON
+  Parameters: {"email"=>"sdagfh"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sdagfh"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2019-07-05 11:50:52 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 211ms (Views: 210.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-05 11:50:55 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 25ms (Views: 24.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/JanetSnakehole/verify" for ::1 at 2019-07-05 11:51:03 -0700
+Processing by Api::UsersController#verify as JSON
+  Parameters: {"email"=>"JanetSnakehole"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "JanetSnakehole"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+Completed 200 OK in 49ms (Views: 13.4ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/" for ::1 at 2019-07-05 11:59:56 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 1576ms (Views: 1573.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/JanetSnakehole/verify" for ::1 at 2019-07-05 12:00:01 -0700
+Processing by Api::UsersController#verify as JSON
+  Parameters: {"email"=>"JanetSnakehole"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "JanetSnakehole"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+Completed 200 OK in 6ms (Views: 0.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2019-07-05 12:00:21 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1252ms (Views: 1251.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/JanetSnakehole/verify" for ::1 at 2019-07-05 12:00:35 -0700
+Processing by Api::UsersController#verify as JSON
+  Parameters: {"email"=>"JanetSnakehole"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "JanetSnakehole"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2019-07-05 12:01:27 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 1181ms (Views: 1179.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/JanetSnakehole/verify" for ::1 at 2019-07-05 12:01:33 -0700
+Processing by Api::UsersController#verify as JSON
+  Parameters: {"email"=>"JanetSnakehole"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "JanetSnakehole"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2019-07-05 12:02:49 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 1829ms (Views: 1824.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/JanetSnakehole/verify" for ::1 at 2019-07-05 12:02:55 -0700
+Processing by Api::UsersController#verify as JSON
+  Parameters: {"email"=>"JanetSnakehole"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "JanetSnakehole"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 1.5ms)
+
+

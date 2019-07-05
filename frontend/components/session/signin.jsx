@@ -21,11 +21,14 @@ class Signin extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="signin_container">
+
+        <div className="signin_header">
         <h3>Let's get started</h3>
         <p>Use email to get started.</p>
+        </div>
 
-        <form >
+        <form className="signin_form">
           <label id='email'>
             <input type="text" name="Email address" value={this.state.email} onChange={this.update('email')} />
           </label>

@@ -15,13 +15,7 @@ class Session extends React.Component {
   }
 
   switchComponent() {
-  if (this.props.session.newUser === true) {
-    // console.log(this.props.user.email);
-    // this.props.user.email = this.props.session.email;
-    // console.log(this.props.user.email);
-    // console.log(this.session);
-    // debugger;
-
+  if (this.props.session.newUser === true) { 
     this.form = <Signup user={this.state} email={this.props.session.email} receiveSignupProps={this.receiveSignupProps} />;
   } else {
     this.form = <Login user={this.state} email={this.props.session.email} receiveLoginProps={this.receiveLoginProps} />;
@@ -36,11 +30,11 @@ class Session extends React.Component {
     });  
   }
 
-  receiveLoginProps (props) {
+  receiveLoginProps (user) {
 
   }
 
-  receiveSignupProps (props) {
+  receiveSignupProps (user) {
 
   }
   

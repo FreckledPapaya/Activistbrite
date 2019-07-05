@@ -3,12 +3,9 @@ class Api::UsersController < ApplicationController
 
   def verify
     @user = User.find_by(email: params[:email])
-
-    if @user
-      render json: @user
-    else
-      render json: ['Require Signup']
-    end
+    @user ||= {new_user: true, email: params[:email]} 
+    
+    render json: @user 
       
   end
   # use to determine which component to render from session (redux)
@@ -18,11 +15,7 @@ class Api::UsersController < ApplicationController
     render :new
   end
 
-  def create
-    # @user = User.find_by(email: params[:user][:email])
-    # if @user
-    #   return render json: @user
-    # end
+  def create 
 
     @user = User.new(
       email: user_params[:email],

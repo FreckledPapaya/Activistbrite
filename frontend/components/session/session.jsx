@@ -1,6 +1,7 @@
 import React from 'react';
 import Signin from './signin';
 import Login from './login';
+import Signup from './signup';
 
 class Session extends React.Component {
   constructor(props) {
@@ -8,31 +9,31 @@ class Session extends React.Component {
     this.state = this.props.user;
     this.receiveSigninProps = this.receiveSigninProps.bind(this);
     this.receiveLoginProps = this.receiveLoginProps.bind(this);
-    this.findUser = this.findUser.bind(this);
+    this.switchComponent = this.switchComponent.bind(this); 
     this.form = <Signin user={this.state} receiveSigninProps={this.receiveSigninProps}/>;
     
   }
 
-  findUser(email) {
-    let thisUser = null;
-    mappedUsers.forEach(user => {
-      if (user[email] === email) {
-        thisUser = user;
-      }
-    });
-    return thisUser;
+  switchComponent() {
+  if (this.props.session.newUser === true) {
+    // console.log(this.props.user.email);
+    // this.props.user.email = this.props.session.email;
+    // console.log(this.props.user.email);
+    // console.log(this.session);
+    // debugger;
+
+    this.form = <Signup user={this.state} email={this.props.session.email} receiveSignupProps={this.receiveSignupProps} />;
+  } else {
+    this.form = <Login user={this.state} email={this.props.session.email} receiveLoginProps={this.receiveLoginProps} />;
+  }
+  this.setState(this.state);
   }
 
   receiveSigninProps (user) {
-    this.setState({user: user});
-    // let response;
-    const response = this.props.fetchUser(user.email);
-    console.log(`response: ${response}`);
-    // if (repsonse === ['Require Signup']) {
-    //   this.form = <Signup user={user} receiveSignupProps={this.receiveSignupProps} />;
-    // } else {
-      this.form = <Login user={user} receiveLoginProps={this.receiveLoginProps} />;
-    // }
+    this.setState({user: user}); 
+    this.props.fetchUser(user.email).then(() => {
+      this.switchComponent();
+    });  
   }
 
   receiveLoginProps (props) {
@@ -43,22 +44,10 @@ class Session extends React.Component {
 
   }
   
-  render() {
-    let form; 
-    // = <Signin formType='Signin' user={this.state}/>;
-
-    // switch(this.props.formType){
-    // case 'Signin':
-    //   form = <Login formType='Login' user={this.state}/>;
-    // // case 'Signup':
-    // //   form = <Signup formType='Signup' user={this.state} />;
-    // default:
-    //   form = <Signin formType='Signin' user={this.state}/>;
-    // }
-
+  render() { 
     return (
       <div className='SessionForm'>
-        {this.form}
+        {this.form} 
       </div>
     )
   }

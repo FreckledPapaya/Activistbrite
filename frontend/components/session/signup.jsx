@@ -2,20 +2,21 @@ import React from 'react';
 
 class Signup extends React.Component {
   constructor(props) {
-    super(props);
-    this.state = this.props.user;
-    this.handleSumbit = this.handleSumbit.bind(this);
+    super(props); 
+    this.state = this.props.user; 
+    this.email = this.props.email;
+    this.handleClick = this.handleClick.bind(this);
   }
 
   update(field) {
     return (e) => {
       this.setState({[field]: e.target.value});
     };
-  }
+  } 
 
-  handleSumbit(e) {
+  handleClick(e) {
     e.preventDefault();
-    this.props.createUser(this.state).then(() => this.props.history.push('/'));
+    this.props.receiveSignupProps(this.state);
   }
 
 
@@ -25,9 +26,10 @@ class Signup extends React.Component {
         <h3>Welcome</h3>
         <p>Create an account.</p>
 
-        <form onSumbit={this.handleSumbit}>
+        <form  >
           <label id='email'>
-            <input type="text" name="Email address" value={this.state.email} onChange={this.update('email')}/>
+            <input type="text" name="Email address" value={this.email} onChange={this.update('email')}/>
+            
           </label>
           <br />
           <label id='fname'>
@@ -42,6 +44,8 @@ class Signup extends React.Component {
             <input type="password" value={this.state.password} onChange={this.update('password')}/>
             <p>Your password must be at least 8 characters</p>
           </label>
+
+          <button onClick={this.handleClick}>Sign Up</button>
         
         </form>
       </div>)

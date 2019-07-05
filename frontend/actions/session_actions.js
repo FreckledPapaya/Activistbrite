@@ -1,7 +1,7 @@
 import * as SessionUtil from '../utils/session_util';
 
 export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
-// export const RECEIVE_USERS = 'RECEIVE_USERS';
+export const RECEIVE_EMAIL = 'RECEIVE_EMAIL';
 export const LOGOUT_CURRENT_USER = 'LOGOUT_CURRENT_USER';
 
 const receiveUser = (user) => ({
@@ -9,10 +9,10 @@ const receiveUser = (user) => ({
   user
 });
 
-// const receiveUsers = (users) => ({
-//   type: RECEIVE_USERS,
-//   users
-// });
+const receiveEmail = (user) => ({
+  type: RECEIVE_EMAIL,
+  user
+});
 
 const logoutCurrentUser = () => ({
   type: LOGOUT_CURRENT_USER
@@ -23,7 +23,7 @@ export const createUser = (formUser) => dispatch => {
 };
 
 export const fetchUser = (email) => dispatch => {
-  return SessionUtil.fetchUser(email).then(user => dispatch(receiveUser(user)));
+  return SessionUtil.fetchUser(email).then(user => dispatch(receiveEmail(user)));
 };
 
 export const loginUser = (formUser) => dispatch => {

@@ -4,6 +4,7 @@ class Login extends React.Component {
   constructor(props) {
     super(props);
     this.state = this.props.user;
+    this.email = this.props.email;
     // this.handleSumbit = this.handleSumbit.bind(this);
   }
 
@@ -29,7 +30,7 @@ class Login extends React.Component {
 
         <form>
           <label id='email'>
-            <input type="text" name="Email address" value={this.state.email} onChange={this.update('email')} />
+            <input type="text" name="Email address" value={this.email} onChange={this.update('email')} />
           </label>
           <br />
           <label id='password'>

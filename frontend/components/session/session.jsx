@@ -26,13 +26,13 @@ class Session extends React.Component {
   receiveSigninProps (user) {
     this.setState({user: user});
     // let response;
-    this.props.fetchUser(user.email).then(promise => console.log(promise));
-    // console.log(response);
-    if (repsonse === ['Require Signup']) {
-      this.form = <Signup user={user} receiveSignupProps={this.receiveSignupProps} />;
-    } else {
+    const response = this.props.fetchUser(user.email);
+    console.log(`response: ${response}`);
+    // if (repsonse === ['Require Signup']) {
+    //   this.form = <Signup user={user} receiveSignupProps={this.receiveSignupProps} />;
+    // } else {
       this.form = <Login user={user} receiveLoginProps={this.receiveLoginProps} />;
-    }
+    // }
   }
 
   receiveLoginProps (props) {

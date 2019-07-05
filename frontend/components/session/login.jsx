@@ -27,14 +27,14 @@ class Login extends React.Component {
 
   render() {
     return (
-      <div className="login_container">
+      <div className="Login_container">
 
-        <div className="login_header">
+        <div className="Login_header">
         <h3>Welcome back</h3>
         <p>Please enter your password to log in.</p>
         </div>
 
-        <form className="login_form">
+        <form className="Login_form">
           <label id='email'>
             <input type="text" name="Email address" value={this.email} disabled />
           </label>
@@ -43,11 +43,10 @@ class Login extends React.Component {
             <input type="password" name="Password" value={this.state.password} onChange={this.update('password')} />
           </label>
           <br />
-
-          <button onClick={this.handleClick}>Log In</button>
-
-
         </form>
+
+        <button className="Session_button" id="session_submit"  onClick={this.handleClick}>Log In</button>
+        
       </div>)
   }
 }

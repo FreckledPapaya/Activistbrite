@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -10,26 +11,26 @@ class NavBar extends React.Component {
 
   handleLogout(e) {
     e.preventDefault();
-    
+    this.props.logout().then(() => this.props.history.push('/'));
+    // where to push?
   }
 
   handleSignin(e) {
     e.preventDefault();
-    
+    // redirect to sign in pages
   }
 
   render () {
     const button = this.currentUser ? (
       <button onClick={handleLogout}>Log out</button>
-
     ) : (
-        <button onClick={handleSignin}>Sign In</button>
+        <Link to='/signin'>Sign In</Link>
     )
   }
 
 
     return (
-      <div className="global_header">
+      <div className="Global_nav_bar">
         {button}
       </div>
     )

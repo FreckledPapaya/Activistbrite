@@ -26,14 +26,14 @@ class Signup extends React.Component {
 
   render() {
     return (
-      <div className="signup_container">
+      <div className="Signup_container">
 
-        <div className="signup_header">
+        <div className="Signup_header">
         <h3>Welcome</h3>
         <p>Create an account.</p>
         </div>
 
-        <form className="signup_form">
+        <form className="Signup_form">
           <label id='email'>
             <input type="text" name="Email address" value={this.email} disabled />
             
@@ -52,9 +52,10 @@ class Signup extends React.Component {
             <p>Your password must be at least 8 characters</p>
           </label>
           <br />
-          <button onClick={this.handleClick}>Sign Up</button>
-        
         </form>
+        
+        <button className="Session_button" onClick={this.handleClick}>Sign Up</button>
+        
       </div>)
   }
 }

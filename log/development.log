@@ -4549,3 +4549,10 @@ Processing by Api::UsersController#verify as JSON
 Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 1.5ms)
 
 
+Started GET "/" for ::1 at 2019-07-05 12:23:21 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 2377ms (Views: 2373.0ms | ActiveRecord: 0.0ms)
+
+

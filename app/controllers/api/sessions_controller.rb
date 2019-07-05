@@ -19,9 +19,8 @@ class Api::SessionsController < ApplicationController
     end 
   end
 
-  def delete
+  def destroy
+    debugger
     logout!
-    redirect_to new_session_url
-    # change to event index
   end 
 end

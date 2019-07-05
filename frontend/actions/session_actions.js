@@ -31,5 +31,5 @@ export const loginUser = (formUser) => dispatch => {
 };
 
 export const logoutUser = () => dispatch => {
-  return SessionUtil.deleteSession().then(() => dispatch(logoutUser()));
+  return SessionUtil.deleteSession().then(() => dispatch(logoutCurrentUser()));
 };

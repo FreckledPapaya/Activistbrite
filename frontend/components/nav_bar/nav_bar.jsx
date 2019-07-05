@@ -5,28 +5,25 @@ class NavBar extends React.Component {
   constructor(props) {
     super(props);
     this.handleLogout = this.handleLogout.bind(this);
-    this.handleSignin = this.handleSignin.bind(this);
-    this.currentUser = this.props.currentUser;
+    this.loggedIn = Boolean(this.props.currentUser);
   }
+  
 
   handleLogout(e) {
     e.preventDefault();
-    this.props.logout().then(() => this.props.history.push('/'));
+    this.props.logoutUser().then(() => this.props.history.push('/'));
     // where to push?
   }
 
-  handleSignin(e) {
-    e.preventDefault();
-    this.props.history.push('/signin');
-  }
-
   render () {
-    debugger
-    const button = this.currentUser ? (
-      <button onClick={handleLogout}>Log out</button>
-    ) : (
+    const button = this.loggedIn ? 
+      <button onClick={this.handleLogout}>Log out</button>
+     : 
+      <div>
         <Link to='/signin'>Sign In</Link>
-    )
+        <button onClick={this.handleLogout}>Log out</button>
+      </div>
+    
 
 
     return (

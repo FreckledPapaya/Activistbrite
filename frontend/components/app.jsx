@@ -4,12 +4,12 @@ import NavBarContainer from './nav_bar/nav_bar_container';
 // import components here
 
 import { Route } from 'react-router-dom';
-// AuthRoute/ProtectedRoute here
+import { AuthRoute, ProtectedRoute } from '../utils/route_util';
 
 export default () => (
   <div>
     <Route path="/" component={NavBarContainer} />
-    <Route path="/signin" component={SessionContainer} />
+    <AuthRoute path="/signin" component={SessionContainer} />
 
   </div>
 );

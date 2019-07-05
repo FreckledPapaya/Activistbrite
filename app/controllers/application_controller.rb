@@ -9,8 +9,9 @@ class ApplicationController < ActionController::Base
     private
 
     def current_user
-        @current_user = User.find_by(session_token: session[:session_token])
+        @current_user ||= User.find_by(session_token: session[:session_token])
     end
+    # make sure ||= to stop from regernating through multiple requests
 
     def logged_in?
         !!current_user
@@ -18,12 +19,14 @@ class ApplicationController < ActionController::Base
 
     def login!(user)
         session[:session_token] = user.reset_session_token!
+        # @current_user = user
     end
 
     def logout!
+        # debugger
+        current_user.reset_session_token!
         session[:session_token] = nil
-        user.session_token = User.generate_session_token
-        user.save!
+        # current_user = nil
     end
 
     def require_logged_in

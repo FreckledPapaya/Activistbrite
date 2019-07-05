@@ -1,5 +1,5 @@
-class API::UsersController < ApplicationController
-  before action :show, :require_logged_in
+class Api::UsersController < ApplicationController
+  # before action :show, :require_logged_in
 
   def verify
     @user = User.find_by(email: params[:email])

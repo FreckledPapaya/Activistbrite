@@ -9,9 +9,10 @@ export const createUser = (user) => {
 };
 
 export const fetchUser = (email) => {
+  debugger
   return $.ajax({
     method: 'GET',
-    url: `/api/users/${email}`
+    url: `/api/users/${email}/verify`
   });
 };
 

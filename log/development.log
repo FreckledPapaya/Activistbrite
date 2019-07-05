@@ -2616,3 +2616,174 @@ ArgumentError - wrong number of arguments (given 2, expected 1):
   app/controllers/api/users_controller.rb:2:in `<class:UsersController>'
   app/controllers/api/users_controller.rb:1:in `<top (required)>'
 
+Started GET "/" for ::1 at 2019-07-04 16:53:48 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 1429ms (Views: 1427.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/JanetSnakehole" for ::1 at 2019-07-04 16:54:26 -0700
+
+ArgumentError - wrong number of arguments (given 2, expected 1):
+  app/controllers/api/users_controller.rb:2:in `<class:UsersController>'
+  app/controllers/api/users_controller.rb:1:in `<top (required)>'
+
+Started GET "/" for ::1 at 2019-07-04 16:57:02 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 1195ms (Views: 1193.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/JanetSnakehole" for ::1 at 2019-07-04 16:58:32 -0700
+
+LoadError - Unable to autoload constant Api::UsersController, expected /Users/appacademy/Desktop/Activistbrite/app/controllers/api/users_controller.rb to define it:
+
+Started GET "/" for ::1 at 2019-07-04 16:58:38 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 2303ms (Views: 2302.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/JanetSnakehole" for ::1 at 2019-07-04 16:58:59 -0700
+
+LoadError - Unable to autoload constant Api::UsersController, expected /Users/appacademy/Desktop/Activistbrite/app/controllers/api/users_controller.rb to define it:
+
+Started GET "/" for ::1 at 2019-07-04 17:00:13 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 359ms (Views: 357.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/JanetSnakehole" for ::1 at 2019-07-04 17:00:22 -0700
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"JanetSnakehole"}
+  [1m[36mUser Load (51.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:43
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (6.0ms)
+Completed 500 Internal Server Error in 486ms (ActiveRecord: 112.1ms)
+
+
+
+SyntaxError - syntax error, unexpected ',', expecting &. or :: or '[' or '.'
+  json.extract! (@user, :id, :fname, :lname, :email)
+                           ^:
+  app/views/api/users/show.json.jbuilder:2:in `'
+  app/controllers/api/users_controller.rb:44:in `show'
+
+Started GET "/" for ::1 at 2019-07-04 17:01:52 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 231ms (Views: 229.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/JanetSnakehole" for ::1 at 2019-07-04 17:02:02 -0700
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"JanetSnakehole"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:43
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (60.6ms)
+Completed 500 Internal Server Error in 105ms (ActiveRecord: 2.0ms)
+
+
+
+NoMethodError - undefined method `email' for nil:NilClass:
+  app/views/api/users/show.json.jbuilder:2:in `_app_views_api_users_show_json_jbuilder__3541162988313170222_70205004573920'
+  app/controllers/api/users_controller.rb:44:in `show'
+
+Started GET "/" for ::1 at 2019-07-04 17:03:19 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 975ms (Views: 974.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/JanetSnakehole/verify" for ::1 at 2019-07-04 17:03:35 -0700
+Processing by Api::UsersController#verify as JSON
+  Parameters: {"email"=>"JanetSnakehole"}
+  [1m[36mUser Load (19.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "JanetSnakehole"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+Completed 200 OK in 236ms (Views: 34.6ms | ActiveRecord: 49.1ms)
+
+
+Started GET "/" for ::1 at 2019-07-04 17:04:29 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 953ms (Views: 952.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/JanetSnakehole/verify" for ::1 at 2019-07-04 17:04:38 -0700
+Processing by Api::UsersController#verify as JSON
+  Parameters: {"email"=>"JanetSnakehole"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "JanetSnakehole"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+Completed 200 OK in 5ms (Views: 1.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2019-07-04 17:04:44 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 181ms (Views: 179.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/JanetSnakehole/verify" for ::1 at 2019-07-04 17:04:55 -0700
+Processing by Api::UsersController#verify as JSON
+  Parameters: {"email"=>"JanetSnakehole"}
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "JanetSnakehole"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+Completed 200 OK in 10ms (Views: 1.1ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/" for ::1 at 2019-07-04 17:05:42 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 1198ms (Views: 1196.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/JanetSnakehole/verify" for ::1 at 2019-07-04 17:05:56 -0700
+Processing by Api::UsersController#verify as JSON
+  Parameters: {"email"=>"JanetSnakehole"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "JanetSnakehole"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+Completed 200 OK in 5ms (Views: 0.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-04 17:07:17 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 1528ms (Views: 1527.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/JanetSnakehole/verify" for ::1 at 2019-07-04 17:07:28 -0700
+Processing by Api::UsersController#verify as JSON
+  Parameters: {"email"=>"JanetSnakehole"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "JanetSnakehole"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+Completed 200 OK in 7ms (Views: 1.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2019-07-04 17:09:29 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 1556ms (Views: 1552.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/JanetSnakehole/verify" for ::1 at 2019-07-04 17:09:40 -0700
+Processing by Api::UsersController#verify as JSON
+  Parameters: {"email"=>"JanetSnakehole"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "JanetSnakehole"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+Completed 200 OK in 5ms (Views: 0.8ms | ActiveRecord: 1.4ms)
+
+

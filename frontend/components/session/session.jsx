@@ -13,28 +13,6 @@ class Session extends React.Component {
     
   }
 
-  // update(field) {
-  //   return (e) => {
-  //     this.setState({[field]: e.target.value});
-  //   };
-  // }
-
-  // handleClick(e) {
-  //   e.preventDefault();
-  //   if (this.formType === 'Signin') {
-  //     if (this.findUser(this.state.email)) {
-  //       this.form = <Login user={this.state} buttonName={this.buttonName} />;
-  //     } 
-  //     else {
-  //       this.props.formType = 'Signup';
-  //       this.props.buttonName = 'Sign Up';
-  //     }
-  //   } else  if (this.formType === 'Signup'){
-  //     this.props.createUser(this.state).then(() => this.props.history.push('/'));
-  //   }
-  //   this.render();
-  // }
-
   findUser(email) {
     let thisUser = null;
     mappedUsers.forEach(user => {
@@ -47,14 +25,21 @@ class Session extends React.Component {
 
   receiveSigninProps (user) {
     this.setState({user: user});
-    let response = this.props.fetchUser(user.email);
-    console.log(`response: ${response}`);
-    // if (this.findUser(user.email)) {
+    // let response;
+    this.props.fetchUser(user.email).then(promise => console.log(promise));
+    // console.log(response);
+    if (repsonse === ['Require Signup']) {
+      this.form = <Signup user={user} receiveSignupProps={this.receiveSignupProps} />;
+    } else {
       this.form = <Login user={user} receiveLoginProps={this.receiveLoginProps} />;
-    // }
+    }
   }
 
   receiveLoginProps (props) {
+
+  }
+
+  receiveSignupProps (props) {
 
   }
   

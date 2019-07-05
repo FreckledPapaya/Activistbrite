@@ -31,17 +31,19 @@ class Session extends React.Component {
   }
 
   receiveLoginProps (user) {
-
+    this.state = user;
+    this.props.loginUser(this.state).then(() => this.props.history.push('/'));
   }
 
   receiveSignupProps (user) {
-
+    this.setState({ user: user });
+    this.props.createUser(this.state).then(() => this.props.history.push('/'));
   }
   
   render() { 
     return (
       <div>
-        <main classaName="Session_container">
+        <main className="Session_container">
         {this.form} 
         </main>
       </div>

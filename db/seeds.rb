@@ -8,7 +8,7 @@
 
 User.destroy_all
 
-
+demo_user = User.create(email: "demouser@demo.com", password: "password")
 user_1 = User.create(email: "EnviroNerd", password: "password")
 user_2 = User.create(email: "RightsForAll", password: "password")
 user_3 = User.create(email: "JanetSnakehole", password: "password")

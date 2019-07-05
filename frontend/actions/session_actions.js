@@ -27,7 +27,7 @@ export const fetchUser = (email) => dispatch => {
 };
 
 export const loginUser = (formUser) => dispatch => {
-  return SessionUtil.createUser(formUser).then(user => dispatch(receiveUser(user)));
+  return SessionUtil.createSession(formUser).then(user => dispatch(receiveUser(user)));
 };
 
 export const logoutUser = () => dispatch => {

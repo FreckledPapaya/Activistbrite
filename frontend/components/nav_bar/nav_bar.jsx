@@ -17,16 +17,16 @@ class NavBar extends React.Component {
 
   handleSignin(e) {
     e.preventDefault();
-    // redirect to sign in pages
+    this.props.history.push('/signin');
   }
 
   render () {
+    debugger
     const button = this.currentUser ? (
       <button onClick={handleLogout}>Log out</button>
     ) : (
         <Link to='/signin'>Sign In</Link>
     )
-  }
 
 
     return (
@@ -37,6 +37,7 @@ class NavBar extends React.Component {
   }
 }
 
+export default NavBar
 // eventbrite logo links to root
 // sign in button/sign out button
 // add create event button with feature

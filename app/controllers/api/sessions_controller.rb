@@ -1,4 +1,4 @@
-class API::SessionsController < ApplicationController
+class Api::SessionsController < ApplicationController
   def new
     @user = User.new
     render :new
@@ -12,11 +12,10 @@ class API::SessionsController < ApplicationController
 
     if @user
       login!(@user)
-      redirect_to user_url(@user)
-      # change to events index
+      render json: @user
     else  
       flash.now[:errors] = ["Invalid email/password"]
-      render :new
+      render json: flash[:errors]
     end 
   end
 

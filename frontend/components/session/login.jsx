@@ -27,14 +27,14 @@ class Login extends React.Component {
 
   render() {
     return (
-      <div className="Login_container">
+      <div className="login_container">
 
-        <div className="Login_header">
+        <div className="login_header">
         <h3>Welcome back</h3>
         <p>Please enter your password to log in.</p>
         </div>
 
-        <form className="Login_form">
+        <form className="login_form">
           <label id='email'>
             <input type="text" name="Email address" value={this.email} disabled />
           </label>

@@ -42,10 +42,16 @@ class Session extends React.Component {
   
   render() { 
     return (
-      <div>
-        <main className="Session_container">
-        {this.form} 
+      <div className="session">
+        <main className="session_main">
+          <div className="session_form_vert">
+            <div classNAme="session_form">
+              {this.form} 
+            </div>
+          </div>
+            
         </main>
+        <footer className="session_footer"></footer>
       </div>
     )
   }

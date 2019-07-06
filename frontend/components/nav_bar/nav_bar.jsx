@@ -7,7 +7,6 @@ class NavBar extends React.Component {
     this.handleLogout = this.handleLogout.bind(this);
     this.loggedIn = Boolean(this.props.currentUser);
   }
-  
 
   handleLogout(e) {
     e.preventDefault();
@@ -17,18 +16,21 @@ class NavBar extends React.Component {
 
   render () {
     const button = this.loggedIn ? 
+
       <button onClick={this.handleLogout}>Log out</button>
      : 
-      <div>
-        <Link to='/signin'>Sign In</Link>
-        <button onClick={this.handleLogout}>Log out</button>
-      </div>
-    
-
+      <Link to='/signin'>Sign In</Link>
 
     return (
-      <div className="Global_nav_bar">
-        {button}
+      <div className="global_nav_bar">
+        <div className="logo">
+          Logo here
+        </div>
+        <div className="navbar_buttons">
+          <div className="session_buttons">
+            {button}
+          </div>
+        </div>
       </div>
     )
   }

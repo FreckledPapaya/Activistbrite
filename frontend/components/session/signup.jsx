@@ -26,14 +26,14 @@ class Signup extends React.Component {
 
   render() {
     return (
-      <div className="Signup_container">
+      <div className="signup_container">
 
-        <div className="Signup_header">
+        <div className="signup_header">
         <h3>Welcome</h3>
         <p>Create an account.</p>
         </div>
 
-        <form className="Signup_form">
+        <form className="signup_form">
           <label id='email'>
             <input type="text" name="Email address" value={this.email} disabled />
             
@@ -54,7 +54,7 @@ class Signup extends React.Component {
           <br />
         </form>
         
-        <button className="Session_button" onClick={this.handleClick}>Sign Up</button>
+        <button className="session_button" onClick={this.handleClick}>Sign Up</button>
         
       </div>)
   }

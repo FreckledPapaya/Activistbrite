@@ -2,44 +2,44 @@
 //   display: block
 // }
 
-.session {
-  height: 100%;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  flex-direction: column;
-  -webkit-box-pack: justify;
-  justify-content: space-between;
+// .session {
+//   height: 100%;
+//   width: 100%;
+//   padding: 0;
+//   margin: 0;
+//   display: flex;
+//   -webkit-box-orient: vertical;
+//   -webkit-box-direction: normal;
+//   flex-direction: column;
+//   -webkit-box-pack: justify;
+//   justify-content: space-between;
 
-}
+// }
 
-.session_main {
-  background-color: pink;
-  max-width: 960px;
-  -webkit-box-flex: 1;
-  flex: 1 0 auto;
-  position: relative;
-  align-self: center;
-  width: 100%;
-}
+// .session_main {
+//   background-color: pink;
+//   max-width: 960px;
+//   -webkit-box-flex: 1;
+//   flex: 1 0 auto;
+//   position: relative;
+//   align-self: center;
+//   width: 100%;
+// }
 
-.session_form_vert {
-    background-color: white;
+// .session_form_vert {
+//     background-color: white;
 
-  margin-top: 56px;
-  margin-bottom: 56px;
-  display: flex;
-  justify-content: center;
-}
+//   margin-top: 56px;
+//   margin-bottom: 56px;
+//   display: flex;
+//   justify-content: center;
+// }
 
-.session_form {
-  overflow: visible;
-  width: 50%;
-}
+// .session_form {
+//   overflow: visible;
+//   width: 50%;
+// }
 
-.session_footer {
+// .session_footer {
 
-}
+// }

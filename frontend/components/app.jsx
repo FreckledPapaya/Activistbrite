@@ -15,6 +15,4 @@ export default () => (
     <Route path="/" component={FooterContainer} /> 
   </div>
 );
-
-// <Route exact path="/signin/signup" component={SignupContainer} />
-//   <Route exact path="/signin/login" component={LoginContainer} />
+ 

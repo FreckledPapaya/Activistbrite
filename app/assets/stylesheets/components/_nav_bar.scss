@@ -1,0 +1,48 @@
+.header_container {
+    height: 59px;
+    border-bottom: 1px solid #eeedf2;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: rgb(238, 237, 242);
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-box-direction: normal;
+    justify-content: space-between;
+    position: relative;
+    letter-spacing: normal;
+    font-size: 14px;
+    background-color: #fff;
+}
+
+// header {
+//     display: flexbox;
+//     overflow: overlay;
+// }
+
+
+.logo_index { 
+    -webkit-box-flex: 1; 
+    flex: 1;
+    -webkit-box-align: center; 
+    align-items: center; 
+    display: flex;
+    -webkit-box-pack: justify; 
+    justify-content: space-between;
+    
+}
+
+.global_nav_bar { 
+    -webkit-box-align: center; 
+    align-items: center; 
+    display: flex;
+    -webkit-box-pack: justify; 
+    justify-content: space-between;
+}
+ 
+.signin_button {
+    -webkit-box-align: center; 
+    align-items: center; 
+    display: flex;
+    -webkit-box-pack: justify; 
+    justify-content: space-between;
+}

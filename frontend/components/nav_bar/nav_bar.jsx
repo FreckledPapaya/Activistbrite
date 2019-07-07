@@ -16,21 +16,25 @@ class NavBar extends React.Component {
 
   render () {
     const button = this.loggedIn ? 
-
-      <button onClick={this.handleLogout}>Log out</button>
+      <div className="dropdown_profile">
+        <button onClick={this.handleLogout}>Log out</button>  
+      </div>
+      // change to dropdown menu of person img
      : 
-      <Link to='/signin'>Sign In</Link>
+     <div className="signin_button">
+       <Link to='/signin'>
+         <span>Sign In</span>
+      </Link> 
+     </div>
 
     return (
-      <div className="global_nav_bar">
-        <div className="logo">
-          Logo here
-        </div>
-        <div className="navbar_buttons">
-          <div className="session_buttons">
-            {button}
+      <div className="header_container"> 
+          <div className="logo_index">
+            Logo here
           </div>
-        </div>
+          <div className="global_nav_bar">  
+            {button} 
+          </div> 
       </div>
     )
   }

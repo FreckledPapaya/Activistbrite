@@ -5,6 +5,18 @@ p, pre, td, textarea, th, ul {
   padding: 0;
 }
 
+#root {
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  background-color: #fff;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+}
+
 header, footer, main, div {
   display: block;
   // border: solid;

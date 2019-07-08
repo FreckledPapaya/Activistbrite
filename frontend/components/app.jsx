@@ -8,7 +8,7 @@ import { Route } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../utils/route_util';
 
 export default () => (
-  <div>
+  <div id="root">
     <Route path="/" component={NavBarContainer} />
     <AuthRoute path="/signin" component={SessionContainer} />
 

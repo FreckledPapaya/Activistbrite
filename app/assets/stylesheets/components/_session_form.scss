@@ -1,8 +1,8 @@
 .main_container {
     position: relative;
     -webkit-box-flex: 1;
-    overflow: hidden;
-    // change to overflow-y: auto;?
+    overflow-x: hidden;
+    overflow-y: auto; 
     box-sizing: border-box;
     flex: 1; 
     height: 100%; 

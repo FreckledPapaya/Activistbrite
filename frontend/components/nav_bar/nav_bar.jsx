@@ -29,12 +29,18 @@ class NavBar extends React.Component {
 
     return (
       <div className="header_container"> 
-          <div className="logo_index">
-            Logo here
-          </div>
-          <div className="global_nav_bar">  
-            {button} 
-          </div> 
+        <div className="header_major">
+          <Link to="/" className="logo_index_link">
+            <div className="logo_index_img_container"> 
+              <div className="logo_index_img"> 
+                <img src={window.location.origin + '/eventbrite_e_logo.png'} alt=""/>
+              </div>
+            </div> 
+          </Link>
+        </div>
+        <div className="global_nav_bar">  
+          {button} 
+        </div>  
       </div>
     )
   }

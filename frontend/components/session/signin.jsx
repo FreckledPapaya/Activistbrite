@@ -21,13 +21,13 @@ class Signin extends React.Component {
 
   render() {
     return (
-      <div className="signin_container">
+      <div className="ssession_form_container">
 
         <div className="session_form_header" id="signin_header">
-          <div className="form_logo">
+          <div className="session_form_logo">
             Logo here
           </div>
-          <div className="form_text">
+          <div className="session_form_text">
             <h3>Let's get started</h3>
             <p>Use email to get started.</p>
           </div>

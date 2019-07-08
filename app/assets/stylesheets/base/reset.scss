@@ -10,12 +10,12 @@ html, body, header, nav, main, button, div, input {
   padding: 0;
   border: 0;
   outline: 0;
-  font: inherit;
-  color: inherit;
-  text-align: inherit;
-  text-decoration: inherit;
-  vertical-align: inherit;
-  box-sizing: inherit;
+  // font: inherit;
+  // color: inherit;
+  // text-align: inherit;
+  // text-decoration: inherit;
+  // vertical-align: inherit;
+  // box-sizing: inherit;
   background: transparent;
 }
 
@@ -29,25 +29,25 @@ img {
   height: auto;
 }
 
-// input[type="password"],
-// input[type="email"],
-// input[type="text"],
-// input[type="submit"],
-// textarea,
-// button {
-//   /*
-//   Get rid of native styling. Read more here:
-//   http://css-tricks.com/almanac/properties/a/appearance/
-//   */
-//   -webkit-appearance: none;
-//   -moz-appearance: none;
-//   appearance: none;
-// }
+input[type="password"],
+input[type="email"],
+input[type="text"],
+input[type="submit"],
+textarea,
+button {
+  /*
+  Get rid of native styling. Read more here:
+  http://css-tricks.com/almanac/properties/a/appearance/
+  */
+  -webkit-appearance: button;
+  -moz-appearance: none;
+  appearance: none;
+}
 
-// button,
-// input[type="submit"] {
-//   cursor: pointer;
-// }
+button,
+input[type="submit"] {
+  cursor: pointer;
+}
 
 /* Clearfix */
 

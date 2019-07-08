@@ -10,8 +10,27 @@ body {
     font-size: 16px;
 } 
 
-.session_form_center_layout, .session_form_header, .session_form_logo{
+.session_form_center_layout, .session_form_header, .session_form_logo,
+.session_form_container {
     font-size: 14px;
     line-height: 22px;
     font-weight: 400;
+}
+
+.session_form_text_lg {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    letter-spacing: .25px;
+    margin-right: -.25px;
+    font-weight: 700;
+    color: var(--eds-ui-900,#1e0a3c);
+    // text-rendering: optimizeLegibility;
+}
+
+.session_form_text_sm {
+    color: #6f7287;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
 }

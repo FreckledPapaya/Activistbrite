@@ -25,26 +25,38 @@ class Signin extends React.Component {
 
         <div className="session_form_header" id="signin_header">
           <div className="session_form_logo">
-            Logo here
+            <i className="session_form_logo_i">
+              <img src="" alt=""/>
+              Logo here
+            </i>
           </div>
-          <div className="session_form_text">
-            <h3>Let's get started</h3>
+          <div className="session_form_text_lg">
+            <h3>Let's get started</h3> 
+          </div>
+          <div className="session_form_text_sm"> 
             <p>Use email to get started.</p>
           </div>
         </div>
 
-        <form className="session_form" id="signin_form">
-          <div className="session_input" id="signin_email_input">
-            <label id='email'>
-              <input type="text" name="Email address" value={this.state.email} onChange={this.update('email')} />
-            </label>
-          </div>
-          <div className="session_submit_button">
-            <button className="button_session_submit" onClick={this.handleClick}>
-              Get Started
-            </button>
-          </div>
-        </form>
+        <div className="session_form_container" id="signin_form">
+          <form className="session_form">
+            <div className="session_input_container" id="signin_input">
+              <div className="session_input_item_internal">
+                <div className="session_input_label_wrapper">
+                  <label id='email'>Email address</label>
+                </div>
+                <div className="session_input_field_wrapper"> 
+                    <input type="email" name="Email address" value={this.state.email} onChange={this.update('email')} />
+                </div>
+              </div>
+            </div>
+            <div className="session_submit_button">
+              <button className="button_session_submit" onClick={this.handleClick}>
+                Get Started
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     )
   }

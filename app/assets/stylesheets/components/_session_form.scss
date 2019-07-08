@@ -58,22 +58,122 @@ main { }
   background-color: #fff;
   margin-bottom: 24px;
   // animation styling here
-  text-align: center;
-
+  text-align: center; 
 }
 
 .session_form_logo_img {
-    //   display: inline-block;
-    // margin: 0 auto;
-    // vertical-align: middle;
-    // background-size: contain;
-    // line-height: 0; 
-    // width: 48px;
-    // height: 48px;
-    //     text-align: center;
+    display: inline-block;
+    margin: 0 auto;
+    vertical-align: middle;
+    background-size: contain;
+    line-height: 0; 
+    width: 48px;
+    height: 48px;
+    text-align: center;
 
 }
 
-.session_form_text{}
+.session_form_text_lg{
+    margin-bottom: 8px;
+    text-align: center;
 
-.session_form{}
+}
+
+.session_form_text_sm{
+    margin-bottom: 32px;
+    margin-left: 12px;
+    margin-right: 12px;
+    letter-spacing: 0;
+
+}
+
+.session_form_container { 
+
+}
+
+.session_form { 
+
+}
+ 
+.session_input_container {
+    margin-bottom: 24px;
+        // margin-bottom: 8px; 
+    border-radius: 2px; 
+    background: var(--eds-ui-300,#dbdae3);
+    padding: 1px;
+    position: relative;
+    transition: background .24s cubic-bezier(.4,0,.3,1);
+    transition-property: background;
+    transition-duration: 0.24s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.3, 1);
+    transition-delay: 0s;
+}
+
+.session_input_item_internal {
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal; 
+    flex-direction: row;
+    position: relative;
+    background: var(--eds-background,#fff);
+    border-radius: 1px; 
+    border: 1px solid var(--eds-background,#fff);
+} 
+
+.session_input_label_wrapper {
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;
+    width: 100%; 
+    box-sizing: border-box;
+    padding: 2px 12px 0;
+}
+
+label#email {
+    color: var(--eds-ui-600,#6f7287);
+    font-size: 12px;
+    line-height: 22px;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+input[type="email"] {  
+    padding: 18px 12px 6px;
+    font-size: 14px;
+    line-height: 22px;
+    background: none;
+    border: none;
+    color: #39364f; 
+    outline: none;
+    -webkit-box-flex: 1;
+    flex: 1;
+    min-width: 0;
+}
+
+.session_submit_button {
+    
+}
+
+.button_session_submit {
+    display: block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    color: #fff; 
+    fill: #fff;
+    border-color: #d1410c; 
+    background-color: #d1410c;
+    transform: translateZ(0);
+    position: relative;
+    height: 44px;
+    padding: 0 30px 1px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 24px;
+    font-weight: 600;
+    letter-spacing: .2px;
+    overflow: visible;
+
+     
+}

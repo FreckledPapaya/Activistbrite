@@ -42,7 +42,12 @@
 .signin_button {
     -webkit-box-align: center; 
     align-items: center; 
+    white-space: nowrap;
+    height: 59px;
     display: flex;
     -webkit-box-pack: justify; 
     justify-content: space-between;
+    // text-decoration: none;
+    color: #6f7287;
+    background-color: transparent;
 }

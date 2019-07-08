@@ -1,4 +1,26 @@
-.copyright_container {
-    background-color: purple;
-    color: white;
+.global_footer_container {
+    width: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0;
+    letter-spacing: 0;
+    background: #1e0a3c;
+    color: #dbdae3;
+
+} 
+
+.copyright_container{
+    font-size: 12px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+    // padding: 16px 0; 
+    padding-top: 16px;
+    padding-bottom: 16px;
+    color: #6f7287;
 }

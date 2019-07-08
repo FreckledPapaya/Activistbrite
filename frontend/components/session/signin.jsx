@@ -21,7 +21,7 @@ class Signin extends React.Component {
 
   render() {
     return (
-      <div className="ssession_form_container">
+      <div className="session_container">
 
         <div className="session_form_header" id="signin_header">
           <div className="session_form_logo">
@@ -44,10 +44,8 @@ class Signin extends React.Component {
               <div className="session_input_item_internal">
                 <div className="session_input_label_wrapper">
                   <label id='email'>Email address</label>
-                </div>
-                <div className="session_input_field_wrapper"> 
-                    <input type="email" name="Email address" value={this.state.email} onChange={this.update('email')} />
-                </div>
+                </div> 
+                  <input type="email" name="Email address" value={this.state.email} onChange={this.update('email')} /> 
               </div>
             </div>
             <div className="session_submit_button">

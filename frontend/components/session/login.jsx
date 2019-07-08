@@ -27,23 +27,43 @@ class Login extends React.Component {
 
   render() {
     return (
-      <div className="login_container">
+      <div className="session_container">
 
-        <div className="login_header">
-        <h3>Welcome back</h3>
-        <p>Please enter your password to log in.</p>
+        <div className="session_form_header">
+          <div className="session_form_logo">
+            <i className="session_form_logo_i">
+              <img src="" alt="" />
+              Logo here
+            </i>
+          </div>
+          <div className="session_form_text_lg">
+            <h3>Welcome Back</h3>
+          </div>
+          <div className="session_form_text_sm">
+            <p>Please enter your password to log in.</p>
+          </div>
         </div>
 
-        <form className="login_form">
-          <label id='email'>
-            <input type="text" name="Email address" value={this.email} disabled />
-          </label>
-          <br />
-          <label id='password'>
-            <input type="password" name="Password" value={this.state.password} onChange={this.update('password')} />
-          </label>
-          <br />
-        </form>
+        <div className="session_form_container" id="login_form">
+          <form className="session_form">
+            <div className="session_input_container" id="signin_input">
+              <div className="session_input_item_internal">
+                <div className="session_input_label_wrapper">
+                  <label id='email'>
+                  </label>
+                </div>
+                <input type="text" name="Email address" value={this.email} disabled />
+              </div>
+              <div className="session_input_item_internal"> 
+                  <div className="session_input_label_wrapper">
+                    <label id='password'>
+                    </label>
+                  </div>
+                  <input type="password" name="Password" value={this.state.password} onChange={this.update('password')} />
+              </div> 
+            </div> 
+          </form>
+        </div>
 
         <button className="Session_button" id="session_submit"  onClick={this.handleClick}>Log In</button>
         

@@ -26,6 +26,7 @@ class Session extends React.Component {
   receiveSigninProps (user) {
     this.setState({user: user}); 
     this.props.fetchUser(user.email).then(() => {
+      this.props.history.push('/signin');
       this.switchComponent();
     });  
   }

@@ -68,7 +68,7 @@ main { }
 //     width: 33.33333%;
 // }
 
-.session_form_container{ }
+.session_container{ }
 
 .session_form_header{
   text-align: center; 
@@ -147,7 +147,7 @@ main { }
     width: 100%; 
     box-sizing: border-box;
     padding: 2px 12px 0;
-}
+} 
 
 label#email {
     color: var(--eds-ui-600,#6f7287);

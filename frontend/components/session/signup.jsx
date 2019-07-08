@@ -26,35 +26,59 @@ class Signup extends React.Component {
 
   render() {
     return (
-      <div className="signup_container">
+      <div className="session_container">
 
-        <div className="signup_header">
-        <h3>Welcome</h3>
-        <p>Create an account.</p>
+        <div className="session_form_header">
+          <div className="session_form_logo">
+            <i className="session_form_logo_i">
+              <img src="" alt="" />
+              Logo here
+            </i>
+          </div>
+          <div className="session_form_text_lg">
+            <h3>Welcome</h3>
+          </div>
+          <div className="session_form_text_sm">
+            <p>Create an account.</p>
+          </div> 
         </div>
 
-        <form className="signup_form">
-          <label id='email'>
+        <div className="session_form_container">
+          <div className="session_imput_email_disabled"> 
+            <label id='email'>Email Address</label>
             <input type="text" name="Email address" value={this.email} disabled />
-            
-          </label>
-          <br />
-          <label id='fname'>
-            <input type="text" value={this.state.fname} onChange={this.update('fname')}/>
-          </label>
-          <br />
-          <label id='lname'>
-            <input type="text" value={this.state.lname} onChange={this.update('lname')}/>
-          </label>
-          <br />
-          <label id='password'>
-            <input type="password" value={this.state.password} onChange={this.update('password')}/>
-            <p>Your password must be at least 8 characters</p>
-          </label>
-          <br />
-        </form>
+          </div>
+
+          <form className="session_form">
+            <div className="session_input_container" id="signup_input">
+              <div className="session_input_item_internal"> 
+                <div className="session_input_label_wrapper">
+                  <label id='fname'>First Name</label> 
+                </div>
+                <input type="text" value={this.state.fname} onChange={this.update('fname')} />
+                
+                <div className="session_input_label_wrapper"> 
+                  <label id='lname'>Last Name</label>
+                </div>
+                <input type="text" value={this.state.lname} onChange={this.update('lname')}/>
+
+              </div>
+
+              <div className="session_input_item_internal">  
+                <div className="session_input_label_wrapper">
+                  <label id='password'>Password</label>
+                </div>
+                <input type="password" value={this.state.password} onChange={this.update('password')}/>
+                <p>Your password must be at least 8 characters</p>
+              </div>
+            </div>        
+            <div className="session_button_submit">
+              <button className="button_session_submit" onClick={this.handleClick}>Sign Up</button>
+            </div>
+          </form> 
+     
+        </div>
         
-        <button className="session_button" onClick={this.handleClick}>Sign Up</button>
         
       </div>)
   }

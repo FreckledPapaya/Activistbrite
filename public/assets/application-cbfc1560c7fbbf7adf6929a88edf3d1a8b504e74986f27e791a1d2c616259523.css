@@ -1,0 +1,478 @@
+/* line 1, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/base/fonts.scss */
+body {
+  font-family: Neue Plak,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  color: #39364f;
+  color: var(--eds-ui-800, #39364f);
+}
+
+/* line 9, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/base/fonts.scss */
+#root {
+  font-size: 16px;
+}
+
+/* line 13, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/base/fonts.scss */
+.session_form_center_layout, .session_form_header, .session_form_logo,
+.session_form_container {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+/* line 20, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/base/fonts.scss */
+.session_form_text_lg {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  letter-spacing: .25px;
+  margin-right: -.25px;
+  font-weight: 700;
+  color: var(--eds-ui-900, #1e0a3c);
+}
+
+/* line 30, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/base/fonts.scss */
+.session_form_text_sm {
+  color: #6f7287;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+}
+
+/* line 38, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/base/fonts.scss */
+.button_session_submit, .signin_button, .dropdown_profile {
+  letter-spacing: normal;
+  font-size: 14px;
+}
+/* line 1, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/base/layout.scss */
+blockquote, body, dd, div, dl, dt, fieldset,
+form, h1, h2, h3, h4, h5, h6, input, li, ol,
+p, pre, td, textarea, th, ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 8, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/base/layout.scss */
+#root {
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  background-color: #fff;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* line 20, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/base/layout.scss */
+header, footer, main, div {
+  display: block;
+}
+/* zero out everything!!! */
+/* line 8, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/base/reset.scss */
+html, body, header, nav, main, button, div, input, a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+}
+
+/* line 22, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/base/reset.scss */
+ul {
+  list-style: none;
+}
+
+/* line 26, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/base/reset.scss */
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* line 32, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/base/reset.scss */
+input[type="password"],
+input[type="email"],
+input[type="text"],
+input[type="submit"],
+textarea,
+button {
+  /*
+  Get rid of native styling. Read more here:
+  http://css-tricks.com/almanac/properties/a/appearance/
+  */
+  -webkit-appearance: button;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* line 47, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/base/reset.scss */
+button,
+input[type="submit"] {
+  cursor: pointer;
+}
+
+/* Clearfix */
+/* line 1, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_footer.scss */
+.global_footer_container {
+  width: 100%;
+  height: 59px;
+  padding-left: 24px;
+  padding-right: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0;
+  letter-spacing: 0;
+  background: #1e0a3c;
+  color: #dbdae3;
+}
+
+/* line 15, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_footer.scss */
+.copyright_container {
+  font-size: 12px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  color: #6f7287;
+}
+/* line 1, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_nav_bar.scss */
+.header_container {
+  height: 59px;
+  z-index: 600;
+  border-bottom: 1px solid #eeedf2;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #eeedf2;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-box-direction: normal;
+  justify-content: space-between;
+  position: relative;
+  letter-spacing: normal;
+  font-size: 14px;
+  background-color: #fff;
+}
+
+/* line 18, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_nav_bar.scss */
+.header_major {
+  -webkit-box-flex: 1;
+  flex: 1;
+  -webkit-box-align: center;
+  align-items: center;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+
+/* line 28, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_nav_bar.scss */
+.logo_index_link {
+  display: flex;
+  -webkit-box-flex: 0;
+  flex: none;
+  -webkit-box-align: center;
+  align-items: center;
+  height: 59px;
+}
+
+/* line 37, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_nav_bar.scss */
+.logo_index_img_container {
+  height: 20px;
+  width: 99px;
+  margin: 0;
+  padding: 0 24px;
+  vertical-align: middle;
+  background-size: contain;
+  line-height: 0;
+}
+
+/* line 47, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_nav_bar.scss */
+.logo_index_img {
+  height: 100%;
+  width: 100%;
+}
+
+/* line 52, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_nav_bar.scss */
+.global_nav_bar {
+  -webkit-box-align: center;
+  align-items: center;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  letter-spacing: normal;
+  font-size: 14px;
+}
+
+/* line 62, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_nav_bar.scss */
+.signin_button, .dropdown_profile {
+  padding: 0 20px;
+  -webkit-box-align: center;
+  align-items: center;
+  white-space: nowrap;
+  height: 59px;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  text-decoration: none;
+  color: #6f7287;
+  background-color: transparent;
+}
+/* line 1, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_session_form.scss */
+.main_container {
+  position: relative;
+  -webkit-box-flex: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+  box-sizing: border-box;
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  letter-spacing: normal;
+  font-size: 14px;
+}
+
+/* line 23, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_session_form.scss */
+.session_form_vert_layout {
+  margin-top: 56px;
+  margin-bottom: 56px;
+}
+
+@media (min-width: 480px) {
+  /* line 31, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_session_form.scss */
+  .session_form_center_layout {
+    margin-left: 16.66667%;
+    width: 66.66667%;
+  }
+}
+@media (min-width: 660px) {
+  /* line 38, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_session_form.scss */
+  .session_form_center_layout {
+    margin-left: 25%;
+    width: 50%;
+  }
+}
+@media (min-width: 960px) {
+  /* line 45, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_session_form.scss */
+  .session_form_center_layout {
+    margin-left: 33.33333%;
+    width: 33.33333%;
+  }
+}
+/* line 52, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_session_form.scss */
+.session_form_center_layout {
+  overflow: visible;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  letter-spacing: 0;
+}
+
+/* line 73, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_session_form.scss */
+.session_form_header {
+  text-align: center;
+}
+
+/* line 77, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_session_form.scss */
+.session_form_logo {
+  background-color: #fff;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+/* line 84, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_session_form.scss */
+.session_form_logo_img {
+  display: inline-block;
+  margin: 0 auto;
+  vertical-align: middle;
+  background-size: contain;
+  line-height: 0;
+  width: 48px;
+  height: 48px;
+  text-align: center;
+}
+
+/* line 96, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_session_form.scss */
+.session_form_text_lg {
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+/* line 102, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_session_form.scss */
+.session_form_text_sm {
+  margin-bottom: 32px;
+  margin-left: 12px;
+  margin-right: 12px;
+  letter-spacing: 0;
+}
+
+/* line 118, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_session_form.scss */
+.session_input_container {
+  margin-bottom: 24px;
+  border-radius: 2px;
+  background: var(--eds-ui-300, #dbdae3);
+  padding: 1px;
+  position: relative;
+  transition: background 0.24s cubic-bezier(0.4, 0, 0.3, 1);
+  transition-property: background;
+  transition-duration: 0.24s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.3, 1);
+  transition-delay: 0s;
+}
+
+/* line 132, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_session_form.scss */
+.session_input_item_internal {
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+  position: relative;
+  background: var(--eds-background, #fff);
+  border-radius: 1px;
+  border: 1px solid var(--eds-background, #fff);
+}
+
+/* line 143, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_session_form.scss */
+.session_input_label_wrapper {
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 2px 12px 0;
+}
+
+/* line 152, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_session_form.scss */
+label {
+  color: var(--eds-ui-600, #6f7287);
+  font-size: 12px;
+  line-height: 22px;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* line 161, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_session_form.scss */
+input[type="email"] {
+  padding: 18px 12px 6px;
+  font-size: 14px;
+  line-height: 22px;
+  background: none;
+  border: none;
+  color: #39364f;
+  outline: none;
+  -webkit-box-flex: 1;
+  flex: 1;
+  min-width: 0;
+}
+
+/* line 178, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_session_form.scss */
+.button_session_submit {
+  display: block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  color: #fff;
+  fill: #fff;
+  border-color: #d1410c;
+  background-color: #d1410c;
+  transform: translateZ(0);
+  position: relative;
+  height: 44px;
+  padding: 0 30px 1px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 24px;
+  font-weight: 600;
+  letter-spacing: .2px;
+  overflow: visible;
+}
+
+/* line 203, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_session_form.scss */
+.session_input_email_wrapper {
+  margin-top: 20px;
+  margin-bottom: 16px;
+}
+
+/* line 208, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_session_form.scss */
+.session_input_email_disabled {
+  margin-bottom: 8px;
+  background: #dbdae3;
+  border-radius: 2px;
+  padding: 1px;
+  position: relative;
+}
+
+/* line 217, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_session_form.scss */
+.session_input_email_label {
+  padding: 2px 12px 0;
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* line 230, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_session_form.scss */
+input[type="password"] {
+  padding: 18px 12px 6px;
+  font-size: 14px;
+  line-height: 22px;
+  background: none;
+  border: none;
+  color: #39364f;
+  color: var(--eds-ui-800, #39364f);
+  outline: none;
+  -webkit-box-flex: 1;
+  flex: 1;
+  margin: 0;
+}
+
+/* line 245, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_session_form.scss */
+.session_btwn_button_text {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  display: block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  fill: #fff;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 0;
+  overflow: visible;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+
+ @import 'base/reset.scss';
+ @import 'base/layout.scss';
+ @import 'base/fonts.scss';
+
+ @import 'components/_session_form.scss';

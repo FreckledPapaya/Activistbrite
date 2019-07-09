@@ -12973,3 +12973,36 @@ Migrating to AddColumnToEvents (20190709204807)
 [ActiveJob] [ActiveStorage::AnalyzeJob] [e3112b7b-096e-4f87-b98a-199ebd1a07e8]   [1m[36mActiveStorage::Blob Update (1.1ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 1]]
 [ActiveJob] [ActiveStorage::AnalyzeJob] [e3112b7b-096e-4f87-b98a-199ebd1a07e8]   [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
 [ActiveJob] [ActiveStorage::AnalyzeJob] [e3112b7b-096e-4f87-b98a-199ebd1a07e8] Performed ActiveStorage::AnalyzeJob (Job ID: e3112b7b-096e-4f87-b98a-199ebd1a07e8) from Async(default) in 1040.05ms
+  [1m[36mEvent Load (1.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mEvent Load (1.6ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Destroy (1.8ms)[0m  [1m[31mDELETE FROM "events" WHERE "events"."id" = $1[0m  [["id", 2]]
+  [1m[35m (32.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveStorage::Attachment Load (1.0ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Event"], ["name", "image"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Destroy (0.5ms)[0m  [1m[31mDELETE FROM "events" WHERE "events"."id" = $1[0m  [["id", 3]]
+  [1m[35m (212.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveStorage::Attachment Load (1.8ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Event"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (10.0ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveStorage::Attachment Destroy (0.9ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = $1[0m  [["id", 1]]
+  [1m[35m (15.6ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] Enqueued ActiveStorage::PurgeJob (Job ID: 9ad8ee7a-0d5c-4ffc-9b46-164857483a07) to Async(default) with arguments: #<GlobalID:0x00007fa987f95f28 @uri=#<URI::GID gid://activistbrite/ActiveStorage::Blob/1>>
+  [1m[36mActiveStorage::Blob Load (1.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [9ad8ee7a-0d5c-4ffc-9b46-164857483a07] Performing ActiveStorage::PurgeJob (Job ID: 9ad8ee7a-0d5c-4ffc-9b46-164857483a07) from Async(default) with arguments: #<GlobalID:0x00007fa987e17700 @uri=#<URI::GID gid://activistbrite/ActiveStorage::Blob/1>>
+[ActiveJob] [ActiveStorage::PurgeJob] [9ad8ee7a-0d5c-4ffc-9b46-164857483a07]   [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [9ad8ee7a-0d5c-4ffc-9b46-164857483a07]   [1m[36mActiveStorage::Attachment Exists (38.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1 LIMIT $2[0m  [["blob_id", 1], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [9ad8ee7a-0d5c-4ffc-9b46-164857483a07]   [1m[36mActiveStorage::Blob Destroy (66.8ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1[0m  [["id", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [9ad8ee7a-0d5c-4ffc-9b46-164857483a07]   [1m[35m (114.0ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [9ad8ee7a-0d5c-4ffc-9b46-164857483a07]   [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [9ad8ee7a-0d5c-4ffc-9b46-164857483a07] [36m  S3 Storage (202.2ms) [0m[31mDeleted file from key: EcR6WD4KjbsPDeCrvNBWCQvM[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [9ad8ee7a-0d5c-4ffc-9b46-164857483a07] [36m  S3 Storage (387.1ms) [0m[31mDeleted files by key prefix: variants/EcR6WD4KjbsPDeCrvNBWCQvM/[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [9ad8ee7a-0d5c-4ffc-9b46-164857483a07] Performed ActiveStorage::PurgeJob (Job ID: 9ad8ee7a-0d5c-4ffc-9b46-164857483a07) from Async(default) in 1092.73ms
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+[36m  S3 Storage (570.9ms) [0m[32mUploaded file to key: x8FczUxQbxzE1NwiZ5BpG9VV (checksum: sp1yiZyiLh4g4XUbcGvH6A==)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveStorage::Blob Create (62.1ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "x8FczUxQbxzE1NwiZ5BpG9VV"], ["filename", "test_image.jpg"], ["content_type", "image/png"], ["metadata", "{\"identified\":true}"], ["byte_size", 2940], ["checksum", "sp1yiZyiLh4g4XUbcGvH6A=="], ["created_at", "2019-07-09 22:32:15.858749"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m

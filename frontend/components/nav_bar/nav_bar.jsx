@@ -25,8 +25,8 @@ class NavBar extends React.Component {
       </div>
       // change to dropdown menu of person img
      : 
-     <div className="signin_button">
-       <Link to='/signin'>
+     <div >
+       <Link className="signin_button" to='/signin'>
          <span>Sign In</span>
       </Link> 
      </div>

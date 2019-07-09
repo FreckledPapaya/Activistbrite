@@ -18,7 +18,7 @@ class User < ApplicationRecord
     validates :password_digest, presence: true 
     validates :password, length: {minimum: 6, allow_nil: true}
 
-    has_many :created_events,
+    has_many :organized_events,
         class_name: 'User',
         primary_key: :id,
         foreign_key: :creator_id

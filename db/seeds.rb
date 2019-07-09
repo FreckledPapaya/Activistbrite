@@ -23,108 +23,109 @@ user_11 = User.create(email: "NoJusticeNoPeace", password: "password")
 user_12 = User.create(email: "WaterIsLife", password: "password")
 user_13 = User.create(email: "WeAreTheLand", password: "password")
 
-# event_1 = Event.create(title: "Refreshments and Resistance", 
-#     body: "", 
-#     start_date: , end_date: , organizer_id:)
-# event_2 = Event.create(title: "Pride Riot", 
-#     body: "", 
-#     start_date: , end_date: , organizer_id:)
-# event_3 = Event.create(title: "The Queeries", 
-#     body: "", 
-#     start_date: , end_date: , organizer_id:)
-# event_4 = Event.create(title: "Climate Change Discussion", 
-#     body: "", 
-#     start_date: , end_date: , organizer_id:)
-# event_5 = Event.create(title: "Feminist Craft Market", 
-#     body: "", 
-#     start_date: , end_date: , organizer_id:)
-# event_6 = Event.create(title: "Queer Burlesque Night", 
-#     body: "", 
-#     start_date: , end_date: , organizer_id:)
+event_1 = Event.create(title: "Refreshments and Resistance", 
+    body: "Meet your neighbors and call your local reps!", 
+    start_date: Date.new(2020,1,2,17), organizer_id: user_2.id)
+event_2 = Event.create(title: "Pride Riot", 
+    body: "THE FIRST PRIDE WAS A RIOT!!
+    Come one, come all to an all-weekend queer extravaganza! Tickets are an all-access pass to panels, workshops, and lecture through out the day. In the evenings, unwind with friends in our sober space or show some skin at our burlesque and drag shows!", 
+    start_date: Date.new(2019,10,5,9), end_date: Date.new(2019,10,6,11), organizer_id: user_5.id)
+event_3 = Event.create(title: "The Queeries", 
+    body: "", 
+    start_date: Date.new(2020,1,2,17), end_date: , organizer_id:)
+event_4 = Event.create(title: "Climate Change Discussion", 
+    body: "", 
+    start_date: Date.new(2020,1,2,17), end_date: , organizer_id:)
+event_5 = Event.create(title: "Feminist Craft Market", 
+    body: "", 
+    start_date: Date.new(2020,1,2,17), end_date: , organizer_id:)
+event_6 = Event.create(title: "Queer Burlesque Night", 
+    body: "", 
+    start_date: Date.new(2020,1,2,17), end_date: , organizer_id:)
 # event_7 = Event.create(title: "Community Singalong", 
 #     body: "", 
-#     start_date: , end_date: , organizer_id:)
+#     start_date: Date.new(2020,1,2,17), end_date: , organizer_id:)
 # event_8 = Event.create(title: "Anti-Pipeline Protest", 
 #     body: "", 
-#     start_date: , end_date: , organizer_id:)
+#     start_date: Date.new(2020,1,2,17), end_date: , organizer_id:)
 # event_9 = Event.create(title: "Sunday in the Park", 
 #     body: "", 
-#     start_date: , end_date: , organizer_id:)
+#     start_date: Date.new(2020,1,2,17), end_date: , organizer_id:)
 # event_10 = Event.create(title: "Sunday in the Park", 
 #     body: "", 
-#     start_date: , end_date: , organizer_id:)
+#     start_date: Date.new(2020,1,2,17), end_date: , organizer_id:)
 # event_11 = Event.create(title: "Sunday in the Park", 
 #     body: "", 
-#     start_date: , end_date: , organizer_id:)
+#     start_date: Date.new(2020,1,2,17), end_date: , organizer_id:)
 # event_12 = Event.create(title: "Buy Nothing Street Fair", 
 #     body: "", 
-#     start_date: , end_date: , organizer_id:)
+#     start_date: Date.new(2020,1,2,17), end_date: , organizer_id:)
 # event_13 = Event.create(title: "#CloseTheCamps Protest", 
 #     body: "", 
-#     start_date: , end_date: , organizer_id:)
+#     start_date: Date.new(2020,1,2,17), end_date: , organizer_id:)
 # event_14 = Event.create(title: "Refreshments and Resistance", 
 #     body: "", 
-#     start_date: , end_date: , organizer_id:)
+#     start_date: Date.new(2020,1,2,17), end_date: , organizer_id:)
 # event_15 = Event.create(title: "Refreshments and Resistance", 
 #     body: "", 
-#     start_date: , end_date: , organizer_id:)
+#     start_date: Date.new(2020,1,2,17), end_date: , organizer_id:)
 # event_16 = Event.create(title: "Refreshments and Resistance", 
 #     body: "", 
-#     start_date: , end_date: , organizer_id:)
+#     start_date: Date.new(2020,1,2,17), end_date: , organizer_id:)
 # event_17 = Event.create(title: "Refreshments and Resistance", 
 #     body: "", 
-#     start_date: , end_date: , organizer_id:)
+#     start_date: Date.new(2020,1,2,17), end_date: , organizer_id:)
 # event_18 = Event.create(title: "Refreshments and Resistance", 
 #     body: "", 
-#     start_date: , end_date: , organizer_id:)
+#     start_date: Date.new(2020,1,2,17), end_date: , organizer_id:)
 # event_19 = Event.create(title: "Refreshments and Resistance", 
 #     body: "", 
-#     start_date: , end_date: , organizer_id:)
+#     start_date: Date.new(2020,1,2,17), end_date: , organizer_id:)
 # event_20 = Event.create(title: "Refreshments and Resistance", 
 #     body: "", 
-#     start_date: , end_date: , organizer_id:)
+#     start_date: Date.new(2020,1,2,17), end_date: , organizer_id:)
 # event_21 = Event.create(title: "Refreshments and Resistance", 
 #     body: "", 
-#     start_date: , end_date: , organizer_id:)
+#     start_date: Date.new(2020,1,2,17), end_date: , organizer_id:)
 # event_22 = Event.create(title: "Refreshments and Resistance", 
 #     body: "", 
-#     start_date: , end_date: , organizer_id:)
+#     start_date: Date.new(2020,1,2,17), end_date: , organizer_id:)
 # event_23 = Event.create(title: "Refreshments and Resistance", 
 #     body: "", 
-#     start_date: , end_date: , organizer_id:)
+#     start_date: Date.new(2020,1,2,17), end_date: , organizer_id:)
 # event_24 = Event.create(title: "Refreshments and Resistance", 
 #     body: "", 
-#     start_date: , end_date: , organizer_id:)
+#     start_date: Date.new(2020,1,2,17), end_date: , organizer_id:)
 # event_25 = Event.create(title: "Refreshments and Resistance", 
 #     body: "", 
-#     start_date: , end_date: , organizer_id:)
+#     start_date: Date.new(2020,1,2,17), end_date: , organizer_id:)
 # event_26 = Event.create(title: "Refreshments and Resistance", 
 #     body: "", 
-#     start_date: , end_date: , organizer_id:)
+#     start_date: Date.new(2020,1,2,17), end_date: , organizer_id:)
 # event_27 = Event.create(title: "Refreshments and Resistance", 
 #     body: "", 
-#     start_date: , end_date: , organizer_id:)
+#     start_date: Date.new(2020,1,2,17), end_date: , organizer_id:)
 # event_28 = Event.create(title: "Refreshments and Resistance", 
 #     body: "", 
-#     start_date: , end_date: , organizer_id:)
+#     start_date: Date.new(2020,1,2,17), end_date: , organizer_id:)
 # event_29 = Event.create(title: "Refreshments and Resistance", 
 #     body: "", 
-#     start_date: , end_date: , organizer_id:)
+#     start_date: Date.new(2020,1,2,17), end_date: , organizer_id:)
 # event_30 = Event.create(title: "Refreshments and Resistance", 
 #     body: "", 
-#     start_date: , end_date: , organizer_id:)
+#     start_date: Date.new(2020,1,2,17), end_date: , organizer_id:)
 # event_31 = Event.create(title: "Refreshments and Resistance", 
 #     body: "", 
-#     start_date: , end_date: , organizer_id:)
+#     start_date: Date.new(2020,1,2,17), end_date: , organizer_id:)
 # event_32 = Event.create(title: "Refreshments and Resistance", 
 #     body: "", 
-#     start_date: , end_date: , organizer_id:)
+#     start_date: Date.new(2020,1,2,17), end_date: , organizer_id:)
 # event_33 = Event.create(title: "Refreshments and Resistance", 
 #     body: "", 
-#     start_date: , end_date: , organizer_id:)
+#     start_date: Date.new(2020,1,2,17), end_date: , organizer_id:)
 # event_34 = Event.create(title: "Refreshments and Resistance", 
 #     body: "", 
-#     start_date: , end_date: , organizer_id:)
+#     start_date: Date.new(2020,1,2,17), end_date: , organizer_id:)
 # event_35 = Event.create(title: "Refreshments and Resistance", 
 #     body: "", 
-#     start_date: , end_date: , organizer_id:)
+#     start_date: Date.new(2020,1,2,17), end_date: , organizer_id:)

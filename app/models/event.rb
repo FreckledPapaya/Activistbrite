@@ -17,6 +17,8 @@ class Event < ApplicationRecord
     #  add validations
     validates :title, :body, :start_date, :organizer_id, presence: true
 
+    # has_one_attached :photo
+
     belongs_to :organizer,
         class_name: 'User',
         primary_key: :id,

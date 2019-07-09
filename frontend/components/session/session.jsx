@@ -10,7 +10,7 @@ class Session extends React.Component {
     this.receiveSigninProps = this.receiveSigninProps.bind(this);
     this.receiveLoginProps = this.receiveLoginProps.bind(this);
     this.switchComponent = this.switchComponent.bind(this); 
-    this.form = <Signin user={this.state} receiveSigninProps={this.receiveSigninProps}/>;
+    this.form = <Signin user={this.state} receiveSigninProps={this.receiveSigninProps} receiveLoginProps={this.receiveLoginProps}/>;
     
   }
 
@@ -32,6 +32,7 @@ class Session extends React.Component {
   }
 
   receiveLoginProps (user) {
+    debugger
     this.state = user;
     this.props.loginUser(this.state).then(() => this.props.history.push('/'));
   }

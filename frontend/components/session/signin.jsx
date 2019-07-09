@@ -5,6 +5,7 @@ class Signin extends React.Component {
     super(props);
     this.state = this.props.user;
     this.handleClick = this.handleClick.bind(this);
+    this.handleDemo = this.handleDemo.bind(this);
   }
 
   update(field) {
@@ -16,6 +17,12 @@ class Signin extends React.Component {
   handleClick (e) {
     e.preventDefault();
     this.props.receiveSigninProps(this.state);
+  }
+
+  handleDemo (e) {
+    this.state = {email: 'demouser@demo.com', password: "password"};
+    debugger
+    this.props.receiveLoginProps(this.state);
   }
 
 
@@ -51,6 +58,9 @@ class Signin extends React.Component {
             <div className="session_submit_button">
               <button className="button_session_submit" onClick={this.handleClick}>
                 Get Started
+              </button>
+              <button className="button_session_submit" onClick={this.handleDemo}>
+                Demo Login
               </button>
             </div>
           </form>

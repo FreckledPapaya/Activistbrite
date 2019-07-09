@@ -20,8 +20,8 @@ class NavBar extends React.Component {
 
   render () {
     const button = this.loggedIn ? 
-      <div className="dropdown_profile">
-        <button onClick={this.handleLogout}>Log out</button>  
+      <div >
+        <button className="dropdown_profile" onClick={this.handleLogout}>Log out</button>  
       </div>
       // change to dropdown menu of person img
      : 

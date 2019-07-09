@@ -12939,3 +12939,37 @@ Migrating to AddColumnToEvents (20190709204807)
   ↳ bin/rails:9
   [1m[35m (28.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/appacademy/.rbenv/versions/2.5.1/bin/annotate:23
+  [1m[36mEvent Load (1.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Create (32.3ms)[0m  [1m[32mINSERT INTO "events" ("title", "body", "created_at", "updated_at", "organizer_id", "start_date", "image_url") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Refreshments and Resistance"], ["body", "Meet your neighbors and call your local reps!"], ["created_at", "2019-07-09 21:34:49.515176"], ["updated_at", "2019-07-09 21:34:49.515176"], ["organizer_id", 1], ["start_date", "2020-01-02 00:00:00"], ["image_url", "image_url"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEvent Create (27.9ms)[0m  [1m[32mINSERT INTO "events" ("title", "body", "created_at", "updated_at", "organizer_id", "start_date", "image_url") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Refreshments and Resistance"], ["body", "Meet your neighbors and call your local reps!"], ["created_at", "2019-07-09 21:49:51.201865"], ["updated_at", "2019-07-09 21:49:51.201865"], ["organizer_id", 1], ["start_date", "2020-01-02 00:00:00"], ["image_url", "image_url"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveStorage::Attachment Load (19.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Event"], ["name", "image"], ["LIMIT", 1]]
+[36m  S3 Storage (594.2ms) [0m[32mUploaded file to key: EcR6WD4KjbsPDeCrvNBWCQvM (checksum: sp1yiZyiLh4g4XUbcGvH6A==)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveStorage::Blob Create (117.2ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "EcR6WD4KjbsPDeCrvNBWCQvM"], ["filename", "meow.jpg"], ["content_type", "image/png"], ["metadata", "{\"identified\":true}"], ["byte_size", 2940], ["checksum", "sp1yiZyiLh4g4XUbcGvH6A=="], ["created_at", "2019-07-09 21:50:55.026565"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveStorage::Attachment Create (112.7ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "image"], ["record_type", "Event"], ["record_id", 3], ["blob_id", 1], ["created_at", "2019-07-09 21:50:55.197806"]]
+  [1m[36mEvent Update (27.0ms)[0m  [1m[33mUPDATE "events" SET "updated_at" = $1 WHERE "events"."id" = $2[0m  [["updated_at", "2019-07-09 21:50:55.312184"], ["id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: e3112b7b-096e-4f87-b98a-199ebd1a07e8) to Async(default) with arguments: #<GlobalID:0x00007fa98a0ace78 @uri=#<URI::GID gid://activistbrite/ActiveStorage::Blob/1>>
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e3112b7b-096e-4f87-b98a-199ebd1a07e8] Performing ActiveStorage::AnalyzeJob (Job ID: e3112b7b-096e-4f87-b98a-199ebd1a07e8) from Async(default) with arguments: #<GlobalID:0x00007fa988931cf8 @uri=#<URI::GID gid://activistbrite/ActiveStorage::Blob/1>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e3112b7b-096e-4f87-b98a-199ebd1a07e8] [36m  S3 Storage (521.1ms) [0m[34mDownloaded file from key: EcR6WD4KjbsPDeCrvNBWCQvM[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e3112b7b-096e-4f87-b98a-199ebd1a07e8] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e3112b7b-096e-4f87-b98a-199ebd1a07e8]   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e3112b7b-096e-4f87-b98a-199ebd1a07e8]   [1m[36mActiveStorage::Blob Update (1.1ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e3112b7b-096e-4f87-b98a-199ebd1a07e8]   [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e3112b7b-096e-4f87-b98a-199ebd1a07e8] Performed ActiveStorage::AnalyzeJob (Job ID: e3112b7b-096e-4f87-b98a-199ebd1a07e8) from Async(default) in 1040.05ms

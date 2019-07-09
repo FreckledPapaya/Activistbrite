@@ -24,9 +24,12 @@ user_12 = User.create(email: "WaterIsLife", password: "password")
 user_13 = User.create(email: "WeAreTheLand", password: "password")
 user_14 = User.create(email: "Jaspurrr", password: "password")
 
+# image seeding:
+
+
 # event_1 = Event.create(title: "Refreshments and Resistance", 
 #     body: "Meet your neighbors and call your local reps!", 
-#     start_date: Date.new(2020,1,2,17), image_url: , organizer_id: user_2.id)
+#     start_date: Date.new(2020,1,2,17), image_url: "image_url", organizer_id: user_2.id) 
 
 # event_2 = Event.create(title: "Pride Riot", 
 #     body: "THE FIRST PRIDE WAS A RIOT!!

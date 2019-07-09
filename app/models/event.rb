@@ -18,7 +18,7 @@ class Event < ApplicationRecord
     #  add validations
     validates :title, :body, :start_date, :organizer_id, :image_url, presence: true
 
-    # has_one_attached :image
+    has_one_attached :image
 
     belongs_to :organizer,
         class_name: 'User',

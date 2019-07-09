@@ -19,8 +19,7 @@ class Api::SessionsController < ApplicationController
     end 
   end
 
-  def destroy
-    debugger
+  def destroy  
     logout!
   end 
 end

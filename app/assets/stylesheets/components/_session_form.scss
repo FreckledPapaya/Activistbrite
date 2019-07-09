@@ -222,3 +222,22 @@ input[type="email"] {
     width: 100%; 
     box-sizing: border-box;
 }
+
+#login_input { 
+    // padding: 0;
+}
+
+input[type="password"] {  
+    padding: 18px 12px 6px; 
+    font-size: 14px;
+    line-height: 22px;
+    background: none;
+    border: none;
+    color: #39364f;
+    color: var(--eds-ui-800,#39364f); 
+    outline: none; 
+    -webkit-box-flex: 1;
+    flex: 1;
+    margin: 0;
+
+}

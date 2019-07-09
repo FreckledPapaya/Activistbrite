@@ -54,7 +54,7 @@ class Login extends React.Component {
                 <input type="email"  value={this.email} disabled />
               </div>
             </div>
-            <div className="session_input_container" id="signin_input">
+            <div className="session_input_container" id="login_input">
               <div className="session_input_item_internal"> 
                 <div className="session_input_label_wrapper">
                   <label id='password'>Password</label>

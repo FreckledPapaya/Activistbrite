@@ -4,13 +4,17 @@ import { Link } from 'react-router-dom';
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
-    this.handleLogout = this.handleLogout.bind(this);
+    this.handleLogout = this.handleLogout.bind(this); 
     this.loggedIn = Boolean(this.props.currentUser);
+  }
+ 
+  componentDidUpdate() {
+    this.loggedIn = Boolean(this.props.currentUser);  
   }
 
   handleLogout(e) {
     e.preventDefault();
-    this.props.logoutUser().then(() => this.props.history.push('/'));
+    this.props.logoutUser().then(() => this.props.history.push('/signin'));
     // where to push?
   }
 
@@ -33,7 +37,7 @@ class NavBar extends React.Component {
           <Link to="/" className="logo_index_link">
             <div className="logo_index_img_container"> 
               <div className="logo_index_img"> 
-                <img src={window.location.origin + '/eventbrite_e_logo.png'} alt=""/>
+                Logo here
               </div>
             </div> 
           </Link>

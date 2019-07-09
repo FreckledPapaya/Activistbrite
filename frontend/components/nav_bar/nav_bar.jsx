@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+// import EventbriteLogo from '../../../app/assets/images/eventbrite_logo.png';
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -37,7 +38,7 @@ class NavBar extends React.Component {
           <Link to="/" className="logo_index_link">
             <div className="logo_index_img_container"> 
               <div className="logo_index_img"> 
-                Logo here
+                <img src={window.images.logo1} alt=""/>
               </div>
             </div> 
           </Link>

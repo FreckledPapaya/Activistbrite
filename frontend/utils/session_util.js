@@ -11,7 +11,8 @@ export const createUser = (user) => {
 export const fetchUser = (email) => {
   return $.ajax({
     method: 'GET',
-    url: `/api/users/${email}/verify` 
+    url: `/api/users/verify`,
+    data: { email } 
   });
 };
 

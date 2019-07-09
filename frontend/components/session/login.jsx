@@ -46,26 +46,31 @@ class Login extends React.Component {
 
         <div className="session_form_container" id="login_form">
           <form className="session_form">
-            <div className="session_input_container" id="signin_input">
-              <div className="session_input_item_internal">
-                <div className="session_input_label_wrapper">
-                  <label id='email'>
-                  </label>
+            <div className="session_input_email_wrapper">
+              <div className="session_input_email_disabled">
+                <div className="session_input_email_label">
+                  <label id='email'>Email Address</label>
                 </div>
-                <input type="text" name="Email address" value={this.email} disabled />
+                <input type="email"  value={this.email} disabled />
               </div>
+            </div>
+            <div className="session_input_container" id="signin_input">
               <div className="session_input_item_internal"> 
-                  <div className="session_input_label_wrapper">
-                    <label id='password'>
-                    </label>
-                  </div>
-                  <input type="password" name="Password" value={this.state.password} onChange={this.update('password')} />
+                <div className="session_input_label_wrapper">
+                  <label id='password'>Password</label>
+                </div>
+                <input type="password" name="Password" value={this.state.password} onChange={this.update('password')} />
               </div> 
             </div> 
+            <div className="session_submit_button">
+              <button className="button_session_submit" id="session_submit"  onClick={this.handleClick}>
+                Log In
+              </button>
+
+            </div>
           </form>
         </div>
 
-        <button className="Session_button" id="session_submit"  onClick={this.handleClick}>Log In</button>
         
       </div>)
   }

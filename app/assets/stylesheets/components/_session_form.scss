@@ -149,14 +149,14 @@ main { }
     padding: 2px 12px 0;
 } 
 
-label#email {
+label {
     color: var(--eds-ui-600,#6f7287);
     font-size: 12px;
     line-height: 22px;
     position: relative;
     white-space: nowrap;
     overflow: hidden;
-}
+} 
 
 input[type="email"] {  
     padding: 18px 12px 6px;
@@ -196,4 +196,29 @@ input[type="email"] {
     overflow: visible;
 
      
+}
+
+// login form
+
+.session_input_email_wrapper {
+    margin-top: 20px;
+    margin-bottom: 16px; 
+}
+
+.session_input_email_disabled {
+    margin-bottom: 8px; 
+    background: #dbdae3;
+    border-radius: 2px; 
+    padding: 1px;
+    position: relative;
+
+}
+
+.session_input_email_label {
+    padding: 2px 12px 0;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;
+    width: 100%; 
+    box-sizing: border-box;
 }

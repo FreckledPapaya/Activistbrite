@@ -241,3 +241,24 @@ input[type="password"] {
     margin: 0;
 
 }
+
+.session_btwn_button_text {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    display: block;
+    -webkit-box-sizing: border-box;
+    // -webkit-box-align: center;
+    box-sizing: border-box;
+    width: 100%; 
+    fill: #fff; 
+    // transform: translateZ(0);
+    // position: relative;
+    // height: 44px; 
+    text-align: center;
+    text-decoration: none; 
+    letter-spacing: 0;
+    overflow: visible;
+ 
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+}

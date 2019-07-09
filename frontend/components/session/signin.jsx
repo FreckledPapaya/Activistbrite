@@ -20,8 +20,7 @@ class Signin extends React.Component {
   }
 
   handleDemo (e) {
-    this.state = {email: 'demouser@demo.com', password: "password"};
-    debugger
+    this.state = {email: 'demouser@demo.com', password: "password"}; 
     this.props.receiveLoginProps(this.state);
   }
 
@@ -58,7 +57,12 @@ class Signin extends React.Component {
             <div className="session_submit_button">
               <button className="button_session_submit" onClick={this.handleClick}>
                 Get Started
-              </button>
+              </button> 
+
+              <div className="session_btwn_button_text"> 
+                <span>or</span>
+              </div> 
+
               <button className="button_session_submit" onClick={this.handleDemo}>
                 Demo Login
               </button>

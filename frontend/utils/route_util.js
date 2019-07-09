@@ -3,8 +3,7 @@ import { connect } from 'react-redux';
 import { Redirect, Route, withRouter } from 'react-router-dom';
 
 // reroutes to root if user is logged in (trying to log in when already logged in)
-const Auth = ({component: Component, path, loggedIn}) => {
-// debugger
+const Auth = ({component: Component, path, loggedIn}) => { 
 return(
   <Route path={path} render={(props) => (
     loggedIn ? (

@@ -31,8 +31,7 @@ class Session extends React.Component {
     });  
   }
 
-  receiveLoginProps (user) {
-    debugger
+  receiveLoginProps (user) { 
     this.state = user;
     this.props.loginUser(this.state).then(() => this.props.history.push('/'));
   }

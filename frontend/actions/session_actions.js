@@ -32,13 +32,14 @@ export const createUser = (formUser) => dispatch => {
 
 export const fetchUser = (email) => dispatch => { 
   return SessionUtil.fetchUser(email)
-    .then(user => dispatch(receiveEmail(user)));
+    .then(user => dispatch(receiveEmail(user)),
+      errors => dispatch(receiveSessionErrors(errors.responseJSON)));
 };
 
 export const loginUser = (formUser) => dispatch => {
   return SessionUtil.createSession(formUser)
-    .then((user)=> dispatch(receiveUser(user)) );
-    // dispatch errors
+    .then((user) => dispatch(receiveUser(user)),
+      errors => dispatch(receiveSessionErrors(errors.responseJSON))); 
 };
 
 export const logoutUser = () => dispatch => {

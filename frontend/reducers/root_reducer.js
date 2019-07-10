@@ -6,5 +6,5 @@ import errorsReducer from './errors_reducer';
 export default combineReducers({
     session: sessionReducer,
     // entities: entitiesReducer,
-    // errors: errorsReducer
+    errors: errorsReducer
 });

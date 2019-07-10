@@ -9,9 +9,9 @@ class NavBar extends React.Component {
     this.loggedIn = Boolean(this.props.currentUser);
   }
  
-  componentDidMount() {
-    this.loggedIn = Boolean(this.props.currentUser);  
-  }
+  // componentDidMount() {
+  //   this.loggedIn = Boolean(this.props.currentUser);  
+  // }
   componentDidUpdate() {
     this.loggedIn = Boolean(this.props.currentUser);  
   }

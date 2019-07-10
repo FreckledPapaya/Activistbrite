@@ -16,7 +16,7 @@ const receiveEvents  = (events) => ({
 });
 
 const removeEvent = (id) => ({
-  type: REMOVE_EVENT
+  type: REMOVE_EVENT,
   id
 });
 
@@ -30,23 +30,25 @@ export const fetchEvents = () => dispatch => {
 };
 
 export const fetchEvent = (id) => dispatch => {
-  EventUtil.fetchEvent(id).then(event => dispatch(receiveEvent(event)))
+  EventUtil.fetchEvent(id)
+    .then(event => dispatch(receiveEvent(event))),
+    errors => dispatch(receiveEventErrors(errors.responseJSON))
 };
 
 export const createEvent = (event) => dispatch => {
   EventUtil.postEvent(event)
   .then(event => dispatch(receiveEvent(event))),
-    errors => dispatch(receiveErrors(errors.responseJSON))
+    errors => dispatch(receiveEventErrors(errors.responseJSON))
 };
 
 export const updateEvent = (event) => dispatch => {
   EventUtil.patchEvent(event)
   .then(event => dispatch(receiveEvent(event))),
-    errors => dispatch(receiveErrors(errors.responseJSON))
+    errors => dispatch(receiveEventErrors(errors.responseJSON))
 };
 
 export const deleteEvent = (id) => dispatch => {
   EventUtil.deleteEvent(id)
   .then((id) => dispatch(removeEvent(id))),
-    errors => dispatch(receiveErrors(errors.responseJSON))
+    errors => dispatch(receiveEventErrors(errors.responseJSON))
 };

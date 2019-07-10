@@ -25,17 +25,25 @@ const logoutCurrentUser = () => ({
 });
 
 export const createUser = (formUser) => dispatch => {
-  return SessionUtil.createUser(formUser).then(user => dispatch(receiveUser(user)));
+  return SessionUtil.createUser(formUser)
+    .then(user => dispatch(receiveUser(user))),
+    errors => dispatch(receiveSessionErrors(errors.responseJSON))
 };
 
 export const fetchUser = (email) => dispatch => {
-  return SessionUtil.fetchUser(email).then(user => dispatch(receiveEmail(user)));
+  return SessionUtil.fetchUser(email)
+    .then(user => dispatch(receiveEmail(user))),
+    errors => dispatch(receiveSessionErrors(errors.responseJSON))
 };
 
 export const loginUser = (formUser) => dispatch => {
-  return SessionUtil.createSession(formUser).then(user => dispatch(receiveUser(user)));
+  return SessionUtil.createSession(formUser)
+    .then(user => dispatch(receiveUser(user))),
+    errors => dispatch(receiveSessionErrors(errors.responseJSON))
 };
 
 export const logoutUser = () => dispatch => {
-  return SessionUtil.deleteSession().then(() => dispatch(logoutCurrentUser()));
+  return SessionUtil.deleteSession()
+    .then(() => dispatch(logoutCurrentUser())),
+    errors => dispatch(receiveSessionErrors(errors.responseJSON))
 };

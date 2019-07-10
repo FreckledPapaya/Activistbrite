@@ -11,6 +11,14 @@ class Api::UsersController < ApplicationController
   # use to determine which component to render from session (redux)
 
   def create 
+    # @user = User.find_by(email: params[:user][:email]) 
+    # if @user
+    #   flash.now[:errors] = ["Invalid password"]
+    #   return render json: flash[:errors], status: 200
+    # else
+    #   flash.now[:errors] = ["Invalid email/password"]
+    #   return render json: flash[:errors], status: 422
+    # end
 
     @user = User.new(
       email: user_params[:email],

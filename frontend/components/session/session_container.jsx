@@ -3,9 +3,9 @@ import { withRouter } from 'react-router-dom';
 import { createUser, loginUser, fetchUser } from '../../actions/session_actions';
 import Session from './session';
  
-const mapStateToProps = ({ session }) => {
-  const defaultUser = {email: '', password: '', fname: '', lname: ''};  
-  return { user: defaultUser , session };
+const mapStateToProps = (state) => {
+  const defaultUser = {email: '', password: '' };  
+  return { user: defaultUser , session: state.session };
  };
  
 const mapDispatchToProps = () => dispatch => ({

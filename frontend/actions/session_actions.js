@@ -26,24 +26,23 @@ const logoutCurrentUser = () => ({
 
 export const createUser = (formUser) => dispatch => {
   return SessionUtil.createUser(formUser)
-    .then(user => dispatch(receiveUser(user))),
-    errors => dispatch(receiveSessionErrors(errors.responseJSON))
+    .then(user => dispatch(receiveUser(user)),
+    errors => dispatch(receiveSessionErrors(errors.responseJSON)));
 };
 
-export const fetchUser = (email) => dispatch => {
+export const fetchUser = (email) => dispatch => { 
   return SessionUtil.fetchUser(email)
-    .then(user => dispatch(receiveEmail(user))),
-    errors => dispatch(receiveSessionErrors(errors.responseJSON))
+    .then(user => dispatch(receiveEmail(user)));
 };
 
 export const loginUser = (formUser) => dispatch => {
   return SessionUtil.createSession(formUser)
-    .then(user => dispatch(receiveUser(user))),
-    errors => dispatch(receiveSessionErrors(errors.responseJSON))
+    .then(user => dispatch(receiveUser(user)),
+    errors => dispatch(receiveSessionErrors(errors.responseJSON)));
 };
 
 export const logoutUser = () => dispatch => {
   return SessionUtil.deleteSession()
-    .then(() => dispatch(logoutCurrentUser())),
-    errors => dispatch(receiveSessionErrors(errors.responseJSON))
+    .then(() => dispatch(logoutCurrentUser()),
+    errors => dispatch(receiveSessionErrors(errors.responseJSON)));
 };

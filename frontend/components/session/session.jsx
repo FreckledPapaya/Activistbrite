@@ -14,8 +14,7 @@ class Session extends React.Component {
     
   }
 
-  switchComponent() {
-    debugger
+  switchComponent() { 
   if (this.props.session.newUser === true) { 
     this.form = <Signup user={this.state} email={this.props.session.email} receiveSignupProps={this.receiveSignupProps} />;
   } else {
@@ -24,14 +23,11 @@ class Session extends React.Component {
   this.setState(this.state);
   }
 
-  receiveSigninProps (user) {
-    this.setState({user: user}); 
-    debugger
-    this.props.fetchUser(user.email).then(() => {
-      debugger
+  receiveSigninProps (user) { 
+    this.props.fetchUser(user.email).then(() => { 
       this.props.history.push('/signin');
       this.switchComponent();
-    });  
+    });   
   }
 
   receiveLoginProps (user) { 
@@ -44,7 +40,7 @@ class Session extends React.Component {
     this.props.createUser(this.state).then(() => this.props.history.push('/'));
   }
   
-  render() { 
+  render() {  
     return (
       <div className="main_container">
         <main >

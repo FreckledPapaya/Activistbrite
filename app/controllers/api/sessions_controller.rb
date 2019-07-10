@@ -10,8 +10,14 @@ class Api::SessionsController < ApplicationController
       login!(@user)
       render 'api/users/show'
     else  
-      flash.now[:errors] = ["Invalid email/password"]
-      render json: flash[:errors], status: 422
+      # @user = User.find_by(email: params[:user][:email])
+      # if @user
+      #   flash.now[:errors] = ["Invalid password"]
+      #   render json: flash[:errors], status: 400
+      # else
+        flash.now[:errors] = ["Invalid email/password"]
+        render json: flash[:errors], status: 422
+      # end
     end 
   end
 

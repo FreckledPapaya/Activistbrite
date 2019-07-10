@@ -4,9 +4,21 @@ class Api::EventsController < ApplicationController
   end
 
   def show
+    @event = Event.find_by(id: params[:id])
   end
 
   def create
+    @event = Event.new(event_params)
+    #  deal with start and end date
+    # set organizer to current user if needed
+
+    if @event.save
+    #  render show page
+      
+    else
+      render json: @event.errors.full_messages
+      # create event errors reducer
+    end
   end
 
   def update

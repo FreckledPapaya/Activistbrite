@@ -27,12 +27,12 @@ user_14 = User.create(email: "Jaspurrr", password: "password")
 # image seeding:
 
 
-event_1 = Event.create(title: "Refreshments and Resistance", 
-    body: "Meet your neighbors and call your local reps!", 
-    start_date: Date.new(2020,1,2,17), image_url: "image_url", organizer_id: user_2.id) 
+# event_1 = Event.create(title: "Refreshments and Resistance", 
+#     body: "Meet your neighbors and call your local reps!", 
+#     start_date: Date.new(2020,1,2,17), image_url: "image_url", organizer_id: user_2.id) 
 
-file = File.open('/Users/appacademy/Desktop/Activistbrite/app/assets/images/eventbrite_logo.png')
-event_1.image.attach(io: file, filename: 'test_image.jpg')
+# file = File.open('/Users/appacademy/Desktop/Activistbrite/app/assets/images/eventbrite_logo.png')
+# event_1.image.attach(io: file, filename: 'test_image.jpg')
 
 # event_2 = Event.create(title: "Pride Riot", 
 #     body: "THE FIRST PRIDE WAS A RIOT!!

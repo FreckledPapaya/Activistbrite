@@ -18,4 +18,4 @@
  @import 'base/layout.scss';
  @import 'base/fonts.scss';
 
- @import 'components/_session_form.scss';
+ @import 'components/*';

@@ -1,0 +1,75 @@
+ 
+ 
+
+.best_life {
+    // 
+    box-sizing: border-box;
+    height: 100%;
+}
+
+@media (min-width: 792px) {
+    .best_life_content {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+} 
+
+.best_life_header {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal; 
+    flex-direction: row;
+    -webkit-box-align: center; 
+    align-items: center;
+    display: flex;
+    padding-left: 12px;
+    padding-right: 12px;
+
+} 
+
+.best_life_header_title  {
+    display: block;
+    -webkit-box-flex: 1; 
+    flex: 1 0 auto;
+    padding-bottom: 16px; 
+}
+
+.best_life_header_title > h1 {
+    color: #1e0a3c;
+    line-height: 2.5rem;
+    letter-spacing: 1px;
+    margin-right: -1px;
+    font-weight: 800;
+    text-rendering: optimizeLegibility;
+}
+
+.best_life_results {
+
+    border: solid;
+    border-color: black;
+    border-width: 1px;
+    // 
+    -webkit-box-align: center; 
+    align-items: center; 
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal; 
+    flex-direction: column;
+    -webkit-box-pack: center; 
+    justify-content: center;
+    min-height: 400px;
+    margin-bottom: 48px;
+}
+
+.homepage_events_section {
+
+    border: solid;
+    border-color: black;
+    border-width: 1px;
+    // 
+    display: flex;
+    flex-wrap: wrap;
+    // 
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}

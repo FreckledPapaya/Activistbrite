@@ -10,10 +10,9 @@ import { AuthRoute, ProtectedRoute } from '../utils/route_util';
 
 
 export default () => (
-  <div id="root">
-    <Route path="/" component={NavBarContainer} />
-    <Route exact path="/" component={EventsIndexContainer} />
-
+  <div id="root2">
+    <Route path="/" component={NavBarContainer} /> 
+    <Route exact path="/" component={EventsIndexContainer} /> 
     <AuthRoute path="/signin" component={SessionContainer} />
 
     <Route path="/" component={FooterContainer} /> 

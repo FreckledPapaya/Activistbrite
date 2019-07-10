@@ -14,9 +14,20 @@ class EventsIndex extends React.Component {
     render() {
 
         return (
-            <div>
-                {this.state}
-            </div> 
+            <div className="best_life">
+                <div className="best_life_content">
+                    <div className="best_life_header">
+                        <div className="best_life_header_title">
+                            <h1>Live Your Best Life</h1>
+                        </div> 
+                    </div> 
+                    <div className="best_life_results">
+                        <div className="homepage_events_section">
+                            Import items here
+                        </div>
+                    </div>
+                </div>
+            </div>
         )
     }
 }

@@ -1,8 +1,4 @@
 class Api::SessionsController < ApplicationController
-  def new
-    @user = User.new
-    render :new
-  end
 
   def create
      @user = User.find_by_credentials(
@@ -12,14 +8,19 @@ class Api::SessionsController < ApplicationController
 
     if @user
       login!(@user)
-      render json: @user
+      render 'api/users/show'
     else  
       flash.now[:errors] = ["Invalid email/password"]
-      render json: flash[:errors]
+      render json: flash[:errors], status: 422
     end 
   end
 
   def destroy  
-    logout!
+    if current_user
+      logout!
+      render json: {}
+    else 
+      render json: ['Not found'], status: 404
+    end
   end 
 end

@@ -10,11 +10,6 @@ class Api::UsersController < ApplicationController
   end
   # use to determine which component to render from session (redux)
 
-  def new
-    @user = User.new
-    render :new
-  end
-
   def create 
 
     @user = User.new(
@@ -24,22 +19,17 @@ class Api::UsersController < ApplicationController
 
     if @user.save
       login!(@user)
-      redirect_to user_url(@user)
+      render 'api/users/show'
       # change to events index
     else  
       flash.now[:errors] = @user.errors.full_messages
-      render :new
+      render json: flash[:errors]
     end 
   end
 
   def show
     @user = User.find_by(id: params[:id])
-    render :show
-  end
-
-  def index
-    @users = User.all
-    render :index
+    render 'api/users/show'
   end
 
   private

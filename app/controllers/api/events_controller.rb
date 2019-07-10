@@ -1,10 +1,13 @@
 class Api::EventsController < ApplicationController
-  def index
-    @events = Events.all
+  def index 
+    @events = Event.all 
+    render 'api/events/index'
+
   end
 
   def show
     @event = Event.find_by(id: params[:id])
+    render 'api/events/show'
   end
 
   def create

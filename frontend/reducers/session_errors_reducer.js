@@ -8,7 +8,7 @@ const sessionErrorsReducer = (state = [], action) => {
       return action.errors;
     default:
       return state;
-  };
+  } 
 };
 
 export default sessionErrorsReducer;

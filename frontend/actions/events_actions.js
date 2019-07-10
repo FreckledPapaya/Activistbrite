@@ -26,7 +26,8 @@ const receiveEventErrors  = (errors) => ({
 });
 
 export const fetchEvents = () => dispatch => {
-  EventUtil.fetchEvents().then(events => dispatch(receiveEvents(events)));
+  EventUtil.fetchEvents().then(events => dispatch(receiveEvents(events)),
+    errors => dispatch(receiveEventErrors(errors.responseJSON))) 
 };
 
 export const fetchEvent = (id) => dispatch => {

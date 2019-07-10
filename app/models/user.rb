@@ -25,7 +25,7 @@ class User < ApplicationRecord
 
     attr_reader :password
 
-    after_initialize :ensure_session_token
+    after_initialize :ensure_session_token, :ensure_org_title
 
     def User.find_by_credentials(email, pw)
         user = User.find_by(email: email)
@@ -58,5 +58,9 @@ class User < ApplicationRecord
         self.password_digest = BCrypt::Password.create(pw)
     end
 
+    # end user auth basics
 
+    def ensure_org_title
+        self.organizer_title ||= self.email
+    end
 end

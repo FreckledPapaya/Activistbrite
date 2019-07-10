@@ -1,7 +1,5 @@
 @events.each do |event|
   json.set! event.id do
-    json.extract! event, :title, :body, :startDate, :endDate, :imageUrl, :categoryId
+     json.extract! event, :id, :title, :body, :start_date, :image_url, :organizer_id
   end
-end
-
-# not tested
+end 

@@ -14949,3 +14949,378 @@ Processing by Api::SessionsController#destroy as JSON
 Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 3.5ms)
 
 
+  [1m[36mEvent Load (9.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT  "events".* FROM "events" ORDER BY "events"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (3.0ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Event"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT  "events".* FROM "events" ORDER BY "events"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Event"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mEvent Load (31.6ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[35m (2.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Destroy (15.0ms)[0m  [1m[31mDELETE FROM "events" WHERE "events"."id" = $1[0m  [["id", 2]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveStorage::Attachment Load (2.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Event"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mEvent Load (1.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mEvent Create (10.5ms)[0m  [1m[32mINSERT INTO "events" ("title", "body", "created_at", "updated_at", "organizer_id", "start_date", "image_url") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Refreshments and Resistance"], ["body", "Meet your neighbors and call your local reps!"], ["created_at", "2019-07-10 22:16:01.473691"], ["updated_at", "2019-07-10 22:16:01.473691"], ["organizer_id", 31], ["start_date", "2020-01-02 00:00:00"], ["image_url", "event_1.jpg"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveStorage::Attachment Load (2.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Event"], ["name", "image"], ["LIMIT", 1]]
+[36m  S3 Storage (1085.0ms) [0m[32mUploaded file to key: u2iruS9TEn8fx13YAtjfB6TG (checksum: zBS0EVjXGw/83ZpgPyC1Ag==)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveStorage::Blob Create (5.6ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "u2iruS9TEn8fx13YAtjfB6TG"], ["filename", "event_1.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 46264], ["checksum", "zBS0EVjXGw/83ZpgPyC1Ag=="], ["created_at", "2019-07-10 22:16:17.096203"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveStorage::Attachment Create (18.6ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "image"], ["record_type", "Event"], ["record_id", 3], ["blob_id", 1], ["created_at", "2019-07-10 22:16:17.142306"]]
+  [1m[36mEvent Update (4.7ms)[0m  [1m[33mUPDATE "events" SET "updated_at" = $1 WHERE "events"."id" = $2[0m  [["updated_at", "2019-07-10 22:16:17.163673"], ["id", 3]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: bfba1bfb-022c-41b0-8dad-fa3bb2a08ae1) to Async(default) with arguments: #<GlobalID:0x00007fd304d87460 @uri=#<URI::GID gid://activistbrite/ActiveStorage::Blob/1>>
+  [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bfba1bfb-022c-41b0-8dad-fa3bb2a08ae1] Performing ActiveStorage::AnalyzeJob (Job ID: bfba1bfb-022c-41b0-8dad-fa3bb2a08ae1) from Async(default) with arguments: #<GlobalID:0x00007fd3052df0e8 @uri=#<URI::GID gid://activistbrite/ActiveStorage::Blob/1>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bfba1bfb-022c-41b0-8dad-fa3bb2a08ae1] [36m  S3 Storage (375.4ms) [0m[34mDownloaded file from key: u2iruS9TEn8fx13YAtjfB6TG[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bfba1bfb-022c-41b0-8dad-fa3bb2a08ae1] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bfba1bfb-022c-41b0-8dad-fa3bb2a08ae1]   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bfba1bfb-022c-41b0-8dad-fa3bb2a08ae1]   [1m[36mActiveStorage::Blob Update (1.6ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bfba1bfb-022c-41b0-8dad-fa3bb2a08ae1]   [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bfba1bfb-022c-41b0-8dad-fa3bb2a08ae1] Performed ActiveStorage::AnalyzeJob (Job ID: bfba1bfb-022c-41b0-8dad-fa3bb2a08ae1) from Async(default) in 565.79ms
+  [1m[36mEvent Load (3.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (2.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mEvent Create (2.0ms)[0m  [1m[32mINSERT INTO "events" ("title", "body", "created_at", "updated_at", "organizer_id", "start_date", "end_date", "image_url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Pride Riot"], ["body", "THE FIRST PRIDE WAS A RIOT!!\n    Come one, come all to an all-weekend queer extravaganza! Tickets are an all-access pass to panels, workshops, and lecture through out the day. In the evenings, unwind with friends in our sober space or show some skin at our burlesque and drag shows!"], ["created_at", "2019-07-10 22:17:43.403511"], ["updated_at", "2019-07-10 22:17:43.403511"], ["organizer_id", 31], ["start_date", "2019-10-05 00:00:00"], ["end_date", "2019-10-06 00:00:00"], ["image_url", "event_2.jpg"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveStorage::Attachment Load (3.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Event"], ["name", "image"], ["LIMIT", 1]]
+[36m  S3 Storage (1057.2ms) [0m[32mUploaded file to key: Rr6dFeEBqNJ6zZGos61pAnno (checksum: v1e0V42Hjk/3JKbSuufSAA==)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveStorage::Blob Create (4.2ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "Rr6dFeEBqNJ6zZGos61pAnno"], ["filename", "event_2.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 47843], ["checksum", "v1e0V42Hjk/3JKbSuufSAA=="], ["created_at", "2019-07-10 22:18:15.524903"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveStorage::Attachment Create (2.2ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "image"], ["record_type", "Event"], ["record_id", 4], ["blob_id", 2], ["created_at", "2019-07-10 22:18:15.556518"]]
+  [1m[36mEvent Update (3.4ms)[0m  [1m[33mUPDATE "events" SET "updated_at" = $1 WHERE "events"."id" = $2[0m  [["updated_at", "2019-07-10 22:18:15.560420"], ["id", 4]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 198ac6a0-4f47-45d6-aa2b-5e7cfc31f3ff) to Async(default) with arguments: #<GlobalID:0x00007fd304508a28 @uri=#<URI::GID gid://activistbrite/ActiveStorage::Blob/2>>
+DEPRECATION WARNING: Delegating as to arel is deprecated and will be removed in Rails 6.0. (called from __pry__ at (pry):11)
+  [1m[36mEvent Load (71928.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [198ac6a0-4f47-45d6-aa2b-5e7cfc31f3ff] Performing ActiveStorage::AnalyzeJob (Job ID: 198ac6a0-4f47-45d6-aa2b-5e7cfc31f3ff) from Async(default) with arguments: #<GlobalID:0x00007fd307b28ae0 @uri=#<URI::GID gid://activistbrite/ActiveStorage::Blob/2>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [198ac6a0-4f47-45d6-aa2b-5e7cfc31f3ff] [36m  S3 Storage (359.8ms) [0m[34mDownloaded file from key: Rr6dFeEBqNJ6zZGos61pAnno[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [198ac6a0-4f47-45d6-aa2b-5e7cfc31f3ff] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [198ac6a0-4f47-45d6-aa2b-5e7cfc31f3ff]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [198ac6a0-4f47-45d6-aa2b-5e7cfc31f3ff]   [1m[36mActiveStorage::Blob Update (1.0ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 2]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [198ac6a0-4f47-45d6-aa2b-5e7cfc31f3ff]   [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [198ac6a0-4f47-45d6-aa2b-5e7cfc31f3ff] Performed ActiveStorage::AnalyzeJob (Job ID: 198ac6a0-4f47-45d6-aa2b-5e7cfc31f3ff) from Async(default) in 384.4ms
+  [1m[36mEvent Load (1.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mEvent Create (1.6ms)[0m  [1m[32mINSERT INTO "events" ("title", "body", "created_at", "updated_at", "organizer_id", "start_date", "end_date", "image_url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Feminist Craft Market"], ["body", "Join us for the debut of the Feminist Creative Collective. The Feminist Spring Market aims to dismantle the patriarchy by supporting and showcasing women (cis and trans), non-binary folks, queers, BIPOC and folks with disabilities. \n        This event will bring together artisans, makers, creatives, small businesses, activists and more like-minded people to create a hub of feminism, community and activism!\n\n        The market will be held at 10C Shared Space, on the 4th floor. This location has accessible doors, washrooms, and elevators, and is supportive of all genders. We are committed to creating a navigable space for people who use mobility devices.\nIf you have any questions about whether you can access this space, please get in touch."], ["created_at", "2019-07-10 22:21:52.784493"], ["updated_at", "2019-07-10 22:21:52.784493"], ["organizer_id", 31], ["start_date", "2020-04-17 00:00:00"], ["end_date", "2020-04-17 00:00:00"], ["image_url", "event_5.jpg"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveStorage::Attachment Load (3.9ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Event"], ["name", "image"], ["LIMIT", 1]]
+[36m  S3 Storage (1069.9ms) [0m[32mUploaded file to key: n99USSyp9pr7HEroLFBK5o55 (checksum: PpRGwrLQ32G4q3xJy5Ab6Q==)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveStorage::Blob Create (2.0ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "n99USSyp9pr7HEroLFBK5o55"], ["filename", "event_5.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 49409], ["checksum", "PpRGwrLQ32G4q3xJy5Ab6Q=="], ["created_at", "2019-07-10 22:22:09.192980"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveStorage::Attachment Create (2.4ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "image"], ["record_type", "Event"], ["record_id", 5], ["blob_id", 3], ["created_at", "2019-07-10 22:22:09.225751"]]
+  [1m[36mEvent Update (0.6ms)[0m  [1m[33mUPDATE "events" SET "updated_at" = $1 WHERE "events"."id" = $2[0m  [["updated_at", "2019-07-10 22:22:09.230614"], ["id", 5]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: b2465968-3d23-40cd-b461-562476c41203) to Async(default) with arguments: #<GlobalID:0x00007fd3046ef7b0 @uri=#<URI::GID gid://activistbrite/ActiveStorage::Blob/3>>
+  [1m[36mEvent Load (3390.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mEvent Load (3.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+Started GET "/" for ::1 at 2019-07-10 15:44:33 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (15.3ms)
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+Completed 200 OK in 1598ms (Views: 1570.2ms | ActiveRecord: 24.1ms)
+
+
+Started GET "/api/verify/users/?email=demouser%40demo.com" for ::1 at 2019-07-10 15:44:42 -0700
+Processing by Api::UsersController#verify as JSON
+  Parameters: {"email"=>"demouser@demo.com"}
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demouser@demo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+Completed 200 OK in 36ms (Views: 1.5ms | ActiveRecord: 19.0ms)
+
+
+Started POST "/api/session" for ::1 at 2019-07-10 15:44:45 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"demouser@demo.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demouser@demo.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:31
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:52
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demouser@demo.com"], ["id", 31], ["LIMIT", 1]]
+  ↳ app/models/user.rb:52
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "J0UW6nEAYRqAjgnDqpejwg"], ["id", 31], ["LIMIT", 1]]
+  ↳ app/models/user.rb:52
+  [1m[36mUser Update (3.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "organizer_title" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["session_token", "J0UW6nEAYRqAjgnDqpejwg"], ["organizer_title", "demouser@demo.com"], ["updated_at", "2019-07-10 22:44:45.954431"], ["id", 31]]
+  ↳ app/models/user.rb:52
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:52
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.9ms)
+Completed 200 OK in 354ms (Views: 21.6ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 15:45:57 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (22.9ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "J0UW6nEAYRqAjgnDqpejwg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+Completed 200 OK in 1626ms (Views: 1611.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 15:46:43 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (29.4ms)
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "J0UW6nEAYRqAjgnDqpejwg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+Completed 200 OK in 1879ms (Views: 1855.6ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 15:47:00 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (9.5ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "J0UW6nEAYRqAjgnDqpejwg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+Completed 200 OK in 1251ms (Views: 1248.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 15:47:22 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (28.7ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "J0UW6nEAYRqAjgnDqpejwg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+Completed 200 OK in 1651ms (Views: 1648.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 15:48:39 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (14.2ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "J0UW6nEAYRqAjgnDqpejwg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+Completed 200 OK in 1475ms (Views: 1468.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/events" for ::1 at 2019-07-10 15:48:41 -0700
+Processing by Api::EventsController#index as JSON
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - uninitialized constant Api::EventsController::Events:
+  app/controllers/api/events_controller.rb:3:in `index'
+
+Started GET "/" for ::1 at 2019-07-10 15:52:51 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (26.0ms)
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "J0UW6nEAYRqAjgnDqpejwg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+Completed 200 OK in 1586ms (Views: 1575.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/api/events" for ::1 at 2019-07-10 15:52:54 -0700
+Processing by Api::EventsController#index as JSON
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - uninitialized constant Api::EventsController::Events:
+  app/controllers/api/events_controller.rb:3:in `index'
+
+Started GET "/" for ::1 at 2019-07-10 15:53:35 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (28.4ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "J0UW6nEAYRqAjgnDqpejwg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+Completed 200 OK in 1660ms (Views: 1648.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 15:54:06 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (9.6ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "J0UW6nEAYRqAjgnDqpejwg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+Completed 200 OK in 196ms (Views: 155.9ms | ActiveRecord: 39.2ms)
+
+
+Started GET "/api/events" for ::1 at 2019-07-10 15:54:07 -0700
+Processing by Api::EventsController#index as JSON
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - uninitialized constant Api::EventsController::Events:
+  app/controllers/api/events_controller.rb:3:in `index'
+
+Started GET "/api/events" for ::1 at 2019-07-10 15:54:10 -0700
+Processing by Api::EventsController#index as JSON
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - uninitialized constant Api::EventsController::Events:
+  app/controllers/api/events_controller.rb:3:in `index'
+
+Started GET "/" for ::1 at 2019-07-10 15:55:11 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (10.5ms)
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "J0UW6nEAYRqAjgnDqpejwg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+Completed 200 OK in 253ms (Views: 250.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/events" for ::1 at 2019-07-10 15:55:15 -0700
+Processing by Api::EventsController#index as JSON
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - uninitialized constant Api::EventsController::Events:
+  app/controllers/api/events_controller.rb:3:in `index'
+
+Started GET "/" for ::1 at 2019-07-10 15:55:31 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "J0UW6nEAYRqAjgnDqpejwg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+Completed 200 OK in 114ms (Views: 110.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/events" for ::1 at 2019-07-10 15:55:35 -0700
+Processing by Api::EventsController#index as JSON
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - uninitialized constant Api::EventsController::Events:
+  app/controllers/api/events_controller.rb:3:in `index'
+
+Started DELETE "/api/session" for ::1 at 2019-07-10 15:57:04 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "J0UW6nEAYRqAjgnDqpejwg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:52
+  [1m[36mUser Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demouser@demo.com"], ["id", 31], ["LIMIT", 1]]
+  ↳ app/models/user.rb:52
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "-pZHYm6Iycq7i4sDVyqfgw"], ["id", 31], ["LIMIT", 1]]
+  ↳ app/models/user.rb:52
+  [1m[36mUser Update (2.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "-pZHYm6Iycq7i4sDVyqfgw"], ["updated_at", "2019-07-10 22:57:04.625147"], ["id", 31]]
+  ↳ app/models/user.rb:52
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:52
+Completed 200 OK in 78ms (Views: 1.0ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/api/events" for ::1 at 2019-07-10 15:57:11 -0700
+Processing by Api::EventsController#index as JSON
+Completed 500 Internal Server Error in 15210ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - uninitialized constant Api::EventsController::Events:
+  app/controllers/api/events_controller.rb:4:in `index'
+
+Started GET "/" for ::1 at 2019-07-10 15:57:44 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (13.6ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+Completed 200 OK in 256ms (Views: 247.6ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/api/events" for ::1 at 2019-07-10 15:57:49 -0700
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  Rendered api/events/index.json.jbuilder (2.1ms)
+Completed 500 Internal Server Error in 6235ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected ',', expecting keyword_end
+      :end_date,
+               ^
+/Users/freckledpapaya/Desktop/Activistbrite/app/views/api/events/index.json.jbuilder:13: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^:
+  app/views/api/events/index.json.jbuilder:5:in `'
+  app/controllers/api/events_controller.rb:6:in `index'
+
+Started GET "/api/verify/users/?email=demouser%40demo.com" for ::1 at 2019-07-10 15:58:50 -0700
+Processing by Api::UsersController#verify as JSON
+  Parameters: {"email"=>"demouser@demo.com"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demouser@demo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+Completed 200 OK in 72ms (Views: 3.8ms | ActiveRecord: 21.7ms)
+
+
+Started POST "/api/session" for ::1 at 2019-07-10 15:58:52 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"demouser@demo.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demouser@demo.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:31
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:52
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demouser@demo.com"], ["id", 31], ["LIMIT", 1]]
+  ↳ app/models/user.rb:52
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "rg8FJZQwN-Z__cH4AJt5rA"], ["id", 31], ["LIMIT", 1]]
+  ↳ app/models/user.rb:52
+  [1m[36mUser Update (1.1ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "rg8FJZQwN-Z__cH4AJt5rA"], ["updated_at", "2019-07-10 22:58:53.313654"], ["id", 31]]
+  ↳ app/models/user.rb:52
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:52
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (2.6ms)
+Completed 200 OK in 358ms (Views: 23.9ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/api/events" for ::1 at 2019-07-10 15:58:55 -0700
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (2.8ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/index.json.jbuilder (41.0ms)
+Completed 200 OK in 119ms (Views: 55.9ms | ActiveRecord: 18.3ms)
+
+
+Started DELETE "/api/session" for ::1 at 2019-07-10 16:00:24 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "rg8FJZQwN-Z__cH4AJt5rA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:52
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demouser@demo.com"], ["id", 31], ["LIMIT", 1]]
+  ↳ app/models/user.rb:52
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "20eXz650I10MeSXqS4HeUw"], ["id", 31], ["LIMIT", 1]]
+  ↳ app/models/user.rb:52
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "20eXz650I10MeSXqS4HeUw"], ["updated_at", "2019-07-10 23:00:24.386531"], ["id", 31]]
+  ↳ app/models/user.rb:52
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:52
+Completed 200 OK in 51ms (Views: 0.8ms | ActiveRecord: 12.7ms)
+
+
+Started GET "/api/events" for ::1 at 2019-07-10 16:00:29 -0700
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (3.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/index.json.jbuilder (31.5ms)
+Completed 200 OK in 63ms (Views: 38.4ms | ActiveRecord: 15.8ms)
+
+

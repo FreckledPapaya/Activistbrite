@@ -9,7 +9,8 @@ export default (state = _nullSession, action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_CURRENT_USER: 
-      return merge ({}, { currentUser: action.user.id });
+    debugger
+      return merge ({}, { currentUser: Object.keys(action.user)[0] });
     case RECEIVE_EMAIL: 
       return merge({}, {currentUser: null, email: action.user.email, newUser: action.user.new_user});
       // camelCase

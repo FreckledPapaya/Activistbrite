@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     resources :users, only: [:create, :show]
     resource :session, only: [:create, :destroy]
     resources :events, only: [:index, :show, :create, :update, :destroy]
-    get '/users/verify', to: 'users#verify', as: 'verify'
+    get '/verify/users/', to: 'users#verify', as: 'verify'
 
   end
 

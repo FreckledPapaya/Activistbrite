@@ -15,6 +15,7 @@ class Session extends React.Component {
   }
 
   switchComponent() {
+    debugger
   if (this.props.session.newUser === true) { 
     this.form = <Signup user={this.state} email={this.props.session.email} receiveSignupProps={this.receiveSignupProps} />;
   } else {
@@ -25,7 +26,9 @@ class Session extends React.Component {
 
   receiveSigninProps (user) {
     this.setState({user: user}); 
+    debugger
     this.props.fetchUser(user.email).then(() => {
+      debugger
       this.props.history.push('/signin');
       this.switchComponent();
     });  

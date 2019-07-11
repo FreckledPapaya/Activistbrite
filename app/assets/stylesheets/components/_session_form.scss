@@ -81,16 +81,21 @@ main { }
   text-align: center; 
 }
 
-.session_form_logo_img {
-    display: inline-block;
-    margin: 0 auto;
-    vertical-align: middle;
-    background-size: contain;
-    line-height: 0; 
-    width: 48px;
-    height: 48px;
-    text-align: center;
+// .session_form_logo_img {
+//     display: inline-block;
+//     margin: 0 auto;
+//     vertical-align: middle;
+//     background-size: contain;
+//     line-height: 0; 
+//     width: 48px;
+//     height: 48px;
+//     text-align: center;
 
+// }
+
+.session_form_logo_img {
+    font-size: 62px;
+    color: #d1410c;
 }
 
 .session_form_text_lg{

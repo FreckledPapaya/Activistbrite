@@ -32,6 +32,8 @@
     -webkit-box-align: center; 
     align-items: center;
     height: 59px;
+    text-decoration: none;
+
 } 
 
 .logo_index_img_container { 
@@ -42,11 +44,20 @@
     vertical-align: middle;
     background-size: contain;
     line-height: 0; 
+    display: flex;
 }
 
-.logo_index_img {
-    height: 100%;
-    width: 100%;
+.logo_index_img { 
+    -webkit-box-align: center; 
+    align-items: center; 
+    white-space: nowrap;
+    // height: 59px;
+    display: flex;
+    -webkit-box-pack: justify; 
+    justify-content: space-between;
+    text-decoration: none;
+    color: #d1410c;
+    background-color: transparent;
 } 
 
 .global_nav_bar { 

@@ -21,6 +21,8 @@ class NavBar extends React.Component {
     this.props.logoutUser().then(() => this.props.history.push('/')); 
   }
 
+  //  <img src={window.images.logo1} alt="" />
+
   render () {
     const button = this.loggedIn ? 
       <div >
@@ -39,9 +41,9 @@ class NavBar extends React.Component {
         <div className="header_major">
           <Link to="/" className="logo_index_link">
             <div className="logo_index_img_container"> 
-              <div className="logo_index_img"> 
-                <img src={window.images.logo1} alt=""/>
-              </div>
+              <b className="logo_index_img"> 
+                activistbrite
+              </b>
             </div> 
           </Link>
         </div>

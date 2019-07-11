@@ -31,9 +31,8 @@ class Signin extends React.Component {
 
         <div className="session_form_header" id="signin_header">
           <div className="session_form_logo">
-            <i className="session_form_logo_i">
-              <img src="" alt=""/>
-              Logo here
+            <i className="session_form_logo_img">
+              a
             </i>
           </div>
           <div className="session_form_text_lg">

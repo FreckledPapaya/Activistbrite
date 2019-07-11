@@ -18,4 +18,7 @@
  @import 'base/layout.scss';
  @import 'base/fonts.scss';
 
- @import 'components/*';
+ @import 'components/';
+ /* @import 'components/footer';
+ @import 'components/session_form';
+ @import 'components/events_index'; */

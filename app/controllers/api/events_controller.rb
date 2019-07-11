@@ -6,7 +6,7 @@ class Api::EventsController < ApplicationController
   end
 
   def show
-    @event = Event.find_by(id: params[:id])
+    @event = Event.find_by(id: params[:id]) 
     render 'api/events/show'
   end
 

@@ -9,10 +9,10 @@ const mapStateToProps = ({events}) => {
 
 const mapDispatchToProps = () => dispatch => ({ 
     fetchEvents: () => dispatch(fetchEvents()),
-    fetchEvent: (id) => dispatch(fetchEvent(id)),
-    createEvent: (event) => dispatch(createEvent(event)),
-    updateEvent: (event) => dispatch(updateEvent(event)),
-    deleteEvent: (id) => dispatch(deleteEvent(id)) 
+    // fetchEvent: (id) => dispatch(fetchEvent(id)),
+    // createEvent: (event) => dispatch(createEvent(event)),
+    // updateEvent: (event) => dispatch(updateEvent(event)),
+    // deleteEvent: (id) => dispatch(deleteEvent(id)) 
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(withRouter(EventsIndex));

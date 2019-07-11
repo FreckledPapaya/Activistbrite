@@ -3,6 +3,7 @@ import SessionContainer from './session/session_container';
 import NavBarContainer from './nav_bar/nav_bar_container';
 import FooterContainer from './footer/footer';
 import EventsIndexContainer from './events/events_index_contianer';
+import EventShowContainer from './events/event_show_container';
 // import components here
 
 import { Route } from 'react-router-dom';
@@ -13,6 +14,7 @@ export default () => (
   <div id="root2">
     <Route path="/" component={NavBarContainer} /> 
     <Route exact path="/" component={EventsIndexContainer} /> 
+    <Route exact path="/events/:eventId" component={EventShowContainer} /> 
     <AuthRoute path="/signin" component={SessionContainer} />
 
     <Route path="/" component={FooterContainer} /> 

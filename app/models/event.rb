@@ -18,10 +18,23 @@ class Event < ApplicationRecord
     #  add validations
     validates :title, :body, :start_date, :organizer_id, :image_url, presence: true
 
+    after_initialize :ensure_photo
+
     has_one_attached :image
 
     belongs_to :organizer,
         class_name: 'User',
         primary_key: :id,
         foreign_key: :organizer_id
+
+    def organizer_title
+        self.organizer.organizer_title
+    end
+
+    def ensure_photo
+        unless self.image.attached?
+            file = File.open('/Users/freckledpapaya/Desktop/Activistbrite/public/images/event_3.jpg')
+            self.image.attach(io: file, filename: "image.jpg")
+        end
+    end
 end

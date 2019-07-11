@@ -5,13 +5,13 @@ import { merge } from 'lodash';
 
 export default (state = {}, action) => {
   Object.freeze(state);
+  const newState = merge({}, state);
   switch (action.type) {
     case RECEIVE_EVENTS: 
       return merge({}, action.events);
-    case RECEIVE_EVENT:
-      return merge({}, {[action.event.id]: action.event});
-    case REMOVE_EVENT:
-      const newState = merge({}, state);
+    case RECEIVE_EVENT: 
+      return merge({}, state, {[action.event.id]: action.event});
+    case REMOVE_EVENT: 
       delete newState[action.id];
       return newState;
     default:

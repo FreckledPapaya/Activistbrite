@@ -3,9 +3,10 @@ import { withRouter } from 'react-router-dom';
 import { fetchEvent, fetchEvents, createEvent, updateEvent, deleteEvent } from '../../actions/events_actions';
 import EventsIndex from './events_index';
 
-const mapStateToProps = ({events}) => { 
-    return { events };
+const mapStateToProps = ({ entities }) => {   
+    return { events: entities.events };  
 };
+
 
 const mapDispatchToProps = () => dispatch => ({ 
     fetchEvents: () => dispatch(fetchEvents()),

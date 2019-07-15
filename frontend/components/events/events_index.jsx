@@ -4,20 +4,21 @@ import EventsIndexItem from './events_index_item';
 class EventsIndex extends React.Component {
     constructor(props) {
         super(props);
-        this.state = this.props.events;
+
     }
 
     componentDidMount () {
-        this.props.fetchEvents();
+        this.props.fetchEvents(); 
+        this.setState({ events: this.props.events });
     }
 
 
-    render() {
-        // const events = Object.keys(this.state).map(id => this.state[id]);
-        // const eventItems = events.map(event => {
-        //     <EventsIndexItem event={event} />
-        // });
-
+    render() { 
+        const events = Object.keys(this.props.events).map(id => this.props.events[id]);
+        const eventItems = events.map(event => {
+            return (<EventsIndexItem event={event} />);
+        });
+        
         return (
             <div className="best_life">
                 <div className="best_life_content">
@@ -28,7 +29,7 @@ class EventsIndex extends React.Component {
                     </div> 
                     <div className="best_life_results">
                         <div className="homepage_events_section">
-
+                            { eventItems }
                         </div>
                     </div>
                 </div>

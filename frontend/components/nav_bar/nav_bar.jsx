@@ -6,7 +6,7 @@ class NavBar extends React.Component {
   constructor(props) {
     super(props);
     this.handleLogout = this.handleLogout.bind(this); 
-    this.loggedIn = Boolean(this.props.currentUser);
+    this.loggedIn = Boolean(this.props.currentUser); 
   }
  
   // componentDidMount() {
@@ -16,7 +16,7 @@ class NavBar extends React.Component {
     this.loggedIn = Boolean(this.props.currentUser);  
   }
 
-  handleLogout(e) {
+  handleLogout(e) { 
     e.preventDefault();
     this.props.logoutUser().then(() => this.props.history.push('/')); 
   }
@@ -26,7 +26,7 @@ class NavBar extends React.Component {
   render () {
     const button = this.loggedIn ? 
       <div >
-        <button className="dropdown_profile" onClick={this.handleLogout}>Log out</button>  
+        <button  className="dropdown_profile" onClick={this.handleLogout}>Log out</button>  
       </div>
       // change to dropdown menu of person img
      : 

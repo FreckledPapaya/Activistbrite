@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom';
 class EventsIndexItem extends React.Component {
     constructor(props) {
         super(props); 
-        this.state = this.props.event;
+        this.state = {
+            event: this.props.event
+        };
     }  
 
     render() {
@@ -14,7 +16,7 @@ class EventsIndexItem extends React.Component {
         return (
             <div className="event_item_padding">
                 <div className="event_item_container">
-                    <Link to='/'>
+                    <Link to='/' className="event_index_item_link">
                         <div className="event_item_image_container">
                             <img src={window.images.event_1} />
                         </div>
@@ -22,16 +24,18 @@ class EventsIndexItem extends React.Component {
                             <div className="event_item_details">
                                 <div className="event_item_date">
                                     <div className="event_item_date_icon">
-                                        <p>Month</p>
-                                        <p>Date</p>
+                                        <p className="event_item_date_month">SEP</p>
+                                        <p className="event_item_date_num">21</p>
                                     </div>
                                 </div>
                                 <div className="event_item_info">
-                                    <div className="event_item_title"></div>
+                                    <div className="event_item_title">
+                                        <h3>Opera At the Ballpark General Admission</h3>
+                                    </div>
                                     <div className="event_item_setting">
-                                        <div className="event_item_time"></div>
-                                        <div className="event_item_location"></div>
-                                        <div className="event_item_price"></div> 
+                                        <div className="event_item_time">Sat, Sep 21, 7:30pm</div>
+                                        <div className="event_item_location">Oracle Park, San Francisco, CA</div>
+                                        <div className="event_item_price">Free</div> 
                                     </div>
                                 </div>
                             </div>

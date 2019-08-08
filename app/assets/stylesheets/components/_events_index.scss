@@ -31,11 +31,14 @@
     -webkit-box-flex: 1; 
     flex: 1 0 auto;
     padding-bottom: 16px; 
+    letter-spacing: normal;
+    font-size: 14px;
 }
 
 .best_life_header_title > h1 {
     color: #1e0a3c;
-    line-height: 2.5rem;
+    font-size: 3.25rem;
+    line-height: 4rem;
     letter-spacing: 1px;
     margin-right: -1px;
     font-weight: 800;
@@ -43,7 +46,7 @@
 }
 
 .best_life_results {
-
+    // remove
     border: solid;
     border-color: black;
     border-width: 1px;
@@ -73,3 +76,6 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+// events index item styling
+

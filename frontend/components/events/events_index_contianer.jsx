@@ -9,7 +9,7 @@ const mapStateToProps = ({ entities }) => {
 
 
 const mapDispatchToProps = () => dispatch => ({ 
-    fetchEvents: () => dispatch(fetchEvents()),
+    fetchEvents: () => dispatch(fetchEvents())
     // fetchEvent: (id) => dispatch(fetchEvent(id)),
     // createEvent: (event) => dispatch(createEvent(event)),
     // updateEvent: (event) => dispatch(updateEvent(event)),

@@ -4,7 +4,9 @@ import EventsIndexItem from './events_index_item';
 class EventsIndex extends React.Component {
     constructor(props) {
         super(props);
-
+        this.state = {
+            events: {}
+        };
     }
 
     componentDidMount () {
@@ -24,7 +26,7 @@ class EventsIndex extends React.Component {
                 <div className="best_life_content">
                     <div className="best_life_header">
                         <div className="best_life_header_title">
-                            <h1>Live Your Best Life</h1>
+                            <h1>Live your best life</h1>
                         </div> 
                     </div> 
                     <div className="best_life_results">

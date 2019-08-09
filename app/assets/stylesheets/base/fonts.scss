@@ -1,5 +1,5 @@
 body, h1, h2, h3, p {
-    font-family: Neue Plak,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
+    font-family: 'Heebo', sans-serif, BlinkMacSystemFont, Roboto, Helvetica Neue,Helvetica,Tahoma,Arial;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
     color: #39364f;
@@ -46,3 +46,8 @@ body, h1, h2, h3, p {
     letter-spacing: normal;
     font-size: 14px;
 }
+
+// @font-face {
+//     font-family: 'Benton-Sans';
+//     src: url('./bentonsansblack/BentonSans\ Black.otf'), url('./bentonsansblack/libfreefonts.txt');
+// };

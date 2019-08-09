@@ -30,7 +30,7 @@ class EventsIndexItem extends React.Component {
                                 </div>
                                 <div className="event_item_info">
                                     <div className="event_item_title">
-                                        <h3>Opera At the Ballpark General Admission</h3>
+                                        <h3>Opera at the Ballpark General Admission</h3>
                                     </div>
                                     <div className="event_item_setting">
                                         <div className="event_item_time">Sat, Sep 21, 7:30pm</div>

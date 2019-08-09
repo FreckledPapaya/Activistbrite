@@ -33041,3 +33041,365 @@ PG::ConnectionBad - FATAL:  database "Activistbrite_development" does not exist
 :
 
 Started POST "/__better_errors/5c9e538a0ac07a71/variables" for ::1 at 2019-08-09 10:20:29 -0700
+Started GET "/" for ::1 at 2019-08-09 10:21:05 -0700
+
+PG::ConnectionBad - FATAL:  database "Activistbrite_development" does not exist
+:
+
+Started POST "/__better_errors/53e8e46653478441/variables" for ::1 at 2019-08-09 10:21:05 -0700
+Started GET "/" for ::1 at 2019-08-09 10:21:21 -0700
+
+PG::ConnectionBad - FATAL:  database "Activistbrite_development" does not exist
+:
+
+Started POST "/__better_errors/38c355af576c5da1/variables" for ::1 at 2019-08-09 10:21:21 -0700
+Started GET "/" for ::1 at 2019-08-09 10:22:01 -0700
+
+PG::ConnectionBad - FATAL:  database "Activistbrite_development" does not exist
+:
+
+Started POST "/__better_errors/446a35ac3d8355af/variables" for ::1 at 2019-08-09 10:22:01 -0700
+Started GET "/" for ::1 at 2019-08-09 10:22:03 -0700
+
+PG::ConnectionBad - FATAL:  database "Activistbrite_development" does not exist
+:
+
+Started POST "/__better_errors/4eccdd211d82baca/variables" for ::1 at 2019-08-09 10:22:03 -0700
+  [1m[35m (750.6ms)[0m  [1m[35mCREATE DATABASE "Activistbrite_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (295.3ms)[0m  [1m[35mCREATE DATABASE "Activistbrite_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (27.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (19.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "active_storage_attachments" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (65.5ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" bigserial primary key, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (14.6ms)[0m  [1m[35mCREATE  INDEX  "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments"  ("blob_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_active_storage_attachments_uniqueness" ON "active_storage_attachments"  ("record_type", "record_id", "name", "blob_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "active_storage_blobs" CASCADE[0m
+  ↳ db/schema.rb:28
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" bigserial primary key, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "byte_size" bigint NOT NULL, "checksum" character varying NOT NULL, "created_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:28
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_active_storage_blobs_on_key" ON "active_storage_blobs"  ("key")[0m
+  ↳ db/schema.rb:28
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "events" CASCADE[0m
+  ↳ db/schema.rb:39
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "events" ("id" bigserial primary key, "title" character varying NOT NULL, "body" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "organizer_id" integer NOT NULL, "start_date" timestamp NOT NULL, "end_date" timestamp, "image_url" character varying NOT NULL)[0m
+  ↳ db/schema.rb:39
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_events_on_organizer_id" ON "events"  ("organizer_id")[0m
+  ↳ db/schema.rb:39
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE  INDEX  "index_events_on_start_date" ON "events"  ("start_date")[0m
+  ↳ db/schema.rb:39
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE  INDEX  "index_events_on_title" ON "events"  ("title")[0m
+  ↳ db/schema.rb:39
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:53
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "fname" character varying, "lname" character varying, "organizer_title" character varying)[0m
+  ↳ db/schema.rb:53
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:53
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  ↳ db/schema.rb:53
+  [1m[35m (51.8ms)[0m  [1m[35mALTER TABLE "active_storage_attachments" ADD CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+[0m
+  ↳ db/schema.rb:66
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (37.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190709204807)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190629220142),
+(20190629231709),
+(20190629232721),
+(20190702232648),
+(20190709042111),
+(20190709043350),
+(20190709163621);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (14.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (4.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-08-09 17:22:28.361008"], ["updated_at", "2019-08-09 17:22:28.361008"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.7ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "active_storage_attachments" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (9.7ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" bigserial primary key, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments"  ("blob_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_active_storage_attachments_uniqueness" ON "active_storage_attachments"  ("record_type", "record_id", "name", "blob_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "active_storage_blobs" CASCADE[0m
+  ↳ db/schema.rb:28
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" bigserial primary key, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "byte_size" bigint NOT NULL, "checksum" character varying NOT NULL, "created_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:28
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_active_storage_blobs_on_key" ON "active_storage_blobs"  ("key")[0m
+  ↳ db/schema.rb:28
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "events" CASCADE[0m
+  ↳ db/schema.rb:39
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "events" ("id" bigserial primary key, "title" character varying NOT NULL, "body" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "organizer_id" integer NOT NULL, "start_date" timestamp NOT NULL, "end_date" timestamp, "image_url" character varying NOT NULL)[0m
+  ↳ db/schema.rb:39
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_events_on_organizer_id" ON "events"  ("organizer_id")[0m
+  ↳ db/schema.rb:39
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE  INDEX  "index_events_on_start_date" ON "events"  ("start_date")[0m
+  ↳ db/schema.rb:39
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE  INDEX  "index_events_on_title" ON "events"  ("title")[0m
+  ↳ db/schema.rb:39
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:53
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "fname" character varying, "lname" character varying, "organizer_title" character varying)[0m
+  ↳ db/schema.rb:53
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:53
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  ↳ db/schema.rb:53
+  [1m[35m (3.9ms)[0m  [1m[35mALTER TABLE "active_storage_attachments" ADD CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+[0m
+  ↳ db/schema.rb:66
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190709204807)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190629220142),
+(20190629231709),
+(20190629232721),
+(20190702232648),
+(20190709042111),
+(20190709043350),
+(20190709163621);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-08-09 17:22:28.486888"], ["updated_at", "2019-08-09 17:22:28.486888"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-08-09 17:22:28.490878"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mEvent Load (1.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demouser@demo.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PHQCLAFitjoWqkLg7M-Cbg"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at", "organizer_title") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "demouser@demo.com"], ["password_digest", "$2a$12$39VtU8rTvJSN86VnwYgwp.ijqVZRUaQRVAVKuc8If8hfylT5pQmlG"], ["session_token", "PHQCLAFitjoWqkLg7M-Cbg"], ["created_at", "2019-08-09 17:22:29.038553"], ["updated_at", "2019-08-09 17:22:29.038553"], ["organizer_title", "demouser@demo.com"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "EnviroNerd"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "qbv4ESoBxJJ-fPVT00dHiQ"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at", "organizer_title") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "EnviroNerd"], ["password_digest", "$2a$12$g.FByKHxO/ig.ue/0L8c1ufnHBCo.7sF7CXQ1e4Q30sfsMCJHPc2K"], ["session_token", "qbv4ESoBxJJ-fPVT00dHiQ"], ["created_at", "2019-08-09 17:22:29.343927"], ["updated_at", "2019-08-09 17:22:29.343927"], ["organizer_title", "EnviroNerd"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "RightsForAll"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "uiMx1rmtHrFNYqFxxaPWbA"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at", "organizer_title") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "RightsForAll"], ["password_digest", "$2a$12$vhWt0zd2afmT6JuhZqb7BObVbrV53tYygM0sKxFF6P0Vqxb..TofK"], ["session_token", "uiMx1rmtHrFNYqFxxaPWbA"], ["created_at", "2019-08-09 17:22:29.638182"], ["updated_at", "2019-08-09 17:22:29.638182"], ["organizer_title", "RightsForAll"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "JanetSnakehole"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Ha-gL5ScUo923A23Wr7SMA"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at", "organizer_title") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "JanetSnakehole"], ["password_digest", "$2a$12$5BfoNTUY05BsHtkEmi20LeDzR9Um.ehP6g/BQ75ZiX7MbbSetHHz."], ["session_token", "Ha-gL5ScUo923A23Wr7SMA"], ["created_at", "2019-08-09 17:22:29.923357"], ["updated_at", "2019-08-09 17:22:29.923357"], ["organizer_title", "JanetSnakehole"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "LightOneCandle"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "x3Gto-WteaMf_emqDEgKUw"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at", "organizer_title") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "LightOneCandle"], ["password_digest", "$2a$12$ZUKfRH85beuaRhtfjmsLNe5m11wTIgR7TdDFbKCZnlRa29QykZHqS"], ["session_token", "x3Gto-WteaMf_emqDEgKUw"], ["created_at", "2019-08-09 17:22:30.214947"], ["updated_at", "2019-08-09 17:22:30.214947"], ["organizer_title", "LightOneCandle"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ExpectoPatronum"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "MzNS-GkH_dtizQ2AEGGCzQ"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at", "organizer_title") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "ExpectoPatronum"], ["password_digest", "$2a$12$GHgHVlO/AKv9UeeUd2xqN.ZtKaWKbE3V62y/pksp/XxpkxVWjxwgC"], ["session_token", "MzNS-GkH_dtizQ2AEGGCzQ"], ["created_at", "2019-08-09 17:22:30.507716"], ["updated_at", "2019-08-09 17:22:30.507716"], ["organizer_title", "ExpectoPatronum"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "VigilAuntie"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "8UpWU8IaBYP4TUFNSOXdRw"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at", "organizer_title") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "VigilAuntie"], ["password_digest", "$2a$12$RQsmSucPkFoJcsxk71PrWeN95a0Xmcz9lMNT64w.0PwcV.U4zHqya"], ["session_token", "8UpWU8IaBYP4TUFNSOXdRw"], ["created_at", "2019-08-09 17:22:30.805638"], ["updated_at", "2019-08-09 17:22:30.805638"], ["organizer_title", "VigilAuntie"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (10.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "FreeHugs"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "84ItXH1YhEXHX0mRrELhUw"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at", "organizer_title") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "FreeHugs"], ["password_digest", "$2a$12$kCXPwqGmndhpn8C449fyBeBRKGAVp3b/TjayEG06ooA9px6mHuhMi"], ["session_token", "84ItXH1YhEXHX0mRrELhUw"], ["created_at", "2019-08-09 17:22:31.111795"], ["updated_at", "2019-08-09 17:22:31.111795"], ["organizer_title", "FreeHugs"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "Education101"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "VG1K0H5HOj_qx4BCipG9SQ"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at", "organizer_title") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "Education101"], ["password_digest", "$2a$12$NeF6HzvRci7W4RpMejTEvOsw2nljoHJsWqzYzWju6WA.l.KuqIUay"], ["session_token", "VG1K0H5HOj_qx4BCipG9SQ"], ["created_at", "2019-08-09 17:22:31.416511"], ["updated_at", "2019-08-09 17:22:31.416511"], ["organizer_title", "Education101"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "FeministGamer"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZC-kne9EmQZH-Ltm0tYhhA"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at", "organizer_title") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "FeministGamer"], ["password_digest", "$2a$12$dOX/pXsW8kIW3N4eK.rCJ.qQ2EPMAb063bga1Fi1MIgzYRHo.XouC"], ["session_token", "ZC-kne9EmQZH-Ltm0tYhhA"], ["created_at", "2019-08-09 17:22:31.739937"], ["updated_at", "2019-08-09 17:22:31.739937"], ["organizer_title", "FeministGamer"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "RootDownRiseUp"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "b4aHN9XxbpsTA9Bp7BbuXA"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at", "organizer_title") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "RootDownRiseUp"], ["password_digest", "$2a$12$/kZDL5Q/P113/haRLJbwf.8Nd0CsC5vZIMQkNcf6K.RvAW4OUXvKS"], ["session_token", "b4aHN9XxbpsTA9Bp7BbuXA"], ["created_at", "2019-08-09 17:22:32.055481"], ["updated_at", "2019-08-09 17:22:32.055481"], ["organizer_title", "RootDownRiseUp"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (21.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "NoJusticeNoPeace"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wdZYXTdv388hxyFh1bmUKQ"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at", "organizer_title") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "NoJusticeNoPeace"], ["password_digest", "$2a$12$nQJHinE79PBwfJEujFQvWu1jC5LxrKmF78WA4At0G0iljNeljrZzG"], ["session_token", "wdZYXTdv388hxyFh1bmUKQ"], ["created_at", "2019-08-09 17:22:32.393987"], ["updated_at", "2019-08-09 17:22:32.393987"], ["organizer_title", "NoJusticeNoPeace"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (40.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "WaterIsLife"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "OrqgQY3kYAFoxZon60ezEg"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at", "organizer_title") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "WaterIsLife"], ["password_digest", "$2a$12$OdzVoO4WNb0IhRZj6EBF4uH1GOR9YLBUvLhjG.gwL.iTvvCoWHUFu"], ["session_token", "OrqgQY3kYAFoxZon60ezEg"], ["created_at", "2019-08-09 17:22:32.749507"], ["updated_at", "2019-08-09 17:22:32.749507"], ["organizer_title", "WaterIsLife"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "WeAreTheLand"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "s8SKnITfPwNIA2-1tqnl_g"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at", "organizer_title") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "WeAreTheLand"], ["password_digest", "$2a$12$IXff/SE4gyxwmK20WkIfi.o2S7Ml9Nb2pWefRcm6huCOs1FLBva.."], ["session_token", "s8SKnITfPwNIA2-1tqnl_g"], ["created_at", "2019-08-09 17:22:33.062082"], ["updated_at", "2019-08-09 17:22:33.062082"], ["organizer_title", "WeAreTheLand"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (21.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "Jaspurrr"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:26
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "QSDqQnhB4n_3lsEnPKvGqw"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:26
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at", "organizer_title") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "Jaspurrr"], ["password_digest", "$2a$12$LE/K8EZmMIynXWn71nyOd.gSew0zKCRU4Jnm0K9sqZFiVIQr5KaZG"], ["session_token", "QSDqQnhB4n_3lsEnPKvGqw"], ["created_at", "2019-08-09 17:22:33.395439"], ["updated_at", "2019-08-09 17:22:33.395439"], ["organizer_title", "Jaspurrr"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (19.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:28
+  [1m[36mEvent Create (1.0ms)[0m  [1m[32mINSERT INTO "events" ("title", "body", "created_at", "updated_at", "organizer_id", "start_date", "image_url") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Refreshments and Resistance"], ["body", "Meet your neighbors and call your local reps!"], ["created_at", "2019-08-09 17:22:33.546722"], ["updated_at", "2019-08-09 17:22:33.546722"], ["organizer_id", 3], ["start_date", "2020-01-02 17:00:00"], ["image_url", "event_1"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (11.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mEvent Create (0.7ms)[0m  [1m[32mINSERT INTO "events" ("title", "body", "created_at", "updated_at", "organizer_id", "start_date", "end_date", "image_url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Pride Riot"], ["body", "THE FIRST PRIDE WAS A RIOT!!\n    Come one, come all to an all-weekend queer extravaganza! Tickets are an all-access pass to panels, workshops, and lecture through out the day. In the evenings, unwind with friends in our sober space or show some skin at our burlesque and drag shows!"], ["created_at", "2019-08-09 17:22:33.564393"], ["updated_at", "2019-08-09 17:22:33.564393"], ["organizer_id", 6], ["start_date", "2019-10-05 09:00:00"], ["end_date", "2019-10-06 11:00:00"], ["image_url", "event_2.jpg"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:42
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ db/seeds.rb:42
+  [1m[36mEvent Create (31.3ms)[0m  [1m[32mINSERT INTO "events" ("title", "body", "created_at", "updated_at", "organizer_id", "start_date", "end_date", "image_url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "The Queeries"], ["body", "A new LGBT2QI+ arts & music festival\n        Honouring those who started the fight for queer liberation\n        Uplifting those with something to say in our communities\n        Creating a space of healing & celebration for those doing the work\n        For those with questions / for those with answers\n\n        A three day immersive arts & music festival for all the queer & trans folks, community members, activists, slacktivists, poets, rebels, musicians, and queermos just doing their best. Let's connect in a beautiful oasis, create a pop-up community together for a weekend of art, music, laughter, and queer magic.\n\n        This festival was born out of community necessity and striving to bring a wide array of voices and talents from our communities back to those who might need those connections most. That's why we're hosting Queeries in the Grey Bruce county this year, in Grand Valley, near Orangeville. The past two years we've experienced an alarmingly high 2SLGBTQ+ youth suicide rate in the region, we've lost a number of friends, participants, and young community members and I know we've all felt the collective heartbreak with how the current socio-political climate has been shifting here. There's a lot of work to do, but the road is arduous. And though Guelph Pride, the hosting organization for this festival, is putting in the work by revamping the way we do our work, bringing more voices to the table and into leadership positions, and shifting our focus to really support those who need us most, we also recognize that there are other sides to advocacy and activism that are often overlooked.\n\n        The road is long, and there is much work to do, but pride celebrations specifically have always been a place of simultaneous celebration and backlash, of authenticity and activism, of fighting like hell but being absolutely fabulous while doing it.\n\n        While we embrace the hard work necessary to make change in our communities, we also need to prioritize time to reconnect to those communities, for rest, for celebration, and for coming together on this land that sustains us.\n\n        And this was the inspiration and motivation behind Queeries - to bring people together, to foster an intentional community for change, and to create a space of celebration for our cultures and communities outside of the heavily commercialized pride festivals.\n\n        That's why we're keeping it grassroots this year - we did not and will not be accepting any corporate sponsorship for this festival. We are accountable to none but ourselves and our incredible partners - the Ridge LGBT campground, Make it Wright of Owen Sound, and DIRTYBOOTS creative. Queeries is also being run as an extension of Guelph Pride, which is a not for profit charitable organization run entirely by volunteers.\n\n        Yes, that's right - none of the organizers of the Queeries festival are being paid. It's run entirely by volunteers. All of the money raised is going towards offsetting costs, paying artists, offering subsidized/free tickets, offering meals to volunteers, and everything left over will be donated back to local, not-for-profit 2SLGBTQ+ serving charities.\n\n        So, thank you for your interest in helping us make this happen, and we can't wait to see you at the Ridge!"], ["created_at", "2019-08-09 17:22:33.569555"], ["updated_at", "2019-08-09 17:22:33.569555"], ["organizer_id", 15], ["start_date", "2020-06-19 17:00:00"], ["end_date", "2020-06-22 02:00:00"], ["image_url", "event_3"]]
+  ↳ db/seeds.rb:42
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:42
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:72
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:72
+  [1m[36mEvent Create (0.6ms)[0m  [1m[32mINSERT INTO "events" ("title", "body", "created_at", "updated_at", "organizer_id", "start_date", "end_date", "image_url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Feminist Craft Market"], ["body", "Join us for the debut of the Feminist Creative Collective. The Feminist Spring Market aims to dismantle the patriarchy by supporting and showcasing women (cis and trans), non-binary folks, queers, BIPOC and folks with disabilities. \n        This event will bring together artisans, makers, creatives, small businesses, activists and more like-minded people to create a hub of feminism, community and activism!\n\n        The market will be held at 10C Shared Space, on the 4th floor. This location has accessible doors, washrooms, and elevators, and is supportive of all genders. We are committed to creating a navigable space for people who use mobility devices.\n        If you have any questions about whether you can access this space, please get in touch."], ["created_at", "2019-08-09 17:22:33.609765"], ["updated_at", "2019-08-09 17:22:33.609765"], ["organizer_id", 10], ["start_date", "2020-04-17 16:00:00"], ["end_date", "2020-04-17 21:00:00"], ["image_url", "event_5"]]
+  ↳ db/seeds.rb:72
+  [1m[35m (8.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:72

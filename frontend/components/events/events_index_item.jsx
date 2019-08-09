@@ -9,6 +9,12 @@ class EventsIndexItem extends React.Component {
         };
     }  
 
+    componentDidMount () {
+        let id = this.state.event.id;
+        let path = '/events/' + id.toString();
+        this.setState({path: path});
+    }
+
     render() {
         // let image_url = this.props.event.image_url;
         // debugger
@@ -16,7 +22,7 @@ class EventsIndexItem extends React.Component {
         return (
             <div className="event_item_padding">
                 <div className="event_item_container">
-                    <Link to='/' className="event_index_item_link">
+                    <Link to={this.state.path} className="event_index_item_link">
                         <div className="event_item_image_container">
                             <img src={window.images.event_1} />
                         </div>

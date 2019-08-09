@@ -49,7 +49,15 @@ class EventShow extends React.Component {
                             </div>
                             <div className="event_listing_img"></div>
                         </div>
-                        <div className="event_listing_panel">Panel</div>
+                        <div className="event_listing_panel_container">
+                            <div className="event_listing_panel_placeholder"></div>
+                            <div className="event_listing_panel">
+                                <div className="event_listing_panel_buttons">
+                                    <div className="event_listing_panel_like_button"></div>
+                                    <div className="event_listing_panel_register_button"></div>
+                                </div>
+                            </div>
+                        </div>
                         <div className="event_listing_info">
                             <div className="event_listing_info_border"></div>
                             <div className="event_listing_info_padding">

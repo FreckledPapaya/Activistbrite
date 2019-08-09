@@ -26,7 +26,7 @@ class EventShow extends React.Component {
                     <div className="event_listing_body">
                         <div className="event_listing_basics">
                             <div className="event_listing_img_container">
-                                <img src="" alt=""/>
+                                <img src={window.images.event_1} />
                             </div>
                             <div className="event_listing_overview">
                                 <div className="event_listing_dta">

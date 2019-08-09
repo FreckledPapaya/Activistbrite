@@ -153,29 +153,82 @@ p#date {
 
 .event_listing_price {}
 
-@media only screen and (min-width: 1080px) {
-  .event_listing_img_container, .event_listing_overview {
-    border-top-left-radius: 4px;
+// add styling when tix available
 
+.event_listing_panel {
+    //   position: relative;
+    // padding: 0px;
+    // margin: 0px;
+}
+
+// 
+
+.event_listing_info {
+  position: relative;
+      
+}
+
+.event_listing_info_border {
+  
+}
+
+.event_listing_info_padding {
+  background-color: rgb(255, 255, 255)
+}
+
+.event_listing_info_contents {
+  box-sizing: border-box;
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  font-weight: 400;
+  font-size: 1.0666666667rem;
+  line-height: 1.5rem;
+}
+
+.event_listing_info_description {
+  font-weight: 400;
+  font-size: 1.0666666667rem;
+  line-height: 1.5rem;
+}
+.event_listing_info_des_body {
+  padding-bottom: 30px;
+  font-weight: 400;
+  font-size: 1.0666666667rem;
+  line-height: 1.5rem;
+  font-size: 0;
+  letter-spacing: 0;
+  letter-spacing: .5px;
+  box-sizing: border-box;
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+}
+
+.event_listing_info_setting {
+  
+}
+
+
+
+@media only screen and (min-width: 480px) {
+  .event_listing_info_padding {
+    padding-top: 50px;
+  }
+  .event_listing_info_contents {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .event_listing_info_des_body {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 
-@media only screen and (min-width: 800px) {
-  .event_listing_img_container, .event_listing_overview, .event_listing_dta,
-  .event_listing_date, .event_listing_ta, .event_listing_org,
-  .event_listing_price_container {
-    font-size: .9333333333rem;
-    line-height: 1.25rem;
-  }
-  .event_listing_img_container {
-    width: 66.6666666667%;
-  }
-  .event_listing_overview {
-    position: absolute;
-    width: 33.3333333333%;
-  }
-  .event_listing_dta {
-    padding-bottom: 20px;
+@media only screen and (max-width: 799px) and (min-width: 480px) {
+  .event_listing_ta {
+    margin-left: 60px;
   }
 }
 
@@ -206,22 +259,41 @@ p#date {
   }
 }
 
-@media only screen and (max-width: 799px) and (min-width: 480px) {
-  .event_listing_ta {
-    margin-left: 60px;
+@media only screen and (min-width: 800px) {
+  .event_listing_img_container, .event_listing_overview, .event_listing_dta,
+  .event_listing_date, .event_listing_ta, .event_listing_org,
+  .event_listing_price_container, .event_listing_info_contents,
+  .event_listing_info_des_body {
+    font-size: .9333333333rem;
+    line-height: 1.25rem;
+  }
+  .event_listing_img_container {
+    width: 66.6666666667%;
+  }
+  .event_listing_overview {
+    position: absolute;
+    width: 33.3333333333%;
+  }
+  .event_listing_dta {
+    padding-bottom: 20px;
+  }
+  .event_listing_info_contents {
+    margin-left: 8.3333333333%;
+    width: 91.6666666667%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .event_listing_info_des_body {
+    margin-bottom: 30px;
+    line-height: 1.25rem;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
-// 
-// 
-// 
-
-.event_listing_panel {
-      position: relative;
-    padding: 0px;
-    margin: 0px;
-}
-
-.event_listing_info {
-  
+@media only screen and (min-width: 1080px) {
+  .event_listing_img_container, .event_listing_overview {
+    border-top-left-radius: 4px;
+    
+  }
 }

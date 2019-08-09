@@ -58,12 +58,14 @@ class EventShow extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="event_listing_info">
+                        <section className="event_listing_info">
                             <div className="event_listing_info_border"></div>
                             <div className="event_listing_info_padding">
                                 <div className="event_listing_info_contents">
                                     <div className="event_listing_info_decription">
                                         Description
+                                        <div className="event_listing_info_des_body"></div>
+                                        <div className="event_listing_info_tags"></div>
                                     </div>
                                     <div className="event_listing_info_setting">
                                         <h3>Date and Time</h3>
@@ -74,7 +76,7 @@ class EventShow extends React.Component {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </section>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-blockquote, body, dd, div, dl, dt, fieldset,
+blockquote, body, dd, div, section, dl, dt, fieldset,
 form, h1, h2, h3, h4, h5, h6, input, li, ol,
 p, pre, td, textarea, th, ul {
   margin: 0;
@@ -16,7 +16,7 @@ p, pre, td, textarea, th, ul {
   position: relative;
 }
 
-header, footer, main, div {
+header, footer, main, div, section {
   display: block;
   // border: solid;
   // border-color: green;

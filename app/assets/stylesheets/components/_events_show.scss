@@ -62,6 +62,92 @@
   padding-right: 0;
 }
 
+
+.event_listing_overview {
+  padding-left: 0;
+  padding-right: 0;
+  background-color: rgba(255,255,255,0.9);
+  height: 100%;
+  right: 0;
+  font-weight: 400;
+  letter-spacing: .5px;
+  box-sizing: border-box;
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  
+}
+
+.event_listing_dta {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  font-weight: 400;
+  font-size: 1.0666666667rem;
+  line-height: 1.5rem;
+  letter-spacing: .5px;
+}
+
+.event_listing_date {
+  position: absolute;
+  font-weight: 400;
+  font-size: 1.0666666667rem;
+  line-height: 1.5rem;
+  letter-spacing: .5px;
+  text-align: center;
+}
+
+p#month {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 15px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+p#date {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 15px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.event_listing_ta {
+  padding-top: 64px;
+  font-weight: 400;
+  font-size: 1.06667rem;
+  line-height: 1.5rem;
+}
+
+.event_listing_ta > h1 {
+  padding-bottom: 2px;    display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  color: rgb(30, 10, 60);
+  // eventrbite font weight is 600 here
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 21px;
+  letter-spacing: 0.5px;
+  word-break: break-word;
+  margin: 0px auto;
+  overflow: hidden;
+}
+
+.event_listing_org {
+  margin-top: 15px;
+  // origin font weight 400
+  font-weight: 300;
+  font-size: 1.06667rem;
+  line-height: 1.5rem;
+}
+
+.event_listing_price_container {}
+.event_listing_price {}
+
 @media only screen and (min-width: 1080px) {
   .event_listing_img_container, .event_listing_overview {
     border-top-left-radius: 4px;
@@ -70,16 +156,20 @@
 }
 
 @media only screen and (min-width: 800px) {
-  .event_listing_img_container {
+  .event_listing_img_container, .event_listing_overview, .event_listing_dta,
+  .event_listing_date, .event_listing_ta, .event_listing_org {
     font-size: .9333333333rem;
     line-height: 1.25rem;
+  }
+  .event_listing_img_container {
     width: 66.6666666667%;
   }
   .event_listing_overview {
     position: absolute;
-    font-size: .9333333333rem;
-    line-height: 1.25rem;
     width: 33.3333333333%;
+  }
+  .event_listing_dta {
+    padding-bottom: 20px;
   }
 }
 
@@ -95,39 +185,35 @@
     font-size: 1.0666666667rem;
     line-height: 1.5rem;
   }
+  .event_listing_date {
+    display: inline-block;
+  }
+  .event_listing_ta {
+    display: inline-block;
+    padding-top: 0px;
+  }
+  .evet_listing_ta > h1 {
+    max-height: 125px;
+    -webkit-line-clamp: 4;
+    font-size: 17px;
+    line-height: 20px;
+  }
 }
 
-.event_listing_overview {
-  padding-left: 0;
-  padding-right: 0;
-  background-color: rgba(255,255,255,0.9);
-  height: 100%;
-  right: 0;
-  font-weight: 400;
-  letter-spacing: .5px;
-  box-sizing: border-box;
-  display: inline-block;
-  overflow: hidden;
-  vertical-align: top;
-
+@media only screen and (max-width: 799px) and (min-width: 480px) {
+  .event_listing_ta {
+    margin-left: 60px;
+  }
 }
-
-.event_listing_dta {}
-.event_listing_date {}
-.event_listing_ta {}
-.event_listing_org {}
-.event_listing_price_container {}
-.event_listing_price {}
-
 
 // 
 // 
 // 
 
 .event_listing_panel {
-
+  
 }
 
 .event_listing_info {
-
+  
 }

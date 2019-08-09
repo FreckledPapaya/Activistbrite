@@ -31,8 +31,8 @@ class EventShow extends React.Component {
                             <div className="event_listing_overview">
                                 <div className="event_listing_dta">
                                     <div className="event_listing_date">
-                                        <p>SEP</p>
-                                        <p>21</p>
+                                        <p id="month">Sep</p>
+                                        <p id="date">21</p>
                                     </div>
                                     <div className="event_listing_ta">
                                         <h1>Opera at the Ballpark General Admission</h1>

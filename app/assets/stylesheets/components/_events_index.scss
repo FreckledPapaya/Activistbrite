@@ -5,6 +5,20 @@
     // 
     box-sizing: border-box;
     height: 100%;
+    display: flex;
+    // -webkit-box-orient: vertical;
+    // -webkit-box-direction: normal;
+    // flex-direction: column;
+    // -webkit-box-pack: center;
+    justify-content: center;
+    // -webkit-box-align: center;
+    // align-items: center;
+}
+
+@media (min-width: 1272px) {
+    .best_life_content {
+        max-width: 1322px;
+    }
 }
 
 @media (min-width: 792px) {

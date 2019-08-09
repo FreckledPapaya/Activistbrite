@@ -40,10 +40,10 @@ class EventShow extends React.Component {
                                             <Link>by San Francisco Opera</Link>
                                         </div>
                                     </div>
-                                </div>
-                                <div className="event_listing_price_container">
-                                    <div className="event_listing_price">
-                                        Price
+                                    <div className="event_listing_price_container">
+                                        <div className="event_listing_price">
+                                            Price
+                                        </div>
                                     </div>
                                 </div>
                             </div>

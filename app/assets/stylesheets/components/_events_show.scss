@@ -42,13 +42,13 @@
 }
 
 .event_listing_basics {
-
   // animation-name: fadeIn;  
   // animation-delay: .4s;
   // animation-duration: .7s;
   // animation-timing-function: linear;
   // animation-iteration-count: 1;
   // animation-fill-mode: forwards;
+  position: relative;
 }
 
 .event_listing_img_container {
@@ -66,7 +66,7 @@
 .event_listing_overview {
   padding-left: 0;
   padding-right: 0;
-  background-color: rgba(255,255,255,0.9);
+  background-color: rgba(240, 236, 231, 0.9);
   height: 100%;
   right: 0;
   font-weight: 400;
@@ -145,7 +145,12 @@ p#date {
   line-height: 1.5rem;
 }
 
-.event_listing_price_container {}
+.event_listing_price_container {
+      position: absolute;
+    bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
 .event_listing_price {}
 
 @media only screen and (min-width: 1080px) {
@@ -157,7 +162,8 @@ p#date {
 
 @media only screen and (min-width: 800px) {
   .event_listing_img_container, .event_listing_overview, .event_listing_dta,
-  .event_listing_date, .event_listing_ta, .event_listing_org {
+  .event_listing_date, .event_listing_ta, .event_listing_org,
+  .event_listing_price_container {
     font-size: .9333333333rem;
     line-height: 1.25rem;
   }

@@ -5,8 +5,8 @@ import EventShow from './event_show';
 
 const mapStateToProps = (state, ownProps) => { 
     event = state.entities.events[ownProps.match.params.eventId];
-    currentUser = state.session.currentUser;
-    return { currentUser, event };
+    // currentUser = state.session.currentUser;
+    return { event };
 };
 
 const mapDispatchToProps = () => dispatch => ({ 

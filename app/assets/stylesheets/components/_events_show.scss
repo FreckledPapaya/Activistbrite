@@ -1,15 +1,10 @@
 .event_listing {
-  // remove
-  border: solid;
-  border-width: 1px;
+  flex: 1 1 auto;
+  height: 100%;
 }
 
 
 .event_listing_header {
-  // remove
-  border: solid;
-  border-width: 1px;
-  // 
   height: 66vh;
   max-height: inherit;
   min-height: 500px;
@@ -146,9 +141,9 @@ p#date {
 }
 
 .event_listing_price_container {
-      position: absolute;
-    bottom: 20px;
-    letter-spacing: 0.5px;
+  position: absolute;
+  bottom: 20px;
+  letter-spacing: 0.5px;
 }
 
 .event_listing_price {}
@@ -177,10 +172,6 @@ p#date {
 }
 
 .event_listing_info_contents {
-  box-sizing: border-box;
-  display: inline-block;
-  overflow: hidden;
-  vertical-align: top;
   font-weight: 400;
   font-size: 1.0666666667rem;
   line-height: 1.5rem;
@@ -190,7 +181,12 @@ p#date {
   font-weight: 400;
   font-size: 1.0666666667rem;
   line-height: 1.5rem;
+  box-sizing: border-box;
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
 }
+
 .event_listing_info_des_body {
   padding-bottom: 30px;
   font-weight: 400;
@@ -199,17 +195,67 @@ p#date {
   font-size: 0;
   letter-spacing: 0;
   letter-spacing: .5px;
+}
+.event_listing_info_des_body > h3 {
+  color: #1E0A3C;
+  line-height: 1.4rem;
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.event_listing_info_des_text {
+  margin-top: 15px;
+  overflow: hidden;
+  position: relative;
+  word-wrap: break-word;
+  font-weight: 400;
+  font-size: 1.0666666667rem;
+  line-height: 1.5rem;
+  letter-spacing: .5px;
+
+}
+
+.event_lsiting_info_des_text > p {
+  color: #6F7287;
+  font-weight: 400;
+  font-size: 1.0666666667rem;
+  line-height: 1.5rem;
+}
+
+.event_listing_info_setting {
+  font-weight: 400;
+  font-size: 1.0666666667rem;
+  line-height: 1.5rem;
   box-sizing: border-box;
   display: inline-block;
   overflow: hidden;
   vertical-align: top;
+  letter-spacing: .5px;
+  width: 100%;
 }
 
-.event_listing_info_setting {
-  
+.event_listing_info_setting_hide > h3 {
+  color: #1E0A3C;
+  line-height: 1.4rem;
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  margin-bottom: 10px;
 }
 
+.event_details_date {
+  margin-bottom: 50px;
+  font-weight: 400;
+  font-size: 1.0666666667rem;
+  line-height: 1.5rem;
+  letter-spacing: .5px;
+}
 
+.event_details_date > p {
+  color: #39364f;
+    font-weight: 200;
+}
 
 @media only screen and (min-width: 480px) {
   .event_listing_info_padding {
@@ -219,16 +265,32 @@ p#date {
     padding-left: 10px;
     padding-right: 10px;
   }
+  .event_listing_info_description {
+    width: 58.3333333333%;
+  }
   .event_listing_info_des_body {
     width: 100%;
     padding-left: 10px;
     padding-right: 10px;
+  }
+  .event_listing_info_setting {
+    margin-left: 8.3333333333%;
+    width: 33.3333333333%;
+  }
+
+}
+@media only screen and (max-width: 479px) {
+  .event_listing_date, .event_listing_price_container, .event_listing_info_setting_hide {
+    display: none!important;
   }
 }
 
 @media only screen and (max-width: 799px) and (min-width: 480px) {
   .event_listing_ta {
     margin-left: 60px;
+  }
+  .event_listing_price_container  {
+    display: none!important;
   }
 }
 
@@ -263,7 +325,8 @@ p#date {
   .event_listing_img_container, .event_listing_overview, .event_listing_dta,
   .event_listing_date, .event_listing_ta, .event_listing_org,
   .event_listing_price_container, .event_listing_info_contents,
-  .event_listing_info_des_body {
+  .event_listing_info_des_body, .event_listing_info_des_text > p,
+  .event_listing_info_setting, .event_listing_info_setting_hide, .event_details_date {
     font-size: .9333333333rem;
     line-height: 1.25rem;
   }

@@ -8,6 +8,8 @@ p, pre, td, textarea, th, ul {
 #root, #root2 {
   overflow: hidden;
   display: flex;
+  flex-flow: column;
+  height: 100%;
   background-color: #fff;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;

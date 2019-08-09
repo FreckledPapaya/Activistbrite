@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 class EventShow extends React.Component {
     constructor (props) {
@@ -22,7 +24,31 @@ class EventShow extends React.Component {
                 </header>
                 <div className="event_listing_container">
                     <div className="event_listing_body">
-                        <div className="event_listing_basics">Basics</div>
+                        <div className="event_listing_basics">
+                            <div className="event_listing_img_container">
+                                <img src="" alt=""/>
+                            </div>
+                            <div className="event_listing_overview">
+                                <div className="event_listing_dta">
+                                    <div className="event_listing_date">
+                                        <p>SEP</p>
+                                        <p>21</p>
+                                    </div>
+                                    <div className="event_listing_ta">
+                                        <h1>Opera at the Ballpark General Admission</h1>
+                                        <div className="event_listing_org">
+                                            <Link>by San Francisco Opera</Link>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="event_listing_price_container">
+                                    <div className="event_listing_price">
+                                        Price
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="event_listing_img"></div>
+                        </div>
                         <div className="event_listing_panel">Panel</div>
                         <div className="event_listing_info">
                             <div className="event_listing_info_border"></div>

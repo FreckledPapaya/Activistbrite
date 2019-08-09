@@ -4,9 +4,10 @@
   border-width: 1px;
 }
 
+
 .event_listing_header {
-    // remove
-    border: solid;
+  // remove
+  border: solid;
   border-width: 1px;
   // 
   height: 66vh;
@@ -21,8 +22,19 @@
   letter-spacing: .5px;
 }
 
+@media only screen and (min-width: 1080px) {
+  .event_listing_container {
+    margin-top: 40px;
+  }
+}
 .event_listing_container {
-
+  max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.15);
+    position: relative;
+    margin-bottom: 50px;
+    padding-top: 0;
 }
 
 .event_listing_body {
@@ -30,8 +42,30 @@
 }
 
 .event_listing_basics {
+  // animation-name: fadeIn;  
+  // animation-delay: .4s;
+  // animation-duration: .7s;
+  // animation-timing-function: linear;
+  // animation-iteration-count: 1;
+  // animation-fill-mode: forwards;
+}
+
+.event_listing_img_container {
 
 }
+
+.event_listing_overview {}
+.event_listing_dta {}
+.event_listing_date {}
+.event_listing_ta {}
+.event_listing_org {}
+.event_listing_price_container {}
+.event_listing_price {}
+
+
+// 
+// 
+// 
 
 .event_listing_panel {
 

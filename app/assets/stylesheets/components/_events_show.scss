@@ -95,18 +95,17 @@
 
 p#month {
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 15px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
 }
 
 p#date {
-  font-size: 13px;
-  font-weight: 600;
-  line-height: 15px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
+  font-size: 17px;
+  font-weight: normal;
+  line-height: 1.25em;
+  letter-spacing: 1px;
 }
 
 .event_listing_ta {
@@ -117,19 +116,28 @@ p#date {
 }
 
 .event_listing_ta > h1 {
-  padding-bottom: 2px;    display: -webkit-box;
+  padding-bottom: 2px;    
+  display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
-  color: rgb(30, 10, 60);
-  // eventrbite font weight is 600 here
-  font-weight: 400;
-  font-size: 20px;
+  color: #1E0A3C;
+  font-weight: 500;
+  font-size: 16px;
   line-height: 21px;
   letter-spacing: 0.5px;
   word-break: break-word;
-  margin: 0px auto;
+  margin: 0 auto;
   overflow: hidden;
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 801px) {
+  .event_listing_ta > h1 {
+    max-height: 125px;
+    -webkit-line-clamp: 4;
+    font-size: 16px;
+    line-height: 21px;
+  }
 }
 
 .event_listing_org {
@@ -216,7 +224,7 @@ p#date {
 
 }
 
-.event_lsiting_info_des_text > p {
+.event_listing_info_des_text > p {
   color: #6F7287;
   font-weight: 400;
   font-size: 1.0666666667rem;
@@ -254,7 +262,7 @@ p#date {
 
 .event_details_date > p {
   color: #39364f;
-    font-weight: 200;
+  font-weight: 400;
 }
 
 @media only screen and (min-width: 480px) {

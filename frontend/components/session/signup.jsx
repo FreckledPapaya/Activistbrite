@@ -42,26 +42,41 @@ class Signup extends React.Component {
           </div> 
         </div>
 
-        <div className="session_form_container">
-          <div className="session_imput_email_disabled"> 
-            <label id='email'>Email Address</label>
-            <input type="text" name="Email address" value={this.email} disabled />
-          </div>
-
+        <div className="session_form_container" id="signup_form">
           <form className="session_form">
+            <div className="session_input_email_wrapper">
+              <div className="session_input_email_disabled"> 
+                <div className="session_input_email_label">
+                  <label id='email'>Email Address</label>
+                </div>
+                <input type="email" value={this.email} disabled />
+              </div>
+            </div>
+            <div className="session_input_container" id="signin_input">
+              <div className="session_input_item_internal">
+                <div className="session_input_label_wrapper">
+                  <label id='email'>No function yet</label>
+                </div>
+                <input type="email" value="" />
+              </div>
+            </div>
             <div className="session_input_container" id="signup_input">
               <div className="session_input_item_internal"> 
                 <div className="session_input_label_wrapper">
                   <label id='fname'>First Name</label> 
                 </div>
                 <input type="text" value={this.state.fname} onChange={this.update('fname')} />
-                
-                <div className="session_input_label_wrapper"> 
-                  <label id='lname'>Last Name</label>
-                </div>
-                <input type="text" value={this.state.lname} onChange={this.update('lname')}/>
-
               </div>
+            </div>
+            <div className="session_input_container" id="signup_input">
+              <div className="session_input_item_internal"> 
+                <div className="session_input_label_wrapper">
+                  <label id='lname'>Last Name</label> 
+                </div>
+                <input type="text" value={this.state.lname} onChange={this.update('lname')} />
+              </div>
+            </div>
+            <div className="session_input_container" id="signup_input">
 
               <div className="session_input_item_internal">  
                 <div className="session_input_label_wrapper">

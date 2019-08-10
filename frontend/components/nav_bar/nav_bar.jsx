@@ -9,9 +9,6 @@ class NavBar extends React.Component {
     this.loggedIn = Boolean(this.props.currentUser); 
   }
  
-  // componentDidMount() {
-  //   this.loggedIn = Boolean(this.props.currentUser);  
-  // }
   componentDidUpdate() {
     this.loggedIn = Boolean(this.props.currentUser);  
   }
@@ -42,7 +39,7 @@ class NavBar extends React.Component {
           <Link to="/" className="logo_index_link">
             <div className="logo_index_img_container"> 
               <b className="logo_index_img"> 
-                activistbrite
+                <p>activistbrite</p>
               </b>
             </div> 
           </Link>

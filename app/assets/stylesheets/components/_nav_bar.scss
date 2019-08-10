@@ -52,14 +52,19 @@
     -webkit-box-align: center; 
     align-items: center; 
     white-space: nowrap;
-    // height: 59px;
     display: flex;
     -webkit-box-pack: justify; 
     justify-content: space-between;
     text-decoration: none;
-    color: #d1410c;
+    color: #f05537;
     background-color: transparent;
 } 
+
+.logo_index_img > p {
+    color: #f05537;
+    font-size: 1.35rem;
+    font-weight: 700;
+}
 
 .global_nav_bar { 
     -webkit-box-align: center; 

@@ -10,13 +10,14 @@ class Session extends React.Component {
     this.receiveSigninProps = this.receiveSigninProps.bind(this);
     this.receiveLoginProps = this.receiveLoginProps.bind(this);
     this.switchComponent = this.switchComponent.bind(this); 
+    this.loginRedirect = this.loginRedirect.bind(this);
     this.form = <Signin user={this.state} receiveSigninProps={this.receiveSigninProps} receiveLoginProps={this.receiveLoginProps}/>;
     
   }
 
   switchComponent() { 
   if (this.props.session.newUser === true) { 
-    this.form = <Signup user={this.state} email={this.props.session.email} receiveSignupProps={this.receiveSignupProps} />;
+    this.form = <Signup user={this.state} email={this.props.session.email} receiveSignupProps={this.receiveSignupProps} loginRedirect={this.loginRedirect} />;
   } else {
     this.form = <Login user={this.state} email={this.props.session.email} receiveLoginProps={this.receiveLoginProps} />;
   }
@@ -39,6 +40,11 @@ class Session extends React.Component {
   receiveSignupProps (user) {
     this.setState({ user: user });
     this.props.createUser(this.state).then(() => this.props.history.push('/'));
+  }
+
+  loginRedirect () {
+    this.form = <Signin user={this.state} receiveSigninProps={this.receiveSigninProps} receiveLoginProps={this.receiveLoginProps} />;
+    this.setState(this.state);
   }
   
   render() {  

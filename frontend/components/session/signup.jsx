@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class Signup extends React.Component {
   constructor(props) {
@@ -6,6 +7,7 @@ class Signup extends React.Component {
     this.state = this.props.user; 
     this.email = this.props.email;
     this.handleClick = this.handleClick.bind(this);
+    this.handleRedirect = this.handleRedirect.bind(this);
   }
 
   componentDidMount() {
@@ -21,6 +23,11 @@ class Signup extends React.Component {
   handleClick(e) {
     e.preventDefault();
     this.props.receiveSignupProps(this.state);
+  }
+
+  handleRedirect(e) {
+    e.preventDefault();
+    this.props.loginRedirect();
   }
 
 
@@ -52,6 +59,7 @@ class Signup extends React.Component {
                 <input type="email" value={this.email} disabled />
               </div>
             </div>
+
             <div className="session_input_container" id="signin_input">
               <div className="session_input_item_internal">
                 <div className="session_input_label_wrapper">
@@ -60,6 +68,7 @@ class Signup extends React.Component {
                 <input type="email" value="" />
               </div>
             </div>
+
             <div className="session_input_container" id="signup_input">
               <div className="session_input_item_internal"> 
                 <div className="session_input_label_wrapper">
@@ -68,6 +77,7 @@ class Signup extends React.Component {
                 <input type="text" value={this.state.fname} onChange={this.update('fname')} />
               </div>
             </div>
+
             <div className="session_input_container" id="signup_input">
               <div className="session_input_item_internal"> 
                 <div className="session_input_label_wrapper">
@@ -76,21 +86,28 @@ class Signup extends React.Component {
                 <input type="text" value={this.state.lname} onChange={this.update('lname')} />
               </div>
             </div>
-            <div className="session_input_container" id="signup_input">
 
-              <div className="session_input_item_internal">  
-                <div className="session_input_label_wrapper">
-                  <label id='password'>Password</label>
+            <div className="signup_password_container">
+              <div className="session_input_container">
+                <div className="session_input_item_internal">  
+                  <div className="session_input_label_wrapper">
+                    <label id='password'>Password</label>
+                  </div>
+                  <input type="password" value={this.state.password} onChange={this.update('password')}/>
                 </div>
-                <input type="password" value={this.state.password} onChange={this.update('password')}/>
+              </div> 
+              <div className="session_form_line"></div>
+              <div className="password_length">
                 <p>Your password must be at least 8 characters</p>
               </div>
-            </div>        
+            </div>
             <div className="session_button_submit">
               <button className="button_session_submit" onClick={this.handleClick}>Sign Up</button>
             </div>
           </form> 
-     
+          <div className="session_form_login_link">
+            <Link to="/signin" onClick={this.handleRedirect}>Log In Instead</Link>
+          </div>
         </div>
         
         

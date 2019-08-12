@@ -31,4 +31,17 @@ class ApplicationController < ActionController::Base
     def require_logged_in
         redirect_to new_session_url unless current_user
     end
+
+    # for event parsing
+    def calculate_day(num)
+        days = Hash.new
+        days[1] = 'Monday'
+        days[2] = 'Tuesday'
+        days[3] = 'Wednesday'
+        days[4] = 'Thursday'
+        days[5] = 'Friday'
+        days[6] = 'Saturday'
+        days[7] = 'Sunday'
+        return days[num]
+    end
 end

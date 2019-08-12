@@ -13,30 +13,30 @@
 #  image_url    :string           not null
 #
 
-# DAYS = {
-#     1: 'Mon',
-#     2: 'Tue',
-#     3: 'Wed',
-#     4: 'Thu',
-#     5: 'Fri',
-#     6: 'Sat',
-#     7: 'Sun',
-# }
+DAYS = {
+    1 => 'Monday',
+    2 => 'Tuesday',
+    3 => 'Wednesday',
+    4 => 'Thursday',
+    5 => 'Friday',
+    6 => 'Saturday',
+    7 => 'Sunday',
+}
 
-# MONTHS = {
-#     1: 'January',
-#     2: 'February',
-#     3: 'March',
-#     4: 'April',
-#     5: 'May',
-#     6: 'June',
-#     7: 'July',
-#     8: 'August',
-#     9: 'September',
-#     10: 'October',
-#     11: 'November',
-#     12: 'December'
-# }
+MONTHS = {
+    1 => 'January',
+    2 => 'February',
+    3 => 'March',
+    4 => 'April',
+    5 => 'May',
+    6 => 'June',
+    7 => 'July',
+    8 => 'August',
+    9 => 'September',
+    10 => 'October',
+    11 => 'November',
+    12 => 'December'
+}
 
 class Event < ApplicationRecord
     # migrate location (indexed) and category_id (indexed, fk) will null:false
@@ -54,6 +54,30 @@ class Event < ApplicationRecord
 
     def organizer_title
         self.organizer.organizer_title
+    end
+
+    def weekday (date)
+        return DAYS[date.wday]
+    end
+
+    def date(date)
+        return date.mday
+    end
+
+    def month(date)
+        return MONTHS[date.mon]
+    end
+
+    def year(date)
+        return date.year
+    end
+
+    def hour(date)
+        return date.hour
+    end
+
+    def minute(date)
+        return date.min
     end
 
     # def ensure_photo

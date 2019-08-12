@@ -41,9 +41,9 @@ class EventsIndexItem extends React.Component {
         let path = '/events/' + id.toString();
         this.setState({path: path});
 
-        let date = new Date(this.state.event.start_date);
-        console.log(this.state.event.start_date);
-        console.log(date);
+        // let date = new Date(this.state.event.start_date);
+        // console.log(this.state.event.start_date);
+        // console.log(date);
     }
 
     handleClick(e) {

@@ -4,8 +4,9 @@ import { Link } from 'react-router-dom';
 class Signup extends React.Component {
   constructor(props) {
     super(props); 
-    this.state = this.props.user; 
-    this.email = this.props.email;
+    this.state = {
+      email: this.props.email
+    }; 
     this.handleClick = this.handleClick.bind(this);
     this.handleRedirect = this.handleRedirect.bind(this);
   }
@@ -15,6 +16,7 @@ class Signup extends React.Component {
   }
 
   update(field) {
+    // let that = this;
     return (e) => {
       this.setState({[field]: e.target.value});
     };
@@ -56,7 +58,7 @@ class Signup extends React.Component {
                 <div className="session_input_email_label">
                   <label id='email'>Email Address</label>
                 </div>
-                <input type="email" value={this.email} disabled />
+                <input type="email" value={this.state.email} disabled />
               </div>
             </div>
 

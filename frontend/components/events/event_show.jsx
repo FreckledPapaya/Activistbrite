@@ -71,6 +71,8 @@ class EventShow extends React.Component {
                                                 <p>This is some text to see how a decription shows up and wraps around new lines of text.
                                                     Also to see new paragraphs render. (they dont show)
                                                 </p>
+                                                <p id="des_text">This is how a new paragraph will render.</p>
+
                                             </div>
                                         </div>
                                         <div className="event_listing_info_tags"></div>

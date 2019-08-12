@@ -27,8 +27,7 @@ class Api::UsersController < ApplicationController
 
     if @user.save
       login!(@user)
-      render 'api/users/show'
-      # change to events index
+      render 'api/users/show' 
     else  
       flash.now[:errors] = @user.errors.full_messages
       render json: flash[:errors]

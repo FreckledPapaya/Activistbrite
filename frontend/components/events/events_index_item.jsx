@@ -1,18 +1,54 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+// const DAYS = {
+//          1: 'Mon',
+//          2: 'Tue',
+//          3: 'Wed',
+//          4: 'Thu',
+//          5: 'Fri',
+//          6: 'Sat',
+//          0: 'Sun',
+    
+// };
+
+// const MONTHS = {
+//          1: 'January',
+//          2: 'February',
+//          3: 'March',
+//          4: 'April',
+//          5: 'May',
+//          6: 'June',
+//          7: 'July',
+//          8: 'August',
+//          9: 'September',
+//          10: 'October',
+//          11: 'November',
+//          12: 'December'
+// };
+
 class EventsIndexItem extends React.Component {
     constructor(props) {
         super(props); 
         this.state = {
             event: this.props.event
         };
+        this.handleClick = this.handleClick.bind(this);
     }  
 
     componentDidMount () {
         let id = this.state.event.id;
         let path = '/events/' + id.toString();
         this.setState({path: path});
+
+        let date = new Date(this.state.event.start_date);
+        console.log(this.state.event.start_date);
+        console.log(date);
+    }
+
+    handleClick(e) {
+        e.preventDefault();
+        this.props.history.push(this.state.path);
     }
 
     render() {
@@ -22,7 +58,7 @@ class EventsIndexItem extends React.Component {
         return (
             <div className="event_item_padding">
                 <div className="event_item_container">
-                    <Link to={this.state.path} className="event_index_item_link">
+                    <Link to={this.state.path} className="event_index_item_link" >
                         <div className="event_item_image_container">
                             <img src={window.images.event_1} />
                         </div>

@@ -17,8 +17,8 @@ class EventsIndex extends React.Component {
 
     render() { 
         const events = Object.keys(this.props.events).map(id => this.props.events[id]);
-        const eventItems = events.map(event => {
-            return (<EventsIndexItem event={event} />);
+        const eventItems = events.map((event,i) => {
+            return (<EventsIndexItem event={event} key={i} />);
         });
         
         return (

@@ -80,6 +80,24 @@ class Event < ApplicationRecord
         return date.min
     end
 
+    def time(date)
+        # hour = date.hour
+        # minute = date.minute
+        # morn_aft = "am"
+        # if hour > 12
+        #     morn_aft = "pm"
+        #     hour -= 12
+        #     hour = hour.to_s
+        # end
+        # if minute < 10
+        #     minute = "0" + minute.to_s
+        # else
+        #     minute = minute.to_s
+        # end
+
+        # return (hour + ":" + minute + morn_aft)
+    end
+
     # def ensure_photo
     #     unless self.image.attached?
     #         file = File.open('/Users/freckledpapaya/Desktop/Activistbrite/public/images/event_3.jpg')

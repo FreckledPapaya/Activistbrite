@@ -11,16 +11,16 @@
       json.end_date event.date(event.end_date)
       json.end_month event.month(event.end_date)
       json.end_year event.year(event.end_date)
-      json.end_hour event.hour(event.end_date)
-      json.end_minute event.minute(event.end_date)
+      # json.end_hour event.hour(event.end_date)
+      # json.end_minute event.minute(event.end_date)
     end
        
     json.start_day event.weekday(event.start_date)
     json.start_date event.date(event.start_date)
     json.start_month event.month(event.start_date)
     json.start_year event.year(event.start_date)
-    json.start_hour event.hour(event.start_date)
-    json.start_minute event.minute(event.start_date)
+    # json.start_time event.time(event.start_date)
+    # json.start_minute event.minute(event.start_date)
   
   end
 end 

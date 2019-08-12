@@ -1,38 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-// const DAYS = {
-//          1: 'Mon',
-//          2: 'Tue',
-//          3: 'Wed',
-//          4: 'Thu',
-//          5: 'Fri',
-//          6: 'Sat',
-//          0: 'Sun',
-    
-// };
-
-// const MONTHS = {
-//          1: 'January',
-//          2: 'February',
-//          3: 'March',
-//          4: 'April',
-//          5: 'May',
-//          6: 'June',
-//          7: 'July',
-//          8: 'August',
-//          9: 'September',
-//          10: 'October',
-//          11: 'November',
-//          12: 'December'
-// };
-
 class EventsIndexItem extends React.Component {
     constructor(props) {
-        super(props); 
+        super(props);
         this.state = {
-            event: this.props.event
+            event: this.props.event,
+            am: true
         };
+       
         this.handleClick = this.handleClick.bind(this);
     }  
 
@@ -40,10 +16,11 @@ class EventsIndexItem extends React.Component {
         let id = this.state.event.id;
         let path = '/events/' + id.toString();
         this.setState({path: path});
-
-        // let date = new Date(this.state.event.start_date);
-        // console.log(this.state.event.start_date);
-        // console.log(date);
+        // if (this.props.event.start_hour > 12) {
+        //     this.setState({am: false});
+        //     this.props.event.start_hour -= 12;
+        // }
+        // if (this.props.event.start_minute)
     }
 
     handleClick(e) {

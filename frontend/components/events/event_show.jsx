@@ -14,6 +14,10 @@ class EventShow extends React.Component {
     } 
     // to render body - parse for line breaks and next within p elements
 
+    // <p>This is some text to see how a decription shows up and wraps around new lines of text.
+    //                                             Also to see new paragraphs render. (they dont show)
+    //                                             </p>
+    // <p id="des_text">This is how a new paragraph will render.</p>
     render () {
         if (!this.props.event) {
             return null;
@@ -30,6 +34,14 @@ class EventShow extends React.Component {
         } else {
             start_time_str = event.start_time;
         }
+        let body = event.body.split('\n');
+        body = body.map((str, i) => {
+            if (i > 0){
+                return (<p id="des_text">{str}</p>);
+            } else {
+                return (<p>{str}</p>)
+            }
+        });
 
         return (
             <div className="event_listing">
@@ -45,13 +57,13 @@ class EventShow extends React.Component {
                             <div className="event_listing_overview">
                                 <div className="event_listing_dta">
                                     <div className="event_listing_date">
-                                        <p id="month">SEP</p>
-                                        <p id="date">21</p>
+                                        <p id="month">{monAbbrev}</p>
+                                        <p id="date">{event.start_date}</p>
                                     </div>
                                     <div className="event_listing_ta">
                                         <h1>{event.title}</h1>
                                         <div className="event_listing_org">
-                                            <Link>by org</Link>
+                                            <Link>by {event.organizer_title}</Link>
                                         </div>
                                     </div>
                                     <div className="event_listing_price_container">
@@ -80,10 +92,7 @@ class EventShow extends React.Component {
                                         <div className="event_listing_info_des_body">
                                             <h3>Description</h3>
                                             <div className="event_listing_info_des_text">
-                                                <p>This is some text to see how a decription shows up and wraps around new lines of text.
-                                                    Also to see new paragraphs render. (they dont show)
-                                                </p>
-                                                <p id="des_text">This is how a new paragraph will render.</p>
+                                                {body}
 
                                             </div>
                                         </div>

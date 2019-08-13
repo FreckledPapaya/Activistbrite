@@ -7,8 +7,11 @@ class Api::EventsController < ApplicationController
 
   def show
     @event = Event.find_by(id: params[:id]) 
-    debugger
-    render 'api/events/show'
+    if @event
+      render 'api/events/show'
+    else
+      render json: @event.errors.full_messages
+    end
   end
 
   def create

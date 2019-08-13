@@ -72,30 +72,22 @@ class Event < ApplicationRecord
         return date.year
     end
 
-    def hour(date)
-        return date.hour
-    end
-
-    def minute(date)
-        return date.min
-    end
-
     def time(date)
-        # hour = date.hour
-        # minute = date.minute
-        # morn_aft = "am"
-        # if hour > 12
-        #     morn_aft = "pm"
-        #     hour -= 12
-        #     hour = hour.to_s
-        # end
-        # if minute < 10
-        #     minute = "0" + minute.to_s
-        # else
-        #     minute = minute.to_s
-        # end
+        hour = date.hour
+        minute = date.min
+        morn_aft = "am"
+        if hour > 12
+            morn_aft = "pm"
+            hour -= 12
+        end
+        hour = hour.to_s
+        if minute < 10
+            minute = "0" + minute.to_s
+        else
+            minute = minute.to_s
+        end
 
-        # return (hour + ":" + minute + morn_aft)
+        return hour + ":" + minute + morn_aft
     end
 
     # def ensure_photo

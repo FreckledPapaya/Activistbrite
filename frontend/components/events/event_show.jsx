@@ -11,9 +11,10 @@ class EventShow extends React.Component {
     }
 
     componentDidMount() {
-        let id = this.props.match.params.eventId.parseInt();
+        let id = parseInt(this.props.match.params.eventId);
         debugger
-        this.props.fetchEvent(id).then(event => this.setState({ event: event }));
+        this.props.fetchEvent(id)
+        this.setState({ event: event });
         // this.dayAbbrev = this.state.event.start_day.slice(0, 3);
         // this.monAbbrev = this.state.event.start_month.slice(0, 3);
         // this.start_datetime =

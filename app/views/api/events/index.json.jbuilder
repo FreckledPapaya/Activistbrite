@@ -1,6 +1,3 @@
-
-
-
 @events.each do |event| 
   json.set! event.id do
     json.extract! event, :id, :title, :image_url, :organizer_id, :organizer_title

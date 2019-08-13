@@ -7,6 +7,7 @@ class Api::EventsController < ApplicationController
 
   def show
     @event = Event.find_by(id: params[:id]) 
+    debugger
     render 'api/events/show'
   end
 

@@ -10,8 +10,8 @@ class EventShow extends React.Component {
     componentDidMount() {
         let id = parseInt(this.props.match.params.eventId);
         this.props.fetchEvent(id);
-
     } 
+
     // to render body - parse for line breaks and next within p elements
 
     // <p>This is some text to see how a decription shows up and wraps around new lines of text.
@@ -19,7 +19,7 @@ class EventShow extends React.Component {
     //                                             </p>
     // <p id="des_text">This is how a new paragraph will render.</p>
     render () {
-        if (!this.props.event) {
+        if (!this.props.event || !this.props.event.body) {
             return null;
         }
 
@@ -34,14 +34,19 @@ class EventShow extends React.Component {
         } else {
             start_time_str = event.start_time;
         }
-        let body = event.body.split('\n');
-        body = body.map((str, i) => {
-            if (i > 0){
-                return (<p id="des_text">{str}</p>);
-            } else {
-                return (<p>{str}</p>)
-            }
-        });
+        let body;
+        if (event.body.length){
+            body = event.body.split('\n');
+            body = body.map((str, i) => {
+                if (i > 0){
+                    return (<p id="des_text">{str}</p>);
+                } else {
+                    return (<p>{str}</p>)
+                }
+            });
+        } else {
+            body = event.body;
+        }
 
         return (
             <div className="event_listing">

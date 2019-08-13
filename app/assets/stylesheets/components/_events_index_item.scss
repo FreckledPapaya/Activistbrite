@@ -1,4 +1,5 @@
 .event_item_padding {
+  flex: 1 1 auto;
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 8px;
@@ -7,6 +8,7 @@
   display: inline-block;
   vertical-align: top;
   overflow: visible;
+  height: 33%;
 }
 
 
@@ -29,12 +31,20 @@
   height: 100%;
   display: block;
   background: #fff;
-  // remove
-  border: solid;
-  border-width: 1px;
 }
 
 .event_item_image_container {
+  height: 120px;
+  box-sizing: border-box;
+  display: flex;
+  // justify-content: center;
+  // width: 100%;
+}
+
+.event_item_image_container > img {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
 
 }
 
@@ -43,6 +53,8 @@
   overflow: visible;
   position: relative;
   padding: 24px;
+  height: 120px;
+  box-sizing: border-box;
 }
 
 .event_item_details {

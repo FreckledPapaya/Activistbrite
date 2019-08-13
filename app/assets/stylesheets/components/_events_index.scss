@@ -1,11 +1,8 @@
- 
- 
-
-.best_life {
+ .best_life {
     // 
     box-sizing: border-box;
     height: 100%;
-    display: flex;
+    display: block;
     flex: 1 1 auto;
     -webkit-box-orient: vertical;
     justify-content: center;

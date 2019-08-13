@@ -43,7 +43,7 @@ class Event < ApplicationRecord
     #  add validations
     validates :title, :body, :start_date, :organizer_id, :image_url, presence: true
 
-    # after_initialize :ensure_photo
+    after_initialize :ensure_photo
 
     has_one_attached :image
 
@@ -90,11 +90,13 @@ class Event < ApplicationRecord
         return hour + ":" + minute + morn_aft
     end
 
-    # def ensure_photo
-    #     unless self.image.attached?
-    #         file = File.open('/Users/freckledpapaya/Desktop/Activistbrite/public/images/event_3.jpg')
-    #         self.image.attach(io: file, filename: "image.jpg")
-    #     end
-    # end 
+    def ensure_photo
+        unless self.image.attached?
+            path = 'app/assets/images/' + self.image_url + '.jpg'
+            file = File.open(path)
+            self.image.attach(io: file, filename: self.image_url + 'jpg')
+        end
+        # debugger
+    end 
 
 end

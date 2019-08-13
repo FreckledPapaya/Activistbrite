@@ -22,7 +22,7 @@ class EventsIndexItem extends React.Component {
 
     handleClick(e) {
         e.preventDefault();
-        this.props.history.push(this.state.path);
+        this.props.linkClick(this.state.path);
     }
 
     render() {
@@ -30,12 +30,14 @@ class EventsIndexItem extends React.Component {
         // debugger
         // let image_source = "window.images." + this.props.event.image_url;
         // debugger
+        // let imgPath = "window.images." + "event_1";
+        // debugger
         return (
             <div className="event_item_padding">
                 <div className="event_item_container">
-                    <Link to={this.state.path} className="event_index_item_link" >
+                    <Link to={`/events/${this.state.event.id}`} className="event_index_item_link" >
                         <div className="event_item_image_container">
-                            <img src={window.images.event_1} />
+                            <img src={this.state.event.image_url} />
                         </div>
                         <div className="event_item_details_container">
                             <div className="event_item_details">

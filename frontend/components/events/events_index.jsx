@@ -7,17 +7,22 @@ class EventsIndex extends React.Component {
         this.state = {
             events: this.props.events
         };
+        this.linkClick = this.linkClick.bind(this);
     }
 
     componentDidMount () {
         this.props.fetchEvents(); 
     }
 
+    linkClick (path) {
+        this.props.history.push(path);
+    }
+
 
     render() { 
         const events = Object.keys(this.props.events).map(id => this.props.events[id]);
-        const eventItems = events.map((event,i) => {
-            return (<EventsIndexItem event={event} key={i} />);
+        const eventItems = events.slice(0,9).map((event,i) => {
+            return (<EventsIndexItem event={event} key={i} linkClick={this.linkClick} />);
         });
         
         return (

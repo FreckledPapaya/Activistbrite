@@ -1,6 +1,6 @@
 @events.each do |event| 
   json.set! event.id do
-    json.extract! event, :id, :title, :image_url, :organizer_id, :organizer_title
+    json.extract! event, :id, :title, :organizer_id, :organizer_title
   
     if event.end_date.present?
       json.end_day event.weekday(event.end_date)
@@ -15,6 +15,8 @@
     json.start_month event.month(event.start_date)
     json.start_year event.year(event.start_date)
     json.start_time event.time(event.start_date)
+
+    json.image_url url_for(event.image)
   
   end
 end 

@@ -9,6 +9,7 @@ class Signup extends React.Component {
     }; 
     this.handleClick = this.handleClick.bind(this);
     this.handleRedirect = this.handleRedirect.bind(this);
+    this.update = this.update.bind(this);
   }
 
   componentDidMount() {
@@ -16,7 +17,6 @@ class Signup extends React.Component {
   }
 
   update(field) {
-    // let that = this;
     return (e) => {
       this.setState({[field]: e.target.value});
     };
@@ -34,6 +34,17 @@ class Signup extends React.Component {
 
 
   render() {
+    // for email confirmation
+    // <div className="session_input_container" id="signin_input">
+    //   <div className="session_input_item_internal">
+    //     <div className="session_input_label_wrapper">
+    //       <label id='email'>No function yet</label>
+    //     </div>
+    //     <input type="email" value={this.state.email2} onChange={this.update('email2')} />
+    //   </div>
+    // </div>
+
+
     return (
       <div className="session_container">
 
@@ -62,14 +73,7 @@ class Signup extends React.Component {
               </div>
             </div>
 
-            <div className="session_input_container" id="signin_input">
-              <div className="session_input_item_internal">
-                <div className="session_input_label_wrapper">
-                  <label id='email'>No function yet</label>
-                </div>
-                <input type="email" value="" />
-              </div>
-            </div>
+            
 
             <div className="session_input_container" id="signup_input">
               <div className="session_input_item_internal"> 

@@ -5,13 +5,12 @@ class EventsIndex extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            events: {}
+            events: this.props.events
         };
     }
 
     componentDidMount () {
         this.props.fetchEvents(); 
-        this.setState({ events: this.props.events });
     }
 
 

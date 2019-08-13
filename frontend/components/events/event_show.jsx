@@ -4,24 +4,33 @@ import { Link } from 'react-router-dom';
 
 class EventShow extends React.Component {
     constructor (props) {
-        super(props); 
-        this.state = {
-            event: this.props.event
-        };
+        super(props);
     }
 
     componentDidMount() {
         let id = parseInt(this.props.match.params.eventId);
         this.props.fetchEvent(id);
-        this.setState({ event: event });
-        // this.dayAbbrev = this.state.event.start_day.slice(0, 3);
-        // this.monAbbrev = this.state.event.start_month.slice(0, 3);
-        // this.start_datetime =
-        //     this.dayAbbrev + ", " + this.monAbbrev + " " + this.state.event.start_date + ", " + this.state.event.start_time;
+
     } 
     // to render body - parse for line breaks and next within p elements
 
     render () {
+        if (!this.props.event) {
+            return null;
+        }
+
+        const {event} = this.props;
+        let dayAbbrev = event.start_day.slice(0, 3);
+        let monAbbrev = event.start_month.slice(0, 3);
+        let start_date_str =
+            dayAbbrev + ", " + event.start_month + " " + event.start_date + ", " + event.start_year;
+        let start_time_str; 
+        if (event.end_time) {
+            start_time_str = event.start_time + " - " + event.end_time;
+        } else {
+            start_time_str = event.start_time;
+        }
+
         return (
             <div className="event_listing">
                 <header className="event_listing_header">
@@ -36,18 +45,17 @@ class EventShow extends React.Component {
                             <div className="event_listing_overview">
                                 <div className="event_listing_dta">
                                     <div className="event_listing_date">
-                                        <p id="month">Sep</p>
+                                        <p id="month">SEP</p>
                                         <p id="date">21</p>
                                     </div>
                                     <div className="event_listing_ta">
-                                        <h1>Opera at the Ballpark General Admission</h1>
+                                        <h1>{event.title}</h1>
                                         <div className="event_listing_org">
-                                            <Link>by San Francisco Opera</Link>
+                                            <Link>by org</Link>
                                         </div>
                                     </div>
                                     <div className="event_listing_price_container">
                                         <div className="event_listing_price">
-                                            Price
                                         </div>
                                     </div>
                                 </div>
@@ -85,14 +93,12 @@ class EventShow extends React.Component {
                                         <div className="event_listing_info_setting_hide">
                                             <h3>Date and Time</h3>
                                             <div className="event_details_date">
-                                                <p>Sat, September 21, 2019</p>
-                                                <p>7:30 PM – 10:30 PM PDT</p>
+                                                <p>{start_date_str}</p>
+                                                <p>{start_time_str}</p>
                                             </div>
                                             <h3>Location</h3>
                                             <div className="event_details_date">
-                                                <p>Oracle Park</p>
-                                                <p>24 Willie Mays Plaza </p>
-                                                <p>San Francisco, CA 94107 </p>
+                                                <p>San Francisco, CA</p>
                                             </div>
                                         </div>
                                     </div>

@@ -6,14 +6,18 @@ class EventShow extends React.Component {
     constructor (props) {
         super(props); 
         this.state = {
-            currentUser: this.props.currentUser
+            event: this.props.event
         };
     }
 
     componentDidMount() {
-        let id = this.props.match.params.eventId;
-        this.props.fetchEvent(id);
-        this.setState({event: event});
+        let id = this.props.match.params.eventId.parseInt();
+        debugger
+        this.props.fetchEvent(id).then(event => this.setState({ event: event }));
+        // this.dayAbbrev = this.state.event.start_day.slice(0, 3);
+        // this.monAbbrev = this.state.event.start_month.slice(0, 3);
+        // this.start_datetime =
+        //     this.dayAbbrev + ", " + this.monAbbrev + " " + this.state.event.start_date + ", " + this.state.event.start_time;
     } 
     // to render body - parse for line breaks and next within p elements
 

@@ -5,10 +5,12 @@ class EventsIndexItem extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            event: this.props.event,
-            am: true
+            event: this.props.event
         };
-       
+        this.dayAbbrev = this.state.event.start_day.slice(0, 3);
+        this.monAbbrev = this.state.event.start_month.slice(0, 3);
+        this.start_datetime =
+            this.dayAbbrev + ", " + this.monAbbrev + " " + this.state.event.start_date + ", " + this.state.event.start_time;
         this.handleClick = this.handleClick.bind(this);
     }  
 
@@ -16,11 +18,6 @@ class EventsIndexItem extends React.Component {
         let id = this.state.event.id;
         let path = '/events/' + id.toString();
         this.setState({path: path});
-        // if (this.props.event.start_hour > 12) {
-        //     this.setState({am: false});
-        //     this.props.event.start_hour -= 12;
-        // }
-        // if (this.props.event.start_minute)
     }
 
     handleClick(e) {
@@ -32,6 +29,7 @@ class EventsIndexItem extends React.Component {
         // let image_url = this.props.event.image_url;
         // debugger
         // let image_source = "window.images." + this.props.event.image_url;
+        // debugger
         return (
             <div className="event_item_padding">
                 <div className="event_item_container">
@@ -43,18 +41,18 @@ class EventsIndexItem extends React.Component {
                             <div className="event_item_details">
                                 <div className="event_item_date">
                                     <div className="event_item_date_icon">
-                                        <p className="event_item_date_month">SEP</p>
-                                        <p className="event_item_date_num">21</p>
+                                        <p className="event_item_date_month">{this.monAbbrev.toUpperCase()}</p>
+                                        <p className="event_item_date_num">{this.state.event.start_date}</p>
                                     </div>
                                 </div>
                                 <div className="event_item_info">
                                     <div className="event_item_title">
-                                        <h3>Opera at the Ballpark General Admission</h3>
+                                        <h3>{this.state.event.title}</h3>
                                     </div>
                                     <div className="event_item_setting">
-                                        <div className="event_item_time">Sat, Sep 21, 7:30pm</div>
-                                        <div className="event_item_location">Oracle Park, San Francisco, CA</div>
-                                        <div className="event_item_price">Free</div> 
+                                        <div className="event_item_time">{this.start_datetime}</div>
+                                        <div className="event_item_location">San Francisco, CA</div>
+                                        <div className="event_item_price"></div> 
                                     </div>
                                 </div>
                             </div>

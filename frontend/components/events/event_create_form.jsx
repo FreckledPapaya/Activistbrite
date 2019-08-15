@@ -6,13 +6,19 @@ class EventCreate extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      event: this.props.event,
+      title: "",
       currentUser: this.props.currentUser
     };
   }
 
   componentDidMount() {
     
+  }
+
+  update(field) {
+    return (e)=> {
+      this.setState({title: e.currentTarget.value});
+    };
   }
 
   render () {
@@ -65,8 +71,8 @@ class EventCreate extends React.Component {
                           <label className="create_event_title_label">Event Title</label>
                         </div>
                         <div className="create_event_title_input_container">
-                          <div className="create_event_input_text">
-                            <input type="text" className="create_event_title_input"/>
+                          <div className="session_input_item_internal">
+                            <input type="text" value={this.state.title} onChange={this.update('title')} className="create_event_title_input"/>
                           </div>
                         </div>
 
@@ -75,33 +81,54 @@ class EventCreate extends React.Component {
                         <div>
                           <div className="create_event_date_container">
                             <div className="create_event_start_date">
-                              <label htmlFor="" className="create_event_date_label"></label>
+                              <label htmlFor="" className="create_event_date_label">Starts</label>
                               <div className="create_event_date_input_container">
                                 <div className="create_event_date_input">
-                                  <input type="text"/>
+                                  <input id="event_start_date" type="text"/>
                                 </div>
-                              </div>
-                              <div className="create_event_date_input_container">
                                 <div className="create_event_date_input">
-                                  <input type="text"/>
+                                  <input id="event_start_time" type="text"/>
                                 </div>
                               </div>
                             </div>
-                            <div className="create_event_end_date">
-                              <label htmlFor="" className="create_event_date_label"></label>
+                            <div className="create_event_start_date">
+                              <label htmlFor="" className="create_event_date_label">Ends</label>
                               <div className="create_event_date_input_container">
                                 <div className="create_event_date_input">
-                                  <input type="text"/>
+                                  <input id="event_start_date" type="text" />
                                 </div>
-                              </div>
-                              <div className="create_event_date_input_container">
                                 <div className="create_event_date_input">
-                                  <input type="text"/>
+                                  <input id="event_start_time" type="text" />
                                 </div>
                               </div>
                             </div>
                           </div>
                           <div className="create_event_date_options"></div>
+                        </div>
+                      </div>
+
+                      <div className="create_event_details_image">
+                        <div className="create_event_image_title">
+                          <h3>Event Image</h3>
+                        </div>
+                        <div className="create_event_image_input_cont">
+                          <div className="create_event_image_input">
+                            <input type="file" />
+                          </div>
+                          <div className="create_event_image_rec">
+                            <span>We recommend using at least a 2160x1080px (2:1 ratio) image that's no larger than 10MB.</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="create_event_details_image">
+                        <div className="create_event_image_title">
+                          <h3>Event Description</h3>
+                        </div>
+                        <div className="create_event_image_input_cont">
+                          <div className="create_event_image_input">
+                            <input type="text" />
+                          </div>
                         </div>
                       </div>
                     </div>

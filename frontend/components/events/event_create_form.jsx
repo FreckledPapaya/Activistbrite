@@ -163,7 +163,7 @@ class EventCreate extends React.Component {
               <div className="create_event_makelive_header">Nice job! You're almost done.</div>
               <div className="create_event_makelive_wrapper">
                 <div className="create_event_makelive_button_cont">
-                  <button onClick={this.handleSubmit}>Make Event Live</button>
+                  <button onClick={this.handleSubmit}>Make Your Event Live</button>
                 </div>
 
               </div>

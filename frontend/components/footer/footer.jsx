@@ -7,7 +7,7 @@ class Footer extends React.Component {
             <div className="global_footer_container">
                 <footer>
                     <div className="copyright_container">
-                        <p>2019 Activistbrite</p>
+                        <p>2019 Activistbrite   </p>
                     </div>
                 </footer>
             </div>

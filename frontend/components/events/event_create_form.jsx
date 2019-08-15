@@ -7,12 +7,22 @@ class EventCreate extends React.Component {
     super(props);
     this.state = {
       title: "",
+      body: "",
+      image_url: "",
+      start_date: "",
+      end_date: "",
       currentUser: this.props.currentUser
     };
   }
 
   componentDidMount() {
-    
+    let thisUser = state.entities.users[this.state.currentUser];
+    if (!thisUser) {
+      
+    } else {
+
+      this.setState({organizer_title: thisUser.organizer_title});
+    }
   }
 
   update(field) {
@@ -22,10 +32,9 @@ class EventCreate extends React.Component {
   }
 
   render () {
-    // return (
-    //   <div>HELLO</div>
-    // )
-
+    if (!this.state.organizer_title){
+      return null;
+    }
     return (
       <div className="create_event">
         <div className="create_event_header_container">
@@ -125,9 +134,9 @@ class EventCreate extends React.Component {
                         <div className="create_event_image_title">
                           <h3>Event Description</h3>
                         </div>
-                        <div className="create_event_image_input_cont">
-                          <div className="create_event_image_input">
-                            <input type="text" />
+                        <div className="create_event_title_input_container">
+                          <div className="create_event_body_input_border">
+                            <input type="text" value="change to text editor" className="create_event_body_input" />
                           </div>
                         </div>
                       </div>

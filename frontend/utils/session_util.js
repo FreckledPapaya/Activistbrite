@@ -16,6 +16,14 @@ export const fetchUser = (email) => {
   });
 };
 
+export const getUser = (id) => {
+  return $.ajax({
+    method: 'GET',
+    url: `/api/users/${id}`,
+    data: id
+  });
+};
+
 export const createSession = (user) => {
   return $.ajax({
     method: 'POST',

@@ -46,7 +46,7 @@ class EventCreate extends React.Component {
         <div className="create_event_header_container">
           <div className="create_event_header">
             <div className="create_event_text">
-              <h2>Create An Event</h2>
+              <h2>Create an Event</h2>
             </div>
             <div className="create_event_publish">
               <div className="create_event_align_right">

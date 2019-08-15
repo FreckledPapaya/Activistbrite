@@ -6,13 +6,13 @@ class EventCreate extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: "",
-      body: "",
-      image_url: "",
-      start_date: "",
-      end_date: "",
-      currentUser: this.props.currentUser
+      title: this.props.event.title,
+      body: this.props.event.body,
+      image_url: this.props.event.image_url,
+      start_date: this.props.event.start_date,
+      end_date: this.props.event.end_date
     };
+    this.currentUser = this.props.currentUser;
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
   }
@@ -20,7 +20,7 @@ class EventCreate extends React.Component {
   componentDidMount() {
     let org_title = this.props.user.organizer_title;
     if (!org_title) {
-      this.props.getUser(this.state.currentUser).then(({user}) => {
+      this.props.getUser(this.currentUser).then(({user}) => {
         this.setState({organizer_title: user.organizer_title});
       });
     } 
@@ -28,12 +28,16 @@ class EventCreate extends React.Component {
 
   update(field) {
     return (e)=> {
-      this.setState({title: e.currentTarget.value});
+      debugger
+      this.setState({[field]: e.currentTarget.value});
     };
   }
 
   handleSubmit (e) {
     e.preventDefault();
+    this.props.createEvent(this.state.event).then((event) => {
+      this.props.history.push(`/events/${event.id}`);
+    });
   }
 
   render () {
@@ -51,7 +55,7 @@ class EventCreate extends React.Component {
             <div className="create_event_publish">
               <div className="create_event_align_right">
                 <div className="create_event_publish_button_cont">
-                  <button className="create_event_publish_button">
+                  <button onClick={this.handleSubmit} className="create_event_publish_button">
                     <span>Publish</span>
                     </button>
                 </div>
@@ -128,7 +132,7 @@ class EventCreate extends React.Component {
                         </div>
                         <div className="create_event_image_input_cont">
                           <div className="create_event_image_input">
-                            <input type="file" />
+                            <input type="file" onChange={this.update('iamge_url')}/>
                           </div>
                           <div className="create_event_image_rec">
                             <span>We recommend using at least a 2160x1080px (2:1 ratio) image that's no larger than 10MB.</span>
@@ -142,7 +146,7 @@ class EventCreate extends React.Component {
                         </div>
                         <div className="create_event_title_input_container">
                           <div className="create_event_body_input_border">
-                            <input type="text" value="change to text editor" className="create_event_body_input" />
+                            <input type="text" value={this.state.body} className="create_event_body_input" onChange={this.update('body')} />
                           </div>
                         </div>
                       </div>

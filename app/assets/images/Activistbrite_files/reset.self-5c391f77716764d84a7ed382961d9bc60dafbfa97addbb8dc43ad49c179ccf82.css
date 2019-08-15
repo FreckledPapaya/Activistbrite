@@ -1,0 +1,51 @@
+/* zero out everything!!! */
+/* line 8, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/base/reset.scss */
+html, body, header, nav, main, button, div, section, input, a, p, h1, h2, h3, img, span, form, input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+  box-sizing: inherit;
+  background: transparent;
+}
+
+/* line 22, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/base/reset.scss */
+ul {
+  list-style: none;
+}
+
+/* line 26, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/base/reset.scss */
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* line 32, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/base/reset.scss */
+input[type="password"],
+input[type="email"],
+input[type="text"],
+input[type="submit"],
+textarea,
+button {
+  /*
+  Get rid of native styling. Read more here:
+  http://css-tricks.com/almanac/properties/a/appearance/
+  */
+  -webkit-appearance: button;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* line 47, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/base/reset.scss */
+button,
+input[type="submit"] {
+  cursor: pointer;
+}
+
+/* Clearfix */

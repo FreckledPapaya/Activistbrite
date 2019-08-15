@@ -1,0 +1,399 @@
+/* line 1, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_events_show.scss */
+.event_listing {
+  flex: 1 1 auto;
+  height: 100%;
+}
+
+/* line 7, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_events_show.scss */
+.event_listing_header {
+  height: 66vh;
+  max-height: inherit;
+  min-height: 500px;
+  overflow: hidden;
+  position: absolute;
+  top: 61px;
+  width: 100%;
+  z-index: -1;
+  font-size: 15px;
+  letter-spacing: .5px;
+}
+
+@media only screen and (min-width: 1080px) {
+  /* line 21, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_events_show.scss */
+  .event_listing_container {
+    margin-top: 40px;
+  }
+}
+/* line 25, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_events_show.scss */
+.event_listing_container {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+  position: relative;
+  margin-bottom: 50px;
+  padding-top: 0;
+}
+
+/* line 39, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_events_show.scss */
+.event_listing_basics {
+  position: relative;
+}
+
+/* line 49, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_events_show.scss */
+.event_listing_img_container {
+  font-weight: 400;
+  letter-spacing: .5px;
+  box-sizing: border-box;
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* line 61, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_events_show.scss */
+.event_listing_overview {
+  padding-left: 0;
+  padding-right: 0;
+  background-color: rgba(240, 236, 231, 0.9);
+  height: 100%;
+  right: 0;
+  font-weight: 400;
+  letter-spacing: .5px;
+  box-sizing: border-box;
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+}
+
+/* line 76, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_events_show.scss */
+.event_listing_dta {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  font-weight: 400;
+  font-size: 1.0666666667rem;
+  line-height: 1.5rem;
+  letter-spacing: .5px;
+}
+
+/* line 87, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_events_show.scss */
+.event_listing_date {
+  position: absolute;
+  font-weight: 400;
+  font-size: 1.0666666667rem;
+  line-height: 1.5rem;
+  letter-spacing: .5px;
+  text-align: center;
+}
+
+/* line 96, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_events_show.scss */
+p#month {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* line 104, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_events_show.scss */
+p#date {
+  font-size: 17px;
+  font-weight: normal;
+  line-height: 1.25em;
+  letter-spacing: 1px;
+}
+
+/* line 111, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_events_show.scss */
+.event_listing_ta {
+  padding-top: 64px;
+  font-weight: 400;
+  font-size: 1.06667rem;
+  line-height: 1.5rem;
+}
+
+/* line 118, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_events_show.scss */
+.event_listing_ta > h1 {
+  padding-bottom: 2px;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  color: #1E0A3C;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  letter-spacing: 0.5px;
+  word-break: break-word;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 801px) {
+  /* line 135, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_events_show.scss */
+  .event_listing_ta > h1 {
+    max-height: 125px;
+    -webkit-line-clamp: 4;
+    font-size: 16px;
+    line-height: 21px;
+  }
+}
+/* line 143, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_events_show.scss */
+.event_listing_org {
+  margin-top: 15px;
+  font-weight: 300;
+  font-size: 1.06667rem;
+  line-height: 1.5rem;
+}
+
+/* line 151, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_events_show.scss */
+.event_listing_price_container {
+  position: absolute;
+  bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+/* line 169, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_events_show.scss */
+.event_listing_info {
+  position: relative;
+}
+
+/* line 178, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_events_show.scss */
+.event_listing_info_padding {
+  background-color: white;
+}
+
+/* line 182, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_events_show.scss */
+.event_listing_info_contents {
+  font-weight: 400;
+  font-size: 1.0666666667rem;
+  line-height: 1.5rem;
+}
+
+/* line 188, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_events_show.scss */
+.event_listing_info_description {
+  font-weight: 400;
+  font-size: 1.0666666667rem;
+  line-height: 1.5rem;
+  box-sizing: border-box;
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+}
+
+/* line 198, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_events_show.scss */
+.event_listing_info_des_body {
+  padding-bottom: 30px;
+  font-weight: 400;
+  font-size: 1.0666666667rem;
+  line-height: 1.5rem;
+  font-size: 0;
+  letter-spacing: 0;
+  letter-spacing: .5px;
+}
+
+/* line 207, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_events_show.scss */
+.event_listing_info_des_body > h3 {
+  color: #1E0A3C;
+  line-height: 1.4rem;
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+/* line 215, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_events_show.scss */
+.event_listing_info_des_text {
+  margin-top: 15px;
+  overflow: hidden;
+  position: relative;
+  word-wrap: break-word;
+  font-weight: 400;
+  font-size: 1.0666666667rem;
+  line-height: 1.5rem;
+  letter-spacing: .5px;
+}
+
+/* line 227, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_events_show.scss */
+.event_listing_info_des_text > p {
+  color: #6F7287;
+  font-weight: 400;
+  font-size: 1.0666666667rem;
+  line-height: 1.5rem;
+}
+
+/* line 234, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_events_show.scss */
+#des_text {
+  padding-top: 10px;
+}
+
+/* line 238, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_events_show.scss */
+.event_listing_info_setting {
+  font-weight: 400;
+  font-size: 1.0666666667rem;
+  line-height: 1.5rem;
+  box-sizing: border-box;
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  letter-spacing: .5px;
+  width: 100%;
+}
+
+/* line 250, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_events_show.scss */
+.event_listing_info_setting_hide > h3 {
+  color: #1E0A3C;
+  line-height: 1.4rem;
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+/* line 259, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_events_show.scss */
+.event_details_date {
+  margin-bottom: 50px;
+  font-weight: 400;
+  font-size: 1.0666666667rem;
+  line-height: 1.5rem;
+  letter-spacing: .5px;
+}
+
+/* line 267, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_events_show.scss */
+.event_details_date > p {
+  color: #39364f;
+  font-weight: 400;
+}
+
+@media only screen and (min-width: 480px) {
+  /* line 273, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_events_show.scss */
+  .event_listing_info_padding {
+    padding-top: 50px;
+  }
+
+  /* line 276, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_events_show.scss */
+  .event_listing_info_contents {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  /* line 280, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_events_show.scss */
+  .event_listing_info_description {
+    width: 58.3333333333%;
+  }
+
+  /* line 283, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_events_show.scss */
+  .event_listing_info_des_body {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  /* line 288, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_events_show.scss */
+  .event_listing_info_setting {
+    margin-left: 8.3333333333%;
+    width: 33.3333333333%;
+  }
+}
+@media only screen and (max-width: 479px) {
+  /* line 295, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_events_show.scss */
+  .event_listing_date, .event_listing_price_container, .event_listing_info_setting_hide {
+    display: none !important;
+  }
+}
+@media only screen and (max-width: 799px) and (min-width: 480px) {
+  /* line 301, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_events_show.scss */
+  .event_listing_ta {
+    margin-left: 60px;
+  }
+
+  /* line 304, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_events_show.scss */
+  .event_listing_price_container {
+    display: none !important;
+  }
+}
+@media only screen and (max-width: 799px) {
+  /* line 310, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_events_show.scss */
+  .event_listing_img_container {
+    width: 100%;
+    font-size: 1.0666666667rem;
+    line-height: 1.5rem;
+  }
+
+  /* line 315, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_events_show.scss */
+  .event_listing_overview {
+    position: relative;
+    background-color: white;
+    font-size: 1.0666666667rem;
+    line-height: 1.5rem;
+  }
+
+  /* line 321, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_events_show.scss */
+  .event_listing_date {
+    display: inline-block;
+  }
+
+  /* line 324, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_events_show.scss */
+  .event_listing_ta {
+    display: inline-block;
+    padding-top: 0px;
+  }
+
+  /* line 328, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_events_show.scss */
+  .evet_listing_ta > h1 {
+    max-height: 125px;
+    -webkit-line-clamp: 4;
+    font-size: 17px;
+    line-height: 20px;
+  }
+}
+@media only screen and (min-width: 800px) {
+  /* line 337, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_events_show.scss */
+  .event_listing_img_container, .event_listing_overview, .event_listing_dta,
+  .event_listing_date, .event_listing_ta, .event_listing_org,
+  .event_listing_price_container, .event_listing_info_contents,
+  .event_listing_info_des_body, .event_listing_info_des_text > p,
+  .event_listing_info_setting, .event_listing_info_setting_hide, .event_details_date {
+    font-size: .9333333333rem;
+    line-height: 1.25rem;
+  }
+
+  /* line 345, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_events_show.scss */
+  .event_listing_img_container {
+    width: 66.6666666667%;
+  }
+
+  /* line 348, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_events_show.scss */
+  .event_listing_overview {
+    position: absolute;
+    width: 33.3333333333%;
+  }
+
+  /* line 352, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_events_show.scss */
+  .event_listing_dta {
+    padding-bottom: 20px;
+  }
+
+  /* line 355, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_events_show.scss */
+  .event_listing_info_contents {
+    margin-left: 8.3333333333%;
+    width: 91.6666666667%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* line 361, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_events_show.scss */
+  .event_listing_info_des_body {
+    margin-bottom: 30px;
+    line-height: 1.25rem;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media only screen and (min-width: 1080px) {
+  /* line 370, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_events_show.scss */
+  .event_listing_img_container, .event_listing_overview {
+    border-top-left-radius: 4px;
+  }
+}

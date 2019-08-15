@@ -1,0 +1,52 @@
+/* line 1, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/base/fonts.scss */
+body, h1, h2, h3, p {
+  font-family: 'Roboto', sans-serif, BlinkMacSystemFont, Roboto, Helvetica Neue,Helvetica,Tahoma,Arial;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  color: #39364f;
+  color: var(--eds-ui-800, #39364f);
+}
+
+/* line 9, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/base/fonts.scss */
+#root {
+  font-size: 16px;
+}
+
+/* line 13, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/base/fonts.scss */
+.session_form_center_layout, .session_form_header, .session_form_logo,
+.session_form_container {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+/* line 20, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/base/fonts.scss */
+.session_form_text_lg {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  letter-spacing: .25px;
+  margin-right: -.25px;
+  font-weight: 700;
+  color: var(--eds-ui-900, #1e0a3c);
+}
+
+/* line 30, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/base/fonts.scss */
+.session_form_text_sm {
+  color: #6f7287;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+}
+
+/* line 38, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/base/fonts.scss */
+.button_session_submit, .signin_button, .dropdown_profile, .logo_index_img {
+  letter-spacing: normal;
+  font-size: 14px;
+}
+
+/* line 45, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/base/fonts.scss */
+.best_life_content {
+  letter-spacing: normal;
+  font-size: 14px;
+}

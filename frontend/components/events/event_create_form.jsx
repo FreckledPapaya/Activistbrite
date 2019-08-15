@@ -13,16 +13,17 @@ class EventCreate extends React.Component {
       end_date: "",
       currentUser: this.props.currentUser
     };
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.update = this.update.bind(this);
   }
 
   componentDidMount() {
-    let thisUser = state.entities.users[this.state.currentUser];
-    if (!thisUser) {
-      
-    } else {
-
-      this.setState({organizer_title: thisUser.organizer_title});
-    }
+    let org_title = this.props.user.organizer_title;
+    if (!org_title) {
+      this.props.getUser(this.state.currentUser).then(({user}) => {
+        this.setState({organizer_title: user.organizer_title});
+      });
+    } 
   }
 
   update(field) {
@@ -31,10 +32,15 @@ class EventCreate extends React.Component {
     };
   }
 
+  handleSubmit (e) {
+    e.preventDefault();
+  }
+
   render () {
     if (!this.state.organizer_title){
       return null;
     }
+
     return (
       <div className="create_event">
         <div className="create_event_header_container">
@@ -55,7 +61,7 @@ class EventCreate extends React.Component {
         </div>
         <div className="create_event_navbar"></div>
         <div className="create_event_content">
-          <form className="create_event_form">
+          <form className="create_event_form" >
             <div className="create_event_form_container1">
               <div className="create_event_form_container2">
                 <div className="create_event_form_wrapper">
@@ -152,7 +158,19 @@ class EventCreate extends React.Component {
 
             </div>
           </form>
-          <div className="create_event_almost_done"></div>
+          <div className="create_event_makelive_callout">
+            <div className="create_event_makelive_cont">
+              <div className="create_event_makelive_header">Nice job! You're almost done.</div>
+              <div className="create_event_makelive_wrapper">
+                <div className="create_event_makelive_button_cont">
+                  <button onClick={this.handleSubmit}>Make Event Live</button>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
 
         </div>
       </div>

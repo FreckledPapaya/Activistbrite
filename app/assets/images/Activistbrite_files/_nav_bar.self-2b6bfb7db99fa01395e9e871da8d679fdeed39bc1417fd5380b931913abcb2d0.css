@@ -1,0 +1,97 @@
+/* line 1, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_nav_bar.scss */
+.header_container {
+  flex: 0 1 59px;
+  z-index: 600;
+  border-bottom: 1px solid #eeedf2;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #eeedf2;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-box-direction: normal;
+  justify-content: space-between;
+  position: relative;
+  letter-spacing: normal;
+  font-size: 14px;
+  background-color: #fff;
+}
+
+/* line 19, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_nav_bar.scss */
+.header_major {
+  -webkit-box-flex: 1;
+  flex: 1;
+  -webkit-box-align: center;
+  align-items: center;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+
+/* line 29, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_nav_bar.scss */
+.logo_index_link {
+  display: flex;
+  -webkit-box-flex: 0;
+  flex: none;
+  -webkit-box-align: center;
+  align-items: center;
+  height: 59px;
+  text-decoration: none;
+}
+
+/* line 40, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_nav_bar.scss */
+.logo_index_img_container {
+  height: 20px;
+  width: 99px;
+  margin: 0;
+  padding: 0 24px;
+  vertical-align: middle;
+  background-size: contain;
+  line-height: 0;
+  display: flex;
+}
+
+/* line 51, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_nav_bar.scss */
+.logo_index_img {
+  -webkit-box-align: center;
+  align-items: center;
+  white-space: nowrap;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  text-decoration: none;
+  color: #f05537;
+  background-color: transparent;
+}
+
+/* line 63, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_nav_bar.scss */
+.logo_index_img > p {
+  color: #f05537;
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+/* line 69, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_nav_bar.scss */
+.global_nav_bar {
+  -webkit-box-align: center;
+  align-items: center;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  letter-spacing: normal;
+  font-size: 14px;
+}
+
+/* line 79, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_nav_bar.scss */
+.signin_button, .dropdown_profile {
+  padding: 0 20px;
+  -webkit-box-align: center;
+  align-items: center;
+  white-space: nowrap;
+  height: 59px;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  text-decoration: none;
+  color: #6f7287;
+  background-color: transparent;
+}

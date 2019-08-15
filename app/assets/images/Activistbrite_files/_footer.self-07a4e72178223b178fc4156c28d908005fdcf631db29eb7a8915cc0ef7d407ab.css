@@ -1,0 +1,28 @@
+/* line 1, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_footer.scss */
+.global_footer_container {
+  width: 100%;
+  height: 59px;
+  padding-left: 24px;
+  padding-right: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0;
+  letter-spacing: 0;
+  background: #1e0a3c;
+  color: #dbdae3;
+}
+
+/* line 15, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/components/_footer.scss */
+.copyright_container {
+  font-size: 12px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  color: #6f7287;
+  flex: 0 1 59px;
+}

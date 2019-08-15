@@ -1,12 +1,18 @@
 import * as SessionUtil from '../utils/session_util';
 
 export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
+export const RECEIVE_USER = 'RECEIVE_USER';
 export const RECEIVE_EMAIL = 'RECEIVE_EMAIL';
 export const LOGOUT_CURRENT_USER = 'LOGOUT_CURRENT_USER';
 export const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS';
 
 const receiveUser = (user) => ({
   type: RECEIVE_CURRENT_USER,
+  user 
+});
+
+const receiveUserData = (user) => ({
+  type: RECEIVE_USER,
   user 
 });
 
@@ -33,6 +39,12 @@ export const createUser = (formUser) => dispatch => {
 export const fetchUser = (email) => dispatch => { 
   return SessionUtil.fetchUser(email)
     .then(user => dispatch(receiveEmail(user)),
+      errors => dispatch(receiveSessionErrors(errors.responseJSON)));
+};
+
+export const getUser = (email) => dispatch => { 
+  return SessionUtil.getUser(email)
+    .then(user => dispatch(receiveUserData(user)),
       errors => dispatch(receiveSessionErrors(errors.responseJSON)));
 };
 

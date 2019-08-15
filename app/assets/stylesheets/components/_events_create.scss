@@ -418,6 +418,57 @@ input#event_start_time {
   height: 300px;
 }
 
+.create_event_makelive_callout {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.create_event_makelive {
+  background-color: #fff;
+  border-top: 1px solid #D2D6DF;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin: 12px 0 0;
+  z-index: 1;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.create_event_makelive_cont {
+  color: #1E0A3C;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.8666666667rem;
+  line-height: 2.25rem;
+  letter-spacing: .75px;
+  margin-right: -.75px;
+}
+
+.create_event_makelive_wrapper {
+  font-weight: 400;
+  font-size: 1.0666666667rem;
+  line-height: 1.5rem;
+  letter-spacing: .5px;
+  box-sizing: border-box;
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.create_event_makelive_button_cont {
+
+}
+
+.create_event_makelive_button_cont > button {
+      margin-top: 10px;
+    margin-left: 14px;
+    color: #FFF;
+
+}
+
 @media only screen and (min-width: 480px) {
   .create_event_details_header_cont {
     width: 66.6666666667%;
@@ -435,7 +486,7 @@ input#event_start_time {
     margin-left: 8.3333333333%;
   }
   
-  .create_event_title_label_cont, .create_event_title_input_container, .create_event_start_date, .create_event_image_title  {
+  .create_event_title_label_cont, .create_event_title_input_container, .create_event_start_date, .create_event_image_title, .create_event_makelive_wrapper  {
     padding-left: 10px;
     padding-right: 10px;
   }
@@ -451,7 +502,7 @@ input#event_start_time {
     padding-right: 15px;
   }
 
-  .create_event_header_text  {
+  .create_event_header_text   {
     font-size: .9333333333rem;
     line-height: 1.25rem;
   }
@@ -473,7 +524,7 @@ input#event_start_time {
     margin-left: 8.3333333333%;
   }
 
-  .create_event_title_label_cont, .create_event_title_input_container, .create_event_title_input_text, .create_event_start_date, .create_event_image_title  {
+  .create_event_title_label_cont, .create_event_title_input_container, .create_event_title_input_text, .create_event_start_date, .create_event_image_title, .create_event_makelive_wrapper  {
     font-size: .9333333333rem;
     line-height: 1.25rem;
     padding-left: 15px;
@@ -483,6 +534,12 @@ input#event_start_time {
   .create_event_image_rec > span {
     font-size: .8rem;
     line-height: 1rem;
+  }
+  .create_event_makelive_cont {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    letter-spacing: .5px;
+    margin-right: -.5px;
   }
 }
 

@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import { withRouter } from 'react-router-dom';
 import { createEvent } from '../../actions/events_actions';
-import { fetchUser } from '../../actions/session_actions';
+import { getUser } from '../../actions/session_actions';
 import EventCreate from './event_create_form';
 
 const mapStateToProps = (state) => {
@@ -13,12 +13,18 @@ const mapStateToProps = (state) => {
     end_date: ""
   };
   let currentUser = state.session.currentUser;
-  return { event, currentUser };
+  let user;
+  if (state.entities.users[currentUser]) {
+    user = state.entities.users[currentUser];
+  } else {
+    user = {};
+  }
+  return { event, currentUser, user };
 };
 
 const mapDispatchToProps = () => dispatch => ({
   createEvent: (event) => dispatch(createEvent(event)),
-  fetchUser: (user) => dispatch(fetchUser(user))
+  getUser: (id) => dispatch(getUser(id))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(withRouter(EventCreate));

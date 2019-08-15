@@ -1,0 +1,31 @@
+/* line 1, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/base/layout.scss */
+blockquote, body, dd, div, section, dl, dt, fieldset,
+form, h1, h2, h3, h4, h5, h6, input, li, ol,
+p, pre, td, textarea, th, ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 8, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/base/layout.scss */
+#root, #root2 {
+  overflow: hidden;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  background-color: #fff;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* line 21, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/base/layout.scss */
+header, footer, main, div, section {
+  display: block;
+}
+
+/* line 29, /Users/appacademy/Desktop/Activistbrite/app/assets/stylesheets/base/layout.scss */
+p {
+  display: block;
+}

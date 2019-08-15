@@ -28,7 +28,6 @@ class EventCreate extends React.Component {
 
   update(field) {
     return (e)=> {
-      debugger
       this.setState({[field]: e.currentTarget.value});
     };
   }

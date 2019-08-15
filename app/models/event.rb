@@ -96,7 +96,6 @@ class Event < ApplicationRecord
             file = File.open(path)
             self.image.attach(io: file, filename: self.image_url + 'jpg')
         end
-        # debugger
     end 
 
 end

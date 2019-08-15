@@ -27,11 +27,8 @@ class EventsIndexItem extends React.Component {
 
     render() {
         // let image_url = this.props.event.image_url;
-        // debugger
         // let image_source = "window.images." + this.props.event.image_url;
-        // debugger
         // let imgPath = "window.images." + "event_1";
-        // debugger
         return (
             <div className="event_item_padding">
                 <div className="event_item_container">

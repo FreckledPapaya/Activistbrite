@@ -10,8 +10,7 @@ const receiveEvent  = (event) => ({
   event
 });
 
-const receiveEvents  = (events) => {
-  debugger
+const receiveEvents  = (events) => { 
   return {
     type: RECEIVE_EVENTS,
     events

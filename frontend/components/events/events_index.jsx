@@ -11,8 +11,7 @@ class EventsIndex extends React.Component {
     }
 
     componentDidMount () {
-        this.props.fetchEvents().then((events) => {
-            debugger
+        this.props.fetchEvents().then((events) => { 
             this.setState({events: events});
         });
     }

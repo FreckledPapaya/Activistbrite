@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {};
     this.handleLogout = this.handleLogout.bind(this); 
     this.loggedIn = Boolean(this.props.currentUser); 
   }
@@ -15,7 +16,7 @@ class NavBar extends React.Component {
 
   handleLogout(e) { 
     e.preventDefault();
-    this.props.logoutUser().then(() => this.props.history.push('/')); 
+    this.props.logoutUser().then(() => this.setState({})); 
   }
 
   //  <img src={window.images.logo1} alt="" />

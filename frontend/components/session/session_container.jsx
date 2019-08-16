@@ -4,7 +4,8 @@ import { createUser, loginUser, fetchUser } from '../../actions/session_actions'
 import Session from './session';
  
 const mapStateToProps = (state) => {
-  const defaultUser = {email: '', password: '' };  
+  const defaultUser = {
+    email: '', password: '', fname: "", lname: ""  };  
   return { user: defaultUser , session: state.session };
  };
  

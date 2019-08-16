@@ -5,7 +5,10 @@ class Signup extends React.Component {
   constructor(props) {
     super(props); 
     this.state = {
-      email: this.props.email
+      email: this.props.email,
+      fname: "",
+      lname: "",
+      password: "" 
     }; 
     this.handleClick = this.handleClick.bind(this);
     this.handleRedirect = this.handleRedirect.bind(this);

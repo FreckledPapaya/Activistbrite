@@ -10,7 +10,7 @@
 #  organizer_id :integer          not null
 #  start_date   :datetime         not null
 #  end_date     :datetime
-#  image_url    :string           not null
+#  image_url    :string
 #
 
 DAYS = {
@@ -41,7 +41,7 @@ MONTHS = {
 class Event < ApplicationRecord
     # migrate location (indexed) and category_id (indexed, fk) will null:false
     #  add validations
-    validates :title, :body, :start_date, :organizer_id, :image_url, presence: true
+    validates :title, :body, :start_date, :organizer_id, presence: true
 
     after_initialize :ensure_photo
 
@@ -92,9 +92,9 @@ class Event < ApplicationRecord
 
     def ensure_photo
         unless self.image.attached?
-            path = 'app/assets/images/' + self.image_url + '.jpg'
+            path = 'app/assets/images/1stpride.png'
             file = File.open(path)
-            self.image.attach(io: file, filename: self.image_url + 'jpg')
+            self.image.attach(io: file, filename: '1stpride.png')
         end
     end 
 

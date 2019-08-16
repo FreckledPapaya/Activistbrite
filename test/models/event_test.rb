@@ -10,7 +10,7 @@
 #  organizer_id :integer          not null
 #  start_date   :datetime         not null
 #  end_date     :datetime
-#  image_url    :string           not null
+#  image_url    :string
 #
 
 require 'test_helper'

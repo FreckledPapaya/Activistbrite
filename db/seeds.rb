@@ -27,58 +27,72 @@ user_14 = User.create(email: "Jaspurrr", password: "password")
  
 event_1 = Event.create(title: "Refreshments and Resistance", 
                        body: "Meet your neighbors and call your local reps!", 
-                       start_date: DateTime.new(2020, 1, 2, 17), image_url: "event_1", organizer_id: user_2.id) 
+                       start_date: DateTime.new(2020, 1, 2, 17), organizer_id: user_2.id) 
  
-# file = File.open('/Users/freckledpapaya/Desktop/Activistbrite/public/images/event_1.jpg')
-# event_1.image.attach(io: file, filename: 'event_1.jpg')
+file = File.open('app/assets/images/1stpride.png')
+
 
 event_2 = Event.create(title: "Pride Riot", 
                        body: "THE FIRST PRIDE WAS A RIOT!! \n Come one, come all to an all-weekend queer extravaganza! Tickets are an all-access pass to panels, workshops, and lecture through out the day. In the evenings, unwind with friends in our sober space or show some skin at our burlesque and drag shows!", 
-                       start_date: DateTime.new(2019, 10, 5, 9), end_date: DateTime.new(2019, 10, 6, 11), image_url: "event_2", organizer_id: user_5.id)
-# file = File.open('/Users/freckledpapaya/Desktop/Activistbrite/public/images/event_2')
-# event_2.image.attach(io: file, filename: 'event_2')
+                       start_date: DateTime.new(2019, 10, 5, 9), end_date: DateTime.new(2019, 10, 6, 11), organizer_id: user_5.id)
+ 
 
 # REPEAT FOR STYLING
 event_3 = Event.create(title: "Pride Riot", 
                        body: "THE FIRST PRIDE WAS A RIOT!!
     Come one, come all to an all-weekend queer extravaganza! Tickets are an all-access pass to panels, workshops, and lecture through out the day. In the evenings, unwind with friends in our sober space or show some skin at our burlesque and drag shows!", 
-                       start_date: DateTime.new(2019, 10, 5, 9), end_date: DateTime.new(2019, 10, 6, 11), image_url: "event_2", organizer_id: user_5.id)
+                       start_date: DateTime.new(2019, 10, 5, 9), end_date: DateTime.new(2019, 10, 6, 11), organizer_id: user_5.id)
 event_4 = Event.create(title: "Pride Riot", 
                        body: "THE FIRST PRIDE WAS A RIOT!!
     Come one, come all to an all-weekend queer extravaganza! Tickets are an all-access pass to panels, workshops, and lecture through out the day. In the evenings, unwind with friends in our sober space or show some skin at our burlesque and drag shows!", 
-                       start_date: DateTime.new(2019, 10, 5, 9), end_date: DateTime.new(2019, 10, 6, 11), image_url: "event_2", organizer_id: user_5.id)
+                       start_date: DateTime.new(2019, 10, 5, 9), end_date: DateTime.new(2019, 10, 6, 11), organizer_id: user_5.id)
 event_5 = Event.create(title: "Pride Riot", 
                        body: "THE FIRST PRIDE WAS A RIOT!!
     Come one, come all to an all-weekend queer extravaganza! Tickets are an all-access pass to panels, workshops, and lecture through out the day. In the evenings, unwind with friends in our sober space or show some skin at our burlesque and drag shows!", 
-                       start_date: DateTime.new(2019, 10, 5, 9), end_date: DateTime.new(2019, 10, 6, 11), image_url: "event_2", organizer_id: user_5.id)
+                       start_date: DateTime.new(2019, 10, 5, 9), end_date: DateTime.new(2019, 10, 6, 11), organizer_id: user_5.id)
 event_6 = Event.create(title: "Pride Riot", 
                        body: "THE FIRST PRIDE WAS A RIOT!!
     Come one, come all to an all-weekend queer extravaganza! Tickets are an all-access pass to panels, workshops, and lecture through out the day. In the evenings, unwind with friends in our sober space or show some skin at our burlesque and drag shows!", 
-                       start_date: DateTime.new(2019, 10, 5, 9), end_date: DateTime.new(2019, 10, 6, 11), image_url: "event_2", organizer_id: user_5.id)
+                       start_date: DateTime.new(2019, 10, 5, 9), end_date: DateTime.new(2019, 10, 6, 11), organizer_id: user_5.id)
 event_7 = Event.create(title: "Pride Riot", 
                        body: "THE FIRST PRIDE WAS A RIOT!!
     Come one, come all to an all-weekend queer extravaganza! Tickets are an all-access pass to panels, workshops, and lecture through out the day. In the evenings, unwind with friends in our sober space or show some skin at our burlesque and drag shows!", 
-                       start_date: DateTime.new(2019, 10, 5, 9), end_date: DateTime.new(2019, 10, 6, 11), image_url: "event_2", organizer_id: user_5.id)
+                       start_date: DateTime.new(2019, 10, 5, 9), end_date: DateTime.new(2019, 10, 6, 11), organizer_id: user_5.id)
 event_8 = Event.create(title: "Pride Riot", 
                        body: "THE FIRST PRIDE WAS A RIOT!!
     Come one, come all to an all-weekend queer extravaganza! Tickets are an all-access pass to panels, workshops, and lecture through out the day. In the evenings, unwind with friends in our sober space or show some skin at our burlesque and drag shows!", 
-                       start_date: DateTime.new(2019, 10, 5, 9), end_date: DateTime.new(2019, 10, 6, 11), image_url: "event_2", organizer_id: user_5.id)
+                       start_date: DateTime.new(2019, 10, 5, 9), end_date: DateTime.new(2019, 10, 6, 11), organizer_id: user_5.id)
 event_9 = Event.create(title: "Pride Riot", 
                        body: "THE FIRST PRIDE WAS A RIOT!!
     Come one, come all to an all-weekend queer extravaganza! Tickets are an all-access pass to panels, workshops, and lecture through out the day. In the evenings, unwind with friends in our sober space or show some skin at our burlesque and drag shows!", 
-                       start_date: DateTime.new(2019, 10, 5, 9), end_date: DateTime.new(2019, 10, 6, 11), image_url: "event_2", organizer_id: user_5.id)
+                       start_date: DateTime.new(2019, 10, 5, 9), end_date: DateTime.new(2019, 10, 6, 11), organizer_id: user_5.id)
 event_10 = Event.create(title: "Pride Riot", 
                         body: "THE FIRST PRIDE WAS A RIOT!!
     Come one, come all to an all-weekend queer extravaganza! Tickets are an all-access pass to panels, workshops, and lecture through out the day. In the evenings, unwind with friends in our sober space or show some skin at our burlesque and drag shows!", 
-                        start_date: DateTime.new(2019, 10, 5, 9), end_date: DateTime.new(2019, 10, 6, 11), image_url: "event_2", organizer_id: user_5.id)
+                        start_date: DateTime.new(2019, 10, 5, 9), end_date: DateTime.new(2019, 10, 6, 11), organizer_id: user_5.id)
 event_11 = Event.create(title: "Pride Riot", 
                         body: "THE FIRST PRIDE WAS A RIOT!!
     Come one, come all to an all-weekend queer extravaganza! Tickets are an all-access pass to panels, workshops, and lecture through out the day. In the evenings, unwind with friends in our sober space or show some skin at our burlesque and drag shows!", 
-                        start_date: DateTime.new(2019, 10, 5, 9), end_date: DateTime.new(2019, 10, 6, 11), image_url: "event_2", organizer_id: user_5.id)
+                        start_date: DateTime.new(2019, 10, 5, 9), end_date: DateTime.new(2019, 10, 6, 11), organizer_id: user_5.id)
 event_12 = Event.create(title: "Pride Riot", 
                         body: "THE FIRST PRIDE WAS A RIOT!!
     Come one, come all to an all-weekend queer extravaganza! Tickets are an all-access pass to panels, workshops, and lecture through out the day. In the evenings, unwind with friends in our sober space or show some skin at our burlesque and drag shows!", 
-                        start_date: DateTime.new(2019, 10, 5, 9), end_date: DateTime.new(2019, 10, 6, 11), image_url: "event_2", organizer_id: user_5.id)
+                        start_date: DateTime.new(2019, 10, 5, 9), end_date: DateTime.new(2019, 10, 6, 11), organizer_id: user_5.id)
+
+
+
+event_1.image.attach(io: file, filename: 'event_1.jpg')
+# event_2.image.attach(io: file, filename: 'event_2.jpg')
+# event_3.image.attach(io: file, filename: 'event_3.jpg')
+# event_4.image.attach(io: file, filename: 'event_4.jpg')
+# event_5.image.attach(io: file, filename: 'event_5.jpg')
+# event_6.image.attach(io: file, filename: 'event_6.jpg')
+# event_7.image.attach(io: file, filename: 'event_7.jpg')
+# event_8.image.attach(io: file, filename: 'event_8.jpg')
+# event_9.image.attach(io: file, filename: 'event_1.jpg')
+# event_10.image.attach(io: file, filename: 'event_1.jpg')
+# event_11.image.attach(io: file, filename: 'event_1.jpg')
+# event_12.image.attach(io: file, filename: 'event_1.jpg') 
 
 
 # event_3 = Event.create(title: "The Queeries", 
@@ -103,13 +117,13 @@ event_12 = Event.create(title: "Pride Riot",
 #         Yes, that's right - none of the organizers of the Queeries festival are being paid. It's run entirely by volunteers. All of the money raised is going towards offsetting costs, paying artists, offering subsidized/free tickets, offering meals to volunteers, and everything left over will be donated back to local, not-for-profit 2SLGBTQ+ serving charities.
 
 #         So, thank you for your interest in helping us make this happen, and we can't wait to see you at the Ridge!", 
-#     start_date: DateTime.new(2020,6,19,17), end_date: DateTime.new(2020,6,22,2), image_url: "event_3" , organizer_id: user_14.id)
+#     start_date: DateTime.new(2020,6,19,17), end_date: DateTime.new(2020,6,22,2),, organizer_id: user_14.id)
 # # file = File.open('/Users/freckledpapaya/Desktop/Activistbrite/public/images/event_3.jpg')
 # # event_3.image.attach(io: file, filename: 'event_3.jpg')
 
 # # event_4 = Event.create(title: "Climate Change Discussion", 
 # #     body: "", 
-# #     start_date: DateTime.new(2020,1,2,17), end_date: , image_url: "image_url" , organizer_id:)
+# #     start_date: DateTime.new(2020,1,2,17), end_date: ," , organizer_id:)
 
 # event_5 = Event.create(title: "Feminist Craft Market", 
 #     body: "Join us for the debut of the Feminist Creative Collective. The Feminist Spring Market aims to dismantle the patriarchy by supporting and showcasing women (cis and trans), non-binary folks, queers, BIPOC and folks with disabilities. 
@@ -117,7 +131,7 @@ event_12 = Event.create(title: "Pride Riot",
 
 #         The market will be held at 10C Shared Space, on the 4th floor. This location has accessible doors, washrooms, and elevators, and is supportive of all genders. We are committed to creating a navigable space for people who use mobility devices.
 #         If you have any questions about whether you can access this space, please get in touch.", 
-#     start_date: DateTime.new(2020,4,17,16), end_date: DateTime.new(2020,4,17,21), image_url: "event_5" , organizer_id: user_9.id)
+#     start_date: DateTime.new(2020,4,17,16), end_date: DateTime.new(2020,4,17,21),, organizer_id: user_9.id)
 
 # file = File.open('/Users/freckledpapaya/Desktop/Activistbrite/public/images/event_5.jpg')
 # event_5.image.attach(io: file, filename: 'event_5.jpg')

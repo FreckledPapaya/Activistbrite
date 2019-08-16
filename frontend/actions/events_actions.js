@@ -10,10 +10,13 @@ const receiveEvent  = (event) => ({
   event
 });
 
-const receiveEvents  = (events) => ({
-  type: RECEIVE_EVENTS,
-  events
-});
+const receiveEvents  = (events) => {
+  debugger
+  return {
+    type: RECEIVE_EVENTS,
+    events
+  };
+};
 
 const removeEvent = (id) => ({
   type: REMOVE_EVENT,

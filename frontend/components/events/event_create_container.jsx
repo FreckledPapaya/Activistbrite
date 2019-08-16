@@ -12,14 +12,8 @@ const mapStateToProps = (state) => {
     start_date: "",
     end_date: ""
   };
-  let currentUser = state.session.currentUser;
-  let user;
-  if (state.entities.users[currentUser]) {
-    user = state.entities.users[currentUser];
-  } else {
-    user = {};
-  }
-  return { event, currentUser, user };
+  let currentUser = state.session.currentUser; 
+  return { event, currentUser };
 };
 
 const mapDispatchToProps = () => dispatch => ({

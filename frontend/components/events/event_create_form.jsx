@@ -19,7 +19,7 @@ class EventCreate extends React.Component {
   }
 
   componentDidMount() { 
-    
+
   }
 
   update(field) {
@@ -30,13 +30,30 @@ class EventCreate extends React.Component {
 
   handleSubmit (e) {
     e.preventDefault();
-    this.props.createEvent(this.state.event).then((event) => {
-      this.props.history.push(`/events/${event.id}`);
+    let formData = new FormData();
+
+    formData.append('event[title]', this.state.title);
+    formData.append('event[body]', this.state.body);
+    formData.append('event[image_url]', this.state.image_url);
+    formData.append('event[start_date]', this.state.start_date);
+    formData.append('event[end_date]', this.state.end_date);
+    formData.append('event[photo_file]', this.state.photo_file);
+
+    this.props.createEvent(formData).then((item) => {
+      this.props.history.push(`/events/${item.event.id}`);
     });
   }
 
   handleFile (e) {
     const file = e.currentTarget.files[0];
+    const fileReader = new FileReader ();
+    fileReader.onloadend = () => {
+      this.setState({photo_file: file, image_url: fileReader.result});
+    };
+
+    if (file) {
+      fileReader.readAsDataURL(file);
+    };
   }
 
   render () {

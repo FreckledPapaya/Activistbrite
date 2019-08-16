@@ -7,6 +7,8 @@ class EventsIndexItem extends React.Component {
         this.state = {
             event: this.props.event
         };
+        // test s3 bucket access
+        this.state.event.image_url = "https://activistbrite-dev.s3.amazonaws.com/activistbrite-dev/witches.jpg";
         this.dayAbbrev = this.state.event.start_day.slice(0, 3);
         this.monAbbrev = this.state.event.start_month.slice(0, 3);
         this.start_datetime =

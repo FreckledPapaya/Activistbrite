@@ -10,20 +10,16 @@ class EventCreate extends React.Component {
       body: this.props.event.body,
       image_url: this.props.event.image_url,
       start_date: this.props.event.start_date,
-      end_date: this.props.event.end_date
-    };
-    this.currentUser = this.props.currentUser;
+      end_date: this.props.event.end_date,
+      organizer_id: this.props.currentUser
+    }; 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleFile = this.handleFile.bind(this);
     this.update = this.update.bind(this);
   }
 
-  componentDidMount() {
-    let org_title = this.props.user.organizer_title;
-    if (!org_title) {
-      this.props.getUser(this.currentUser).then(({user}) => {
-        this.setState({organizer_title: user.organizer_title});
-      });
-    } 
+  componentDidMount() { 
+    
   }
 
   update(field) {
@@ -37,6 +33,10 @@ class EventCreate extends React.Component {
     this.props.createEvent(this.state.event).then((event) => {
       this.props.history.push(`/events/${event.id}`);
     });
+  }
+
+  handleFile (e) {
+    const file = e.currentTarget.files[0];
   }
 
   render () {

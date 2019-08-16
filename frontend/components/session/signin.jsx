@@ -14,14 +14,14 @@ class Signin extends React.Component {
     };
   }
 
-  handleClick (e) {
+  handleClick (e) { 
     e.preventDefault();
     this.props.receiveSigninProps(this.state);
   }
 
   handleDemo (e) {
-    this.state = {email: 'demouser@demo.com', password: "password"}; 
-    this.props.receiveLoginProps(this.state);
+    e.preventDefault();  
+    this.props.receiveLoginProps({ email: 'demouser@demo.com', password: "password" });
   }
 
 

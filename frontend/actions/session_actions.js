@@ -48,7 +48,7 @@ export const getUser = (email) => dispatch => {
       errors => dispatch(receiveSessionErrors(errors.responseJSON)));
 };
 
-export const loginUser = (formUser) => dispatch => {
+export const loginUser = (formUser) => dispatch => { 
   return SessionUtil.createSession(formUser)
     .then((user) => dispatch(receiveUser(user)),
       errors => dispatch(receiveSessionErrors(errors.responseJSON))); 

@@ -33,9 +33,8 @@ class Session extends React.Component {
     });   
   }
 
-  receiveLoginProps (user) { 
-    this.state = user;
-    this.props.loginUser(this.state).then(() => this.props.history.push('/'));
+  receiveLoginProps (user) {  
+    this.props.loginUser(user).then(() => this.props.history.push('/'));
   }
 
   receiveSignupProps (user) {

@@ -4,7 +4,7 @@ import { fetchEvent } from '../../actions/events_actions';
 import EventShow from './event_show';
 
 const mapStateToProps = (state, ownProps) => { 
-    event = state.entities.events[ownProps.match.params.eventId];
+    let event = state.entities.events[ownProps.match.params.eventId]; 
     return { event };
 };
 

@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 
 class EventShow extends React.Component {
     constructor (props) {
-        super(props);
+        super(props); 
     }
 
-    componentDidMount() {
+    componentDidMount() { 
         let id = parseInt(this.props.match.params.eventId);
-        this.props.fetchEvent(id);
+        this.props.fetchEvent(id); 
     } 
 
     // to render body - parse for line breaks and next within p elements
@@ -57,7 +57,7 @@ class EventShow extends React.Component {
                     <div className="event_listing_body">
                         <div className="event_listing_basics">
                             <div className="event_listing_img_container">
-                                <img src={window.images.event_1} />
+                                <img src={event.image_url} />
                             </div>
                             <div className="event_listing_overview">
                                 <div className="event_listing_dta">
@@ -68,7 +68,7 @@ class EventShow extends React.Component {
                                     <div className="event_listing_ta">
                                         <h1>{event.title}</h1>
                                         <div className="event_listing_org">
-                                            <Link>by {event.organizer_title}</Link>
+                                            <div>by {event.organizer_title}</div>
                                         </div>
                                     </div>
                                     <div className="event_listing_price_container">

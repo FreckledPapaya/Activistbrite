@@ -53,10 +53,10 @@ class EventCreate extends React.Component {
 
     if (file) {
       fileReader.readAsDataURL(file);
-    };
+    } 
   }
 
-  render () {
+  render () { 
     if (!this.state.organizer_title){
       return null;
     }

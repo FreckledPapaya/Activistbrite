@@ -19,35 +19,36 @@ event_7 = Event.create(title: "Speaking Our Truths: Pride Edition", body: "Speak
     
 event_8 = Event.create(title: "Stitch n B*tch", 
     body: "Calling all crafters to a night you won't forget. Meet your community of fiber-artists, woodworkers, and the like while blowing off some steam. After a brief led discussion on current events where we can share our plans for change, let loose and have some fun! Share patterns and creativity, and if you're feeling brave, take the stage at our 9pm open mic. Snacks provided", 
-    start_date: DateTime.new(2020,4,18,6), end_date: DateTime.new(2020,4,18,11),  organizer_id:)
+    start_date: DateTime.new(2020,4,18,6), end_date: DateTime.new(2020,4,18,11),  organizer_id: user_14.id)
+
 event_9 = Event.create(title: "Queer Tango", 
     body: "", 
-    start_date: DateTime.new(2020,1,2,17), end_date: ,  organizer_id:)
+    start_date: DateTime.new(2020,1,2,17), end_date: ,  organizer_id: user_14.id)
 event_10 = Event.create(title: "Youth Climate Protest", 
-    body: "", 
-    start_date: DateTime.new(2020,1,2,17), end_date: ,  organizer_id:)
+    body: "Note- though this is a youth focused strike, adult allies are always welcome to and encouraged to join.\nWe will be striking in support of the National Climate Emergency Declaration Resolution, and will demand that Senator Feinstein, Rep. Doris Matsui and Rep. Ami Bera sign onto the resolution. The first step to solving the climate crisis is acknowledging the issue, and we demand that our elected officials do so! The strike will include speeches by local youth climate leaders, chants, and an optional die-in.\nSpeaking announcements and more information can be found on our Instagram @fridaysforfuturesac.", 
+    start_date: DateTime.new(2020,1,2,17), end_date: ,  organizer_id: user_14.id)
     
 event_9 = Event.create(title: "Queer book club", 
     body: "", 
-    start_date: DateTime.new(2020,1,2,17), end_date: ,  organizer_id:)
+    start_date: DateTime.new(2020,1,2,17), end_date: ,  organizer_id: user_14.id)
     
 event_10 = Event.create(title: "Which Protest? Witch Protest!", 
     body: "", 
-    start_date: DateTime.new(2020,1,2,17), end_date: ,  organizer_id:)
+    start_date: DateTime.new(2020,1,2,17), end_date: ,  organizer_id: user_14.id)
     
 event_11 = Event.create(title: "My Body My Choice", 
     body: "", 
-    start_date: DateTime.new(2020,1,2,17), end_date: ,  organizer_id:)
+    start_date: DateTime.new(2020,1,2,17), end_date: ,  organizer_id: user_14.id)
 event_7 = Event.create(title: "Community Music Jam", 
     body: "", 
-    start_date: DateTime.new(2020,1,2,17), end_date: ,  organizer_id:)
+    start_date: DateTime.new(2020,1,2,17), end_date: ,  organizer_id: user_14.id)
     
 event_16 = Event.create(title: "Poetry Slam Justice Edition: SF", 
     body: "", 
-    start_date: DateTime.new(2020,1,2,17), end_date: ,  organizer_id:)
+    start_date: DateTime.new(2020,1,2,17), end_date: ,  organizer_id: user_14.id)
 event_14 = Event.create(title: "Knit In the Street", 
     body: "", 
-    start_date: DateTime.new(2020,1,2,17), end_date: ,  organizer_id:)
+    start_date: DateTime.new(2020,1,2,17), end_date: ,  organizer_id: user_14.id)
                             # ########################################
                                 
                                 

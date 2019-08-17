@@ -56,6 +56,8 @@ event_6 = Event.create(title: "Climate Change Discussion", body: "The growing mo
 
 file = File.open('app/assets/images/justice_slam.jpg')
 event_6.image.attach(io: file, filename: 'event_6.jpg') 
+
+# edit dates for below events
     
 event_7 = Event.create(title: "Speaking Our Truths: Pride Edition", body: "Speaking our Truths is a long-standing Pride event, and over the years has seen such a huge array of speakers, stories, victories, triumphs, tragedies, heartbreak, and immense, overwhelming, and radiating love. We're so excited to be bringing it back, especially in partnership with SF Spoken Word, an arts organization that has done so much for the LGBT2QI+ community over the years. \n So we invite you to come and share with us! Share part of your story, a specific lesson or learning, yearning or love, or anything in between. We ask that speakers limit their piece to between 5-7 minutes, but check with any of our hosts if you have concerns about this or you have a story that cannot be made any more succinct. We'd love to have you and we're excited about what you might have to say.", start_date: DateTime.new(2020,1,2,17),  organizer_id: user_14.id);
 
@@ -65,7 +67,7 @@ event_7.image.attach(io: file, filename: 'event_7.jpg')
     
 event_8 = Event.create(title: "Stitch n B*tch", 
     body: "Calling all crafters to a night you won't forget. Meet your community of fiber-artists, woodworkers, and the like while blowing off some steam. After a brief led discussion on current events where we can share our plans for change, let loose and have some fun! Share patterns and creativity, and if you're feeling brave, take the stage at our 9pm open mic. Snacks provided", 
-    start_date: DateTime.new(2020,4,18,6), end_date: DateTime.new(2020,4,18,11),  organizer_id:)
+    start_date: DateTime.new(2020,4,18,6), end_date: DateTime.new(2020,4,18,11),  organizer_id: user_14.id) 
 
 file = File.open('app/assets/images/crafty.jpg')
 event_8.image.attach(io: file, filename: 'event_8.jpg') 

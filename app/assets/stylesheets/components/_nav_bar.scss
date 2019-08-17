@@ -14,7 +14,13 @@
     letter-spacing: normal;
     font-size: 14px;
     background-color: #fff;
-}
+
+    // 
+    border-bottom: 1px solid #eeedf2;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #eeedf2;
+} 
 
 .header_major {
     -webkit-box-flex: 1; 
@@ -23,7 +29,7 @@
     align-items: center; 
     display: flex;
     -webkit-box-pack: justify; 
-    justify-content: space-between;
+    justify-content: space-between; 
 }
 
 .logo_index_link {

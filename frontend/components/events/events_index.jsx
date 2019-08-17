@@ -3,17 +3,12 @@ import EventsIndexItem from './events_index_item';
 
 class EventsIndex extends React.Component {
     constructor(props) {
-        super(props);
-        this.state = {
-            events: this.props.events
-        };
+        super(props); 
         this.linkClick = this.linkClick.bind(this);
     }
 
     componentDidMount () {
-        this.props.fetchEvents().then((events) => { 
-            this.setState({events: events});
-        });
+        this.props.fetchEvents(); 
     }
 
     linkClick (path) {
@@ -22,6 +17,7 @@ class EventsIndex extends React.Component {
 
 
     render() { 
+        // debugger
         const events = Object.keys(this.props.events).map(id => this.props.events[id]);
         const eventItems = events.slice(0,9).map((event,i) => {
             return (<EventsIndexItem event={event} key={i} linkClick={this.linkClick} />);

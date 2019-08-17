@@ -12,12 +12,7 @@ class EventShow extends React.Component {
         this.props.fetchEvent(id); 
     } 
 
-    // to render body - parse for line breaks and next within p elements
-
-    // <p>This is some text to see how a decription shows up and wraps around new lines of text.
-    //                                             Also to see new paragraphs render. (they dont show)
-    //                                             </p>
-    // <p id="des_text">This is how a new paragraph will render.</p>
+    
     render () {
         if (!this.props.event || !this.props.event.body) {
             return null;
@@ -46,7 +41,7 @@ class EventShow extends React.Component {
             });
         } else {
             body = event.body;
-        }
+        } 
 
         return (
             <div className="event_listing">

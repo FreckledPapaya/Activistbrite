@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 import { HashRouter } from 'react-router-dom';
 import App from './app';
 
-export const Root = ({ store }) => {
+export const Root = ({ store }) => { 
   return (
     <Provider store={store}>
       <HashRouter>
@@ -11,5 +11,5 @@ export const Root = ({ store }) => {
       </HashRouter>
     </Provider>
   )
-  };
+};
 

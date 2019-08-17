@@ -38,17 +38,40 @@
   // box-sizing: border-box;
   // display: flex; 
   // max-width: 100%;
+  // ////////
   -webkit-box-flex: 0; 
   flex: 0 0 auto;
   position: relative;
   overflow: visible;
 }
 
-.event_item_image_container > img {
-  width: 100%;
-  height: auto;
-  overflow: hidden;
+.event_item_image_wrapper {
+  position: relative;
+  overflow: hidden; 
+  box-sizing: border-box; 
+}
 
+.event_item_image {
+  width: 100%;
+  padding-top: 50%;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  // transition: border-radius .24s cubic-bezier(.4,0,.3,1); 
+}
+
+.event_item_image > img {
+  max-width: 100%;
+  height: auto;
+  // overflow: hidden;
+
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0; 
+  // transform: translateX(-50%) translateY(-50%);
 }
 
 .event_item_details_container {

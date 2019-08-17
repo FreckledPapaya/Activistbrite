@@ -36,7 +36,11 @@ class EventsIndexItem extends React.Component {
                 <div className="event_item_container">
                     <Link to={`/events/${this.state.event.id}`} className="event_index_item_link" >
                         <div className="event_item_image_container">
-                            <img src={this.state.event.image_url} />
+                            <div className="event_item_image_wrapper">
+                                <div className="event_item_image">
+                                    <img src={this.state.event.image_url} />
+                                </div>
+                            </div>
                         </div>
                         <div className="event_item_details_container">
                             <div className="event_item_details">

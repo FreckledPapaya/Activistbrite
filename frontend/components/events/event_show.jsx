@@ -39,9 +39,9 @@ class EventShow extends React.Component {
             body = event.body.split('\n');
             body = body.map((str, i) => {
                 if (i > 0){
-                    return (<p id="des_text">{str}</p>);
+                    return (<p id="des_text" key={i}>{str}</p>);
                 } else {
-                    return (<p>{str}</p>)
+                    return (<p key={i}>{str}</p>)
                 }
             });
         } else {

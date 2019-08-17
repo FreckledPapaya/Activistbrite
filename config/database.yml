@@ -83,3 +83,4 @@ production:
   database: Activistbrite_production
   username: Activistbrite
   password: <%= ENV['ACTIVISTBRITE_DATABASE_PASSWORD'] %>
+ 

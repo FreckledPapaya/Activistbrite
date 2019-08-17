@@ -45,8 +45,8 @@ class EventShow extends React.Component {
 
         return (
             <div className="event_listing">
-                <header className="event_listing_header">
-                    header
+                <header className="event_listing_header">  
+                    <img src={event.image_url}/>  
                 </header>
                 <div className="event_listing_container">
                     <div className="event_listing_body">

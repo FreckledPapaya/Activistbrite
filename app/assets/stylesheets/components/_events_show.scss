@@ -12,9 +12,27 @@
   position: absolute;
   top: 61px;
   width: 100%;
-  z-index: -1;
-  font-size: 15px;
-  letter-spacing: .5px;
+  // z-index: -1; 
+  // 
+  // content: "";
+  // display: table;
+  // clear: both;
+  // display: flex;
+  // flex-direction: row;
+} 
+
+.event_listing_header > img {
+  filter: blur(50px) brightness(.9);
+  // display: inline-block;
+  // width: 200%;
+  // position: relative;
+  // top: 50%;
+  // left: 50%;
+  // // bottom: 0;
+  // // right: 0;
+  // border: 0;
+  //  
+ 
 }
 
 @media only screen and (min-width: 1080px) {

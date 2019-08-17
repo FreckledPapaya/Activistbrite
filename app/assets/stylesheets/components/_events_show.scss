@@ -77,6 +77,8 @@
 
 
 .event_listing_overview {
+    width: 100%;
+
   padding-left: 0;
   padding-right: 0;
   background-color: rgba(240, 236, 231, 0.9);
@@ -141,7 +143,7 @@ p#date {
   text-overflow: ellipsis;
   color: #1E0A3C;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 21px;
   letter-spacing: 0.5px;
   word-break: break-word;
@@ -161,9 +163,14 @@ p#date {
 .event_listing_org {
   margin-top: 15px;
   // origin font weight 400
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.06667rem;
   line-height: 1.5rem;
+  color: rgb(111, 114, 135);
+}
+
+.event_listing_org_fonts {
+
 }
 
 .event_listing_price_container {

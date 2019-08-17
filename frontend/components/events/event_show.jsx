@@ -63,7 +63,7 @@ class EventShow extends React.Component {
                                     <div className="event_listing_ta">
                                         <h1>{event.title}</h1>
                                         <div className="event_listing_org">
-                                            <div>by {event.organizer_title}</div>
+                                            <div className="event_listing_org_fonts">by {event.organizer_title}</div>
                                         </div>
                                     </div>
                                     <div className="event_listing_price_container">

@@ -72,7 +72,7 @@ class Signup extends React.Component {
                 <div className="session_input_email_label">
                   <label id='email'>Email Address</label>
                 </div>
-                <input className="session_input" type="email" value={this.state.email} disabled />
+                <input id="session_input" type="email" value={this.state.email} disabled />
               </div>
             </div>
 
@@ -83,7 +83,7 @@ class Signup extends React.Component {
                 <div className="session_input_label_wrapper">
                   <label id='fname'>First Name</label> 
                 </div>
-                <input className="session_input" type="text" value={this.state.fname} onChange={this.update('fname')} />
+                <input id="session_input" type="text" value={this.state.fname} onChange={this.update('fname')} />
               </div>
             </div>
 
@@ -92,7 +92,7 @@ class Signup extends React.Component {
                 <div className="session_input_label_wrapper">
                   <label id='lname'>Last Name</label> 
                 </div>
-                <input className="session_input" type="text" value={this.state.lname} onChange={this.update('lname')} />
+                <input id="session_input" type="text" value={this.state.lname} onChange={this.update('lname')} />
               </div>
             </div>
 
@@ -102,7 +102,7 @@ class Signup extends React.Component {
                   <div className="session_input_label_wrapper">
                     <label id='password'>Password</label>
                   </div>
-                  <input className="session_input" type="password" value={this.state.password} onChange={this.update('password')}/>
+                  <input id="session_input" type="password" value={this.state.password} onChange={this.update('password')}/>
                 </div>
               </div> 
               <div className="session_form_line"></div>

@@ -50,7 +50,7 @@ class Signin extends React.Component {
                 <div className="session_input_label_wrapper">
                   <label id='email'>Email address</label>
                 </div> 
-                  <input className="session_input" type="email" value={this.state.email} onChange={this.update('email')} /> 
+                  <input id="session_input" type="email" value={this.state.email} onChange={this.update('email')} /> 
               </div>
             </div>
             <div className="session_submit_button">

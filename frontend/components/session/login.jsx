@@ -50,7 +50,7 @@ class Login extends React.Component {
                 <div className="session_input_email_label">
                   <label id='email'>Email Address</label>
                 </div>
-                <input className="session_input" type="email"  value={this.email} disabled />
+                <input id="session_input" type="email"  value={this.email} disabled />
               </div>
             </div>
             <div className="session_input_container" id="login_input">
@@ -58,7 +58,7 @@ class Login extends React.Component {
                 <div className="session_input_label_wrapper">
                   <label id='password'>Password</label>
                 </div>
-                <input className="session_input" type="password" name="Password" value={this.state.password} onChange={this.update('password')} />
+                <input id="session_input" type="password" name="Password" value={this.state.password} onChange={this.update('password')} />
               </div> 
             </div> 
             <div className="session_submit_button">

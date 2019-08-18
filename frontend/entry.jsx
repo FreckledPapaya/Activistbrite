@@ -4,8 +4,7 @@ import createStore from './store/store';
 import { Root } from './components/root';
 
 
-document.addEventListener("DOMContentLoaded", () => {
-    debugger
+document.addEventListener("DOMContentLoaded", () => { 
     const root = document.getElementById("root");
     let preloadedState = {};
     if (window.currentUser) {

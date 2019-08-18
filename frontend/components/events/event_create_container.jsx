@@ -4,7 +4,7 @@ import { createEvent } from '../../actions/events_actions';
 import { getUser } from '../../actions/session_actions';
 import EventCreate from './event_create_form';
 
-const mapStateToProps = (state) => { 
+const mapStateToProps = (state) => {  
   let event = {
     title: "",
     body: "",

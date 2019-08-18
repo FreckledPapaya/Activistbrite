@@ -30,18 +30,19 @@ class EventCreate extends React.Component {
 
   handleSubmit (e) {
     e.preventDefault();
-    let formData = new FormData();
-
-    formData.append('event[title]', this.state.title);
-    formData.append('event[body]', this.state.body);
-    formData.append('event[image_url]', this.state.image_url);
-    formData.append('event[start_date]', this.state.start_date);
-    formData.append('event[end_date]', this.state.end_date);
-    formData.append('event[photo_file]', this.state.photo_file);
-
-    this.props.createEvent(formData).then((item) => {
-      this.props.history.push(`/events/${item.event.id}`);
-    });
+    // debugger
+    // let formData = new FormData();
+    // debugger
+    // formData.append('event[title]', this.state.title);
+    // formData.append('event[body]', this.state.body);
+    // formData.append('event[image_url]', this.state.image_url);
+    // formData.append('event[start_date]', this.state.start_date);
+    // formData.append('event[end_date]', this.state.end_date);
+    // formData.append('event[photo_file]', this.state.photo_file);
+    // debugger
+    // this.props.createEvent(formData).then((item) => {
+    //   this.props.history.push(`/events/${item.event.id}`);
+    // });
   }
 
   handleFile (e) {
@@ -57,14 +58,15 @@ class EventCreate extends React.Component {
   }
 
   render () { 
-    if (!this.state.organizer_title){
-      return null;
-    }
+    // if (!this.state.organizer_title){
+    //   return null;
+    // }
 
     return (
       <div className="create_event">
         <div className="create_event_header_container">
-          <div className="create_event_header">
+
+          <div className="create_event_header_lg">
             <div className="create_event_text">
               <h2>Create an Event</h2>
             </div>
@@ -78,6 +80,14 @@ class EventCreate extends React.Component {
               </div>
             </div>
           </div>
+
+          <div className="create_event_header_sm">
+            <div className="create_event_text_sm">
+              <p></p>
+              <h2>Create an Event</h2>
+            </div>
+          </div>
+          
         </div>
         <div className="create_event_navbar"></div>
         <div className="create_event_content">
@@ -162,7 +172,7 @@ class EventCreate extends React.Component {
                         </div>
                         <div className="create_event_title_input_container">
                           <div className="create_event_body_input_border">
-                            <input type="text" value={this.state.body} className="create_event_body_input" onChange={this.update('body')} />
+                            <textarea value={this.state.body} className="create_event_body_input" onChange={this.update('body')} />
                           </div>
                         </div>
                       </div>

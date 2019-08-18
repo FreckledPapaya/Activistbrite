@@ -17,7 +17,7 @@ export default () => (
     <Route exact path="/" component={EventsIndexContainer} /> 
     <Route exact path="/events/:eventId" component={EventShowContainer} /> 
     <AuthRoute path="/signin" component={SessionContainer} />
-    <Route exact path="/create" component={EventsIndexContainer} /> 
+    <Route exact path="/create" component={EventCreateContainer} /> 
     <Route path="/" component={FooterContainer} /> 
   </div>
 );

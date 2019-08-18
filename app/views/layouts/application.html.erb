@@ -7,13 +7,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <% if current_user %>
-      <script type="text/javascript">
-        window.currentUser = { 
-          "id": <%= current_user.id %>
-          };
-      </script>
-    <% end %>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1" /> 
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap" rel="stylesheet">
   </head>

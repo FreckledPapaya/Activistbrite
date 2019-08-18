@@ -1,6 +1,6 @@
 @events.each do |event| 
   json.set! event.id do
-    json.extract! event, :id, :title, :organizer
+    json.extract! event, :id, :title
     if event.end_date.present?
       json.end_day event.weekday(event.end_date)
       json.end_date event.date(event.end_date)

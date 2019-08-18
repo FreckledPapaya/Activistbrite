@@ -69,6 +69,7 @@ group :test do
   gem 'chromedriver-helper'
 end
 
+gem 'rails_12factor', group: :production
 
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

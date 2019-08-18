@@ -77,8 +77,13 @@ class Event < ApplicationRecord
         minute = date.min
         morn_aft = "am"
         if hour > 11
-            morn_aft = "pm"
+            morn_aft = "pm" 
+        end
+        if hour > 12 
             hour -= 12
+        end
+        if hour == 0
+            hour = 12
         end
         hour = hour.to_s
         if minute < 10

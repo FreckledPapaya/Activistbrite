@@ -15,15 +15,17 @@ return(
 };
 
 // reroutes to root if user is not logged in (try to access protected page)
-const Protected = ({component: Component, path, loggedIn}) => (
-  <Route path={path} render={(props) => (
-    !loggedIn ? (
-      <Redirect to='/' />
-    ) : (
-      <Component {...props} />
-    )
-  )} />
-);
+const Protected = ({component: Component, path, loggedIn}) => {
+  return (
+    <Route path={path} render={(props) => (
+      !loggedIn ? (
+        <Redirect to='/' />
+      ) : (
+        <Component {...props} />
+      )
+    )} />
+  );
+}
 
 const mapStateToProps = state => ({
   loggedIn: Boolean(state.session.currentUser)

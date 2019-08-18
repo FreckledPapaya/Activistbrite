@@ -14,10 +14,12 @@ import { AuthRoute, ProtectedRoute } from '../utils/route_util';
 export default () => (
   <div id="root2">
     <Route path="/" component={NavBarContainer} /> 
-    <Route exact path="/" component={EventsIndexContainer} /> 
-    <Route exact path="/events/:eventId" component={EventShowContainer} /> 
-    <AuthRoute path="/signin" component={SessionContainer} />
-    <ProtectedRoute exact path="/create" component={EventCreateContainer} /> 
+    <Switch>
+      <AuthRoute path="/signin" component={SessionContainer} />
+      <Route exact path="/events/:eventId" component={EventShowContainer} /> 
+      <ProtectedRoute exact path="/create" component={EventCreateContainer} /> 
+      <Route path="/" component={EventsIndexContainer} /> 
+    </Switch>
     <Route path="/" component={FooterContainer} /> 
   </div>
 );

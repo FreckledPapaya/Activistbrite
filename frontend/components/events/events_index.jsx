@@ -17,7 +17,7 @@ class EventsIndex extends React.Component {
 
 
     render() { 
-        // debugger
+        debugger
         const events = Object.keys(this.props.events).map(id => this.props.events[id]);
         const eventItems = events.slice(0,9).map((event,i) => {
             return (<EventsIndexItem event={event} key={i} linkClick={this.linkClick} />);

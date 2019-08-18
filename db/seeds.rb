@@ -71,7 +71,15 @@ event_8 = Event.create(title: "Stitch n B*tch",
 
 file = File.open('app/assets/images/crafty.jpg')  
 event_8.image.attach(io: file, filename: 'event_8.jpg') 
+
+event_9 = Event.create(title: "Which Protest? Witch Protest!", 
+    body: "Join us for a public demonstration at our local ICE office in binding the power of those who commit violence, offering strength and solidarity to those who suffer at their hands, and fostering love and growth to bring our communities back into a mindset of love and cooperation.\n Rally will be held at noon and ritual will begin shortly afterwards. Those who are able may join us for refreshments, crafts, storytelling, and sign making for future protests.", 
+    start_date: DateTime.new(2021,5,3,12), organizer_id: user_4.id)
     
+
+file = File.open('app/assets/images/witch_2.jpg')  
+event_9.image.attach(io: file, filename: 'event_9.jpg') 
+
     # REPEATS
 # event_9 = Event.create(title: "Pride Riot", 
 #                        body: "THE FIRST PRIDE WAS A RIOT!!

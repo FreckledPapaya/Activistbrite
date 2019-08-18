@@ -7,7 +7,7 @@ import EventShowContainer from './events/event_show_container';
 import EventCreateContainer from './events/event_create_container';
 // import components here
 
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../utils/route_util';
 
 
